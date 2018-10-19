@@ -1,0 +1,26 @@
+html {font-size:62.5%;}
+img {max-width: 50%;
+    height: auto;}
+body{margin: 0;
+    padding: 0;
+    background-color: #68cdd5;}
+.btn{margin-top: 1.5625%;
+    margin-left: 2.375%;}
+.logo{padding: 3.125% 0 9.375% 0;
+    text-align: center;}
+.center{margin: auto;
+    width: 71%;
+    font-size:1.5rem;
+    text-align:left;
+    font-family: "sans-serif";
+    color:#ffffff;}
+div{max-width: 100%;}
+.icon-1,.icon-2{float: left;
+    margin-left: 9.375%;
+    padding-top:14.06%;
+    font-family: "Adobe 黑体 Std", sans-serif;
+    color:#ffffff;
+    text-align: center;}
+.icon-2{float: right;
+    margin-right: 8.6%;
+    padding-top:14.06%;}
