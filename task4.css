@@ -27,7 +27,7 @@ header{position:fixed;
 .wrap1{width: 100%;height: 5.8rem;position: absolute;top:5.5rem;border-style:none none solid none;font-size: 1.6rem;border-bottom-width:0.75rem;border-color:#eff0f4;background-color:#ffffff;}
 .wrap2{width: 100%;height: 5.8rem;position: absolute;top:12.2rem;border-style:none none solid none;border-bottom-width:1.75rem;border-color:#eff0f4;background-color:#ffffff;}
 /*表单内容样式*/
-.text,.password{height:5rem;width: calc(100% - 9rem);;border:none;outline:none}
+.text,.password{height:5rem;width: calc(100% - 10rem);;border:none;outline:none}
 /*登陆按钮表单样式*/
 .button{width:100%;height:5rem;position:absolute;top:19.8rem;border:none;background-color: #5fc0cd;font-size: 1.8rem; color:#f3f4f6;}
 a{ color:#5fc0cd}
