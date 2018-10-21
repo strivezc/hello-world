@@ -1,16 +1,15 @@
-html {font-size:62.5%;}
+html {font-size:75%;}
+p {font-size: 1rem; /* 1*20=20px*/}
 body{margin: 0;
     padding: 0;
-background-color:#f3f4f6;}
+    background-color:#f3f4f6;}
 header{position:fixed;
     width: 100%;
     height: 4.6rem;
     background-color: #5fc0cd;
     color:#ffffff;
     line-height:4.6rem;
-    border-style:none none solid none;
-    border-bottom-width:0.85rem;
-    border-color:#eff0f4;}
+    margin-bottom: 0.85rem}
 .close{ position:absolute;
     font-size: 1.6rem;
     left: 1.5rem}
@@ -23,17 +22,42 @@ header{position:fixed;
     margin:0;
     font-size: 1.8rem;
     text-align: center;}
-/*中间两个容器样式*/
-.wrap1{width: 100%;height: 5.8rem;position: absolute;top:5.5rem;border-style:none none solid none;font-size: 1.6rem;border-bottom-width:0.75rem;border-color:#eff0f4;background-color:#ffffff;}
-.wrap2{width: 100%;height: 5.8rem;position: absolute;top:12.2rem;border-style:none none solid none;border-bottom-width:1.75rem;border-color:#eff0f4;background-color:#ffffff;}
-/*表单内容样式*/
-.text,.password{height:5rem;width: calc(100% - 10rem);;border:none;outline:none}
-/*登陆按钮表单样式*/
-.button{width:100%;height:5rem;position:absolute;top:19.8rem;border:none;background-color: #5fc0cd;font-size: 1.8rem; color:#f3f4f6;}
-a{ color:#5fc0cd}
-.href{position:absolute;top:25.6rem;right:1.8rem;}
-.icon{margin: 1.5rem 1.5rem 1.5rem 2.2rem;float: left}
-.line{margin: 1.2rem 1.5rem 1.25rem 0.75rem;float: left}
+.wrap1{width: 100%;
+    height: 5rem;
+    position: absolute;
+    top:5.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.85rem;
+    background-color:#ffffff;}
+.wrap2{width: 100%;
+    height: 5rem;
+    position: absolute;
+    top:11.35rem;
+    margin-bottom: 0.85rem;
+    background-color:#ffffff;}
+.wrap3{width: 100%;
+    height: 5rem;
+    position: absolute;
+    top:17.2rem;
+    border:none;}
+.text,.password,.button{
+    height:5rem;
+    width: calc(100% - 8rem);
+    border:none;
+    outline:none;
+    padding:0;}
+.button{width: 100%;
+    background-color: #5fc0cd;
+    font-size: 1.8rem;
+    color:#f3f4f6;}
+a{ color:#5fc0cd;
+position: absolute;
+    top:23.87rem;
+    right:1.8rem;}
+.icon{margin: 1.4754rem 1.5rem 1.4754rem 2.2rem;
+    float: left}
+.line{margin: 1.2254rem 1.5rem 1.2254rem 0.75rem;
+    float: left}
 .clearfix:after{
     content: "";
     display: block;
