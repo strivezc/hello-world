@@ -4,58 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <title>task5</title>
+    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="task6.css">
 </head>
 <body>
 <header>
-    <div class="employer"> 找雇主</div>
-    <div class="workers"> 找护工</div>
-    <a href="  " class="map">
-    </a>
-</header>
-
-<footer></footer>
-<main>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">找护工</button>
+        <button type="button" class="btn btn-default">找雇主</button>
+    </div>
+    <button class="map"></button>
     <table class="head">
         <tr>
-        <td class="head-information">
-            <div class="dropdown">
-            <button class="dropbtn">所在地</button>
-            <div class="dropdown-content">
-                <span>龙岗区</span>
-                <span>罗湖区</span>
-                <span>南山区</span>
-                <span>宝安区</span>
-                <span>盐田区</span>
-                <span>大鹏新区</span>
-                <span>光明新区</span>
-            </div>
-            </div>
-        </td>
-        <td class="head-information">
-            <div class="dropdown">
-            <button class="dropbtn">食宿</button>
-                <div class="dropdown-content">
-                    <span>包吃住</span>
-                    <span>不包吃住</span>
+            <td class="head-information">
+                <div class="dropdown">
+                    <button class="dropbtn">所在地</button>
+                    <div class="dropdown-content">
+                        <span>龙岗区</span>
+                        <span>罗湖区</span>
+                        <span>南山区</span>
+                        <span>宝安区</span>
+                        <span>盐田区</span>
+                        <span>大鹏新区</span>
+                        <span>光明新区</span>
+                    </div>
                 </div>
-            </div>
-        </td>
-        <td class="head-information">
-            <div class="dropdown">
-                <button class="dropbtn">病人情况</button>
-                <div class="dropdown-content">
-                    <span>糟糕</span>
-                    <span>中等</span>
-                    <span>良好</span>
+                <div class="triangle triangle1"></div>
+                <div class="line1 icon2"></div>
+            </td>
+            <td class="head-information">
+                <div class="dropdown">
+                    <button class="dropbtn">食宿</button>
+                    <div class="dropdown-content">
+                        <span>包吃住</span>
+                        <span>不包吃住</span>
+                    </div>
                 </div>
-            </div>
-
-        </td>
-        <div class="line1 icon2"></div>
-        <div class="line2 icon2"></div>
+                <div class="triangle2 triangle"></div>
+                <div class="line2 icon2"></div>
+            </td>
+            <td class="head-information">
+                <div class="dropdown">
+                    <button class="dropbtn">病人情况</button>
+                    <div class="dropdown-content">
+                        <span>糟糕</span>
+                        <span>中等</span>
+                        <span>良好</span>
+                    </div>
+                </div>
+                <div class="triangle3 triangle"></div>
+            </td>
         </tr>
     </table>
+</header>
+<main>
     <ul class="list">
         <li class="option">
             <div class="icon">
@@ -149,5 +153,19 @@
         </li>
     </ul>
 </main>
+<footer>
+    <div class="home-page">
+        <button class="home-page-btn">
+            <span>首页</span>
+        </button>
+    </div>
+    <button class="words">
+    </button>
+    <div class="individual">
+        <button class="individual-btn">
+            <span>我的</span>
+        </button>
+    </div>
+</footer>
 </body>
 </html>
