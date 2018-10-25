@@ -34,7 +34,6 @@ header{
     padding: 0.15rem 0.3rem;
     outline: none;
     border-radius: 0.08rem!important;
-
 }
 .btn-group .btn+.btn{
     margin-left: -0.05rem;
