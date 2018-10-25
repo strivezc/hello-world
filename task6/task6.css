@@ -32,8 +32,10 @@ header{
     color: white;
     border: 0;
     padding: 0.15rem 0.3rem;
-    border: none;
-    outline: none;}
+    outline: none;
+    border-radius: 0.08rem!important;
+
+}
 .btn-group .btn+.btn{
     margin-left: -0.05rem;
     background-color: white;
