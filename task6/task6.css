@@ -23,13 +23,17 @@ header{
     background: url(img.png) no-repeat;
     background-size: 4.92rem 0.96rem;
     background-position:  -2.44rem 0;
+    border: none;
+    outline: none;
 }
 .btn-group>.btn:first-child,.btn-group .btn+.btn{
     margin-left: 0;
     background-color: #55a8b3;
     color: white;
     border: 0;
-    padding: 0.15rem 0.3rem;}
+    padding: 0.15rem 0.3rem;
+    border: none;
+    outline: none;}
 .btn-group .btn+.btn{
     margin-left: -0.05rem;
     background-color: white;
@@ -87,6 +91,8 @@ footer span{
     background: url(img.png) no-repeat;
     background-size: 4.92rem 0.96rem;
     background-position:  -3.11rem 0;
+    border: none;
+    outline: none;
 }
 .words{border: 0;
     background: url(img.png) no-repeat;
@@ -95,6 +101,8 @@ footer span{
     width: 0.96rem;
     height:0.96rem;
     background-position:  -3.96rem 0;
+    border: none;
+    outline: none;
 }
 .individual{
     width: 0.42rem;
@@ -110,6 +118,8 @@ footer span{
     height:0.41rem;
     margin-top: 0.09rem;
     background-position:  -1.72rem 0;
+    border: none;
+    outline: none;
 }
 .head{
     position: fixed;
