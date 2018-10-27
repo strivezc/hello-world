@@ -1,16 +1,17 @@
 html{font-size:312.5%  }
 *{margin: 0;
     padding: 0;
-background-color: #f0f0f0}
+}
+body{
+    background-color: #f0f0f0;
+}
 .header{
     background-color: #29bde0;
     height: 0.7rem;
-}
-.container{
-   padding: 0;
-}
-.row{
-   margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
 .menu{
     position: absolute;
@@ -22,24 +23,103 @@ background-color: #f0f0f0}
     background-size: 0.36rem 0.29rem;
     border: none;
     outline: none !important;
+    cursor: pointer;
 }
 .last-name{position: relative;
-    margin: 0.25rem 0.35rem;
-    width: 100%;
-    height:1.16rem;
+    margin: 0.95rem 0.35rem 0.25rem;
+    height:1.18rem;
     border:0.01rem solid #c9c9c9;
     background-color: white;
-    line-height: 1.16rem;
+    line-height: 1.18rem;
     color:#c9c9c9 ;
     font-size: 0.35rem;
     text-align: center;
 }
-.arrow{position: absolute;
+.arrow1{position: absolute;
     top:0.38rem;
     right:0.15rem;
     width: 0.26rem;
     height: 0.42rem;
-    background: url(1.png) no-repeat;
+    background: url(2.png) no-repeat;
+    background-size: 0.26rem 0.42rem;
     border: none;
     outline: none !important;
+    cursor: pointer;
 }
+.game{
+    height:0.93rem;
+    border-bottom:0.02rem solid #fde1ae;
+    background-color: white;
+    line-height: 0.93rem;
+    color: #fbb435;
+    font-size: 0.37rem;
+    text-align: center;
+}
+.list{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.7rem;
+}
+.catalog{
+    background-color: white;
+}
+.simple{
+    height:1.36rem;
+    margin: 0.29rem 0.87rem 0 0.89rem;
+    background-color: #69d1e9;
+    line-height: 1.36rem;
+    color: white;
+    font-size: 0.32rem;
+    text-align: center;
+}
+.edition{
+    height:1.36rem;
+    margin: 0 0.87rem 0 0.89rem;
+    background-color: #69d1e9;
+    line-height: 1.36rem;
+    color: white;
+    font-size: 0.32rem;
+    text-align: center;
+}
+.text,.text2{
+    height: 0.77rem;
+    margin: 0 0.87rem 0 0.89rem;
+    background-color: white;
+    line-height: 0.77rem;
+    color: #787878;
+    text-align: center;
+    font-size: 0.25rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.text2{
+    height: 0.6rem;
+}
+.catalog{
+    background-color: white;
+    margin: 0 0.35rem;
+    position: relative;
+    border:0.01rem solid #c9c9c9;
+}
+.arrow2{position: absolute;
+    top:3.78em;
+    right:0.08rem;
+    width: 0.30rem;
+    height: 0.56rem;
+    background: url(3.png) no-repeat;
+    background-size: 0.30rem 0.56rem;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+}
+.round{
+    height: 0.5rem;
+    font-size: 0.18rem;
+    text-align: center;
+    line-height: 0.3rem;
+}
+.round1{color: #69d1e9 ;}
+a{ color: #f0f0f0 ;}
+
+
