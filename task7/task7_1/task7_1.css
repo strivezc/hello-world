@@ -1,5 +1,6 @@
 html{font-size:312.5%  }
-*{margin: 0;
+*{
+    margin: 0;
     padding: 0;
 }
 body{
@@ -58,8 +59,8 @@ body{
 .list{
     width: 100%;
     list-style: none;
-    padding: 0;
-    margin-top: 0.7rem;
+
+
 }
 .catalog{
     background-color: white;
@@ -100,7 +101,8 @@ body{
     background-color: white;
     margin: 0 0.35rem;
     position: relative;
-    border:0.01rem solid #c9c9c9;
+    border:0.02rem solid #c9c9c9;
+    list-style: none;
 }
 .arrow2{position: absolute;
     top:3.78em;
@@ -120,6 +122,6 @@ body{
     line-height: 0.3rem;
 }
 .round1{color: #69d1e9 ;}
-a{ color: #f0f0f0 ;}
+.round2{ color: #f0f0f0 ;}
 
 

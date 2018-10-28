@@ -1,0 +1,165 @@
+html{font-size:312.5%  }
+*{
+    margin: 0;
+    padding: 0;
+}
+p{margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;}
+.header{
+    background-color: #29bde0;
+    height: 0.88rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 0.88rem;
+    color: white;
+    border-bottom:0.02rem solid #74d4eb;
+}
+.menuButton{
+    position: absolute;
+    left: 0.20rem;
+    top: 0.22rem;
+    width: 0.53rem;
+    height: 0.45rem;
+    background: url(1.png) no-repeat;
+    background-size: 0.53rem 0.45rem;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+}
+.explain{
+    position: absolute;
+    right: 0.20rem;
+    top: 0.24rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    background: url(2.png) no-repeat;
+    background-size: 0.42rem 0.42rem;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+}
+.result{
+    width: 100%;
+    margin-top:0.88rem;
+    background-color: #29bde0;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+.row1{
+    height: 2.29rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.row2{
+    height: 1.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.32rem;
+    color: #ffc865;
+}
+.row2 span,.row3 span {
+    display: block;
+    width: 75%;
+    margin: 0 12.5% 0 12.5%;
+}
+.row3{
+    height: 2.34rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.26rem;
+    color: white;
+    border-bottom:0.02rem solid #dddddd;
+}
+.resultIcon{
+    margin-top: 0.24rem;
+    width: 3.5rem;
+    height: 2.05rem;
+    background: url(3.png) no-repeat;
+    background-size: 3.5rem 2.05rem;
+    display: inline-block;
+}
+.resultIcon span{
+    display: block;
+    font-size: 0.46rem;
+    color: white;
+    text-align: center;
+   margin-top:1.36rem;
+    line-height: 0.48rem;
+}
+.list{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.row4{
+    width: 100%;
+    height: 1.66rem;
+    border-bottom:0.02rem solid #dddddd;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.process{
+    width: 75%;
+    height:1.64rem;
+    margin: 0 12.5% 0 12.5%;
+    list-style: none;
+    padding: 0;
+}
+.time{
+    height: 0.6rem;
+    font-size: 0.3rem;
+    color: #515151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time span{
+    font-size: 0.2rem;
+    color: #c7c7c7;
+}
+.day{
+    height: 0.4rem;
+    font-size: 0.26rem;
+    color: #a6a6a6;
+    line-height: 0.4rem;
+}
+.footer{
+    width: 100%;
+    height: 1.3rem;
+    position: fixed;
+    bottom: 0;
+    background: rgba(41,189,224,.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerButton1,.footerButton2{
+    height: 0.86rem;
+    width: 42%;
+    background-color: #f66f6f;
+    font-size: 0.4rem;
+    color: white;
+    margin-left: 0.24rem;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+    border-radius: 0.1rem;
+}
+.footerButton2{
+    background-color: #fbb435;
+    margin-left: 0;
+    margin-right: 0.24rem;
+}
