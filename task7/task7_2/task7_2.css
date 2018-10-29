@@ -1,12 +1,12 @@
-html{font-size:312.5%  }
-*{
+html {font-size:312.5%  }
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background-color: #29bde0;
 }
-.header{
+.header {
     background-color: #29bde0;
     height: 0.7rem;
     position: fixed;
@@ -17,11 +17,11 @@ body{
     line-height: 0.7rem;
     color: white;
 }
-.header p{
+.header p {
     font-size: 0.34rem;
     margin-bottom: 0;
 }
-.menuButton{
+.menuButton {
     position: absolute;
     left: 0.24rem;
     top: 0.15rem;
@@ -33,7 +33,7 @@ body{
     outline: none !important;
     cursor: pointer;
 }
-.closeButton{
+.closeButton {
     position: absolute;
     right: 0.24rem;
     top: 0.15rem;
@@ -45,7 +45,7 @@ body{
     outline: none !important;
     cursor: pointer;
 }
-.dialogBox{
+.dialogBox {
     height: 0.82rem;
     width: 100%;
     background-color: #b9e9f5;
@@ -54,7 +54,7 @@ body{
     color: #464646;
     text-align: left;
 }
-.dialogBox:after{
+.dialogBox:after {
     content: "";
     border-top: solid 0.20rem #b9e9f5;
     border-left: solid 0.15rem #00800000;
@@ -63,12 +63,12 @@ body{
     left: 11.25%;
     top: 100%;
 }
-.dialogBox p{
+.dialogBox p {
     margin-left: 7.5%;
     margin-bottom: 0;
     font-size: 0.26rem;
 }
-.musicButton{
+.musicButton {
     position: absolute;
     right: 0.18rem;
     top: 0.15rem;
@@ -80,14 +80,14 @@ body{
     outline: none !important;
     cursor: pointer;
 }
-.footer{
+.footer {
     height: 1.9rem;
     width: 100%;
     position: fixed;
     bottom: 0;
     background-color:  #29bde0;
 }
-.vote{
+.vote {
     height: 0.87rem;
     margin: 0.42rem  0 0.61rem 11.7%;
     background-color:  #fbb435;
@@ -97,18 +97,24 @@ body{
     font-size: 0.4rem;
     width: 76.6%;
     border: none;
+    outline: none !important;
+    cursor: pointer;
 }
-.tips{
+.tips {
     height: 0.9rem;
     width: 100%;
-    font-size: 0.24rem;
     color: white;
+    background-color: #29bde0;
+    margin-top: 0.82rem;
 }
-.tips p{
+.tips p {
     margin-left: 11%;
     line-height: 0.9rem;
+    font-size: 0.24rem;
+    text-align: start;
 }
-.row1,.lastRow{
+.row1,
+.lastRow {
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -116,41 +122,41 @@ body{
     width: 87%;
     margin-left: 6.5%;
 }
-.lastRow{
+.lastRow {
     margin-bottom: 2rem;
 }
 .list {
     width: 100%;
     list-style: none;
     padding: 0;
-    margin-top: 1.52rem;
+    margin-top: 2.42rem;
 }
-.role{
+.role {
     width: 1.36rem;
     height: 2.09rem;
 }
-.diving{
+.diving {
     width: 1.36rem;
     height: 1.36rem;
     background-color: #f5c97b;
     border: 0.04rem solid white;
     text-align: center;
 }
-.name{
+.name {
     width: 1.26rem;
     height: 1rem;
     line-height: 1rem;
     font-size: 0.3rem;
 }
-.number{
-    width: 1.26rem;
-    height: 0.26rem;
+.number {
+    width: 1.28rem;
+    height: 0.28rem;
     line-height: 0.26rem;
     font-size: 0.22rem;
     color: white;
     background-color: #83b09a;
 }
-.operation{
+.operation {
     height: 0.73rem;
     width: 1.36rem;
     display: flex;
@@ -158,8 +164,11 @@ body{
     justify-content: space-between;
     visibility:hidden;
 }
-.role:hover .operation{  visibility:visible;}
-.killButton,.checkButton,.snipeButton,.reviveButton{
+.role:hover .operation {  visibility:visible;}
+.killButton,
+.checkButton,
+.snipeButton,
+.reviveButton {
     width: 0.3rem;
     height: 0.3rem;
     background: white url(4.png) no-repeat;
@@ -168,18 +177,19 @@ body{
     outline: none !important;
     cursor: pointer;
 }
-.checkButton{
+.checkButton {
     background: white url(5.png) no-repeat;
     background-size: 0.3rem 0.3rem;
 }
-.snipeButton{
+.snipeButton {
     background: white url(6.png) no-repeat;
     background-size: 0.3rem 0.3rem;
 }
-.reviveButton{
+.reviveButton {
     background: white url(7.png) no-repeat;
     background-size: 0.3rem 0.3rem;
 }
-audio{
+audio {
     opacity: 0;
 }
+.play {height: 40px}

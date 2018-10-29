@@ -26,7 +26,8 @@ body{
     outline: none !important;
     cursor: pointer;
 }
-.last-name{position: relative;
+.last-name{
+    position: relative;
     margin: 0.95rem 0.35rem 0.25rem;
     height:1.18rem;
     border:0.01rem solid #c9c9c9;
@@ -36,7 +37,8 @@ body{
     font-size: 0.35rem;
     text-align: center;
 }
-.arrow1{position: absolute;
+.arrow1{
+    position: absolute;
     top:0.38rem;
     right:0.15rem;
     width: 0.26rem;
@@ -64,24 +66,35 @@ body{
     background-color: white;
 }
 .simple{
+    display: block;
     height:1.36rem;
-    margin: 0.29rem 0.87rem 0 0.89rem;
+    width: 80%;
+    margin: 0.29rem auto auto;
     background-color: #69d1e9;
     line-height: 1.36rem;
     color: white;
     font-size: 0.32rem;
     text-align: center;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
 }
 .edition{
+    display: block;
     height:1.36rem;
-    margin: 0 0.87rem 0 0.89rem;
+    width: 80%;
+    margin: auto;
     background-color: #69d1e9;
     line-height: 1.36rem;
     color: white;
     font-size: 0.32rem;
     text-align: center;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
 }
-.text,.text2{
+.text,
+.text2{
     height: 0.77rem;
     margin: 0 0.87rem 0 0.89rem;
     background-color: white;
@@ -102,7 +115,8 @@ body{
     border:0.02rem solid #c9c9c9;
     list-style: none;
 }
-.arrow2{position: absolute;
+.arrow2{
+    position: absolute;
     top:3.78em;
     right:0.08rem;
     width: 0.30rem;
