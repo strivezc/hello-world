@@ -180,3 +180,6 @@ body{
     background: white url(7.png) no-repeat;
     background-size: 0.3rem 0.3rem;
 }
+audio{
+    opacity: 0;
+}
