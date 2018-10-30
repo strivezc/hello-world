@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="task7_3.css">
     <title>task7_3</title>
 </head>
 <body>
-<header class="header">
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top header" >
+        游戏结果
     <button class="menuButton"></button>
     <button class="explain"></button>
-    <p>游戏结果</p>
+    </nav>
 </header>
 <main>
         <ul class="result">
-            <li class="row1">
+            <li class="victory">
             <div class="resultIcon">
             <span>卧底胜利</span>
             </div>
             </li>
-            <li class="row2">
+            <li class="congratulate">
                 <span>太棒了!你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</span>
             </li>
-            <li class="row3">
+            <li class="details">
                 <span>
                     本次游戏共计用时0小时25分钟<br>
                     杀&nbsp;&nbsp;&nbsp;&nbsp;手0人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;警&nbsp;&nbsp;&nbsp;察1人&nbsp;&nbsp;&nbsp;&nbsp;平&nbsp;&nbsp;民6人<br>
@@ -34,7 +36,7 @@
                     水民词汇：努尔哈赤
                 </span>
             </li>
-            <li class="row4">
+            <li class="detailsOfDay">
                 <ul class="process">
                     <li class="time">
                         <p>第一天</p>
@@ -48,7 +50,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="row4">
+            <li class="detailsOfDay">
                 <ul class="process">
                     <li class="time">
                         <p>第一天</p>
@@ -62,7 +64,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="row4">
+            <li class="detailsOfDay">
                 <ul class="process">
                     <li class="time">
                         <p>第一天</p>
@@ -76,7 +78,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="row4">
+            <li class="detailsOfDay">
                 <ul class="process">
                     <li class="time">
                         <p>第一天</p>
@@ -92,11 +94,13 @@
             </li>
         </ul>
 </main>
-<footer class="footer">
-    <button onclick="window.location.href='https://strivezc.github.io/hello-world/task7/task7_1/task7_1.html';" class="footerButton1">
+<footer>
+    <nav class="navbar navbar-default navbar-fixed-bottom header footer" >
+    <button class="btn btn-default footerButton1" onclick="window.location.href='https://strivezc.github.io/hello-world/task7/task7_1/task7_1.html';">
         再来一局
     </button>
-    <button class="footerButton2">上传并分享</button>
+    <button class="btn btn-default vote footerButton2">上传并分享</button>
+    </nav>
 </footer>
 </body>
 </html>

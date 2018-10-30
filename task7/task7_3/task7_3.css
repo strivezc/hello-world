@@ -3,27 +3,27 @@ html{font-size:312.5%  }
     margin: 0;
     padding: 0;
 }
-p{margin-bottom: 0;
+p{
+    margin-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;}
+    text-overflow: ellipsis;
+}
 .header{
     background-color: #29bde0;
-    height: 0.88rem;
-    position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1;
     font-size: 0.34rem;
     text-align: center;
     line-height: 0.88rem;
     color: white;
     border-bottom:0.02rem solid #74d4eb;
+    margin: 0;
+    min-height: 0;
 }
 .menuButton{
-    position: absolute;
-    left: 0.20rem;
-    top: 0.22rem;
+    float: left;
+   margin-left: 0.20rem;
+    margin-top: 0.22rem;
     width: 0.53rem;
     height: 0.45rem;
     background: url(1.png) no-repeat;
@@ -33,9 +33,9 @@ p{margin-bottom: 0;
     cursor: pointer;
 }
 .explain{
-    position: absolute;
-    right: 0.20rem;
-    top: 0.24rem;
+   float: right;
+    margin-right: 0.20rem;
+    margin-top: 0.24rem;
     width: 0.42rem;
     height: 0.42rem;
     background: url(2.png) no-repeat;
@@ -52,13 +52,13 @@ p{margin-bottom: 0;
     padding: 0;
     margin-bottom: 2rem;
 }
-.row1{
+.victory{
     height: 2.29rem;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.row2{
+.congratulate{
     height: 1.6rem;
     width: 100%;
     display: flex;
@@ -67,12 +67,12 @@ p{margin-bottom: 0;
     font-size: 0.32rem;
     color: #ffc865;
 }
-.row2 span,.row3 span {
+.congratulate span,.details span {
     display: block;
     width: 75%;
     margin: 0 12.5% 0 12.5%;
 }
-.row3{
+.details{
     height: 2.34rem;
     width: 100%;
     display: flex;
@@ -103,7 +103,7 @@ p{margin-bottom: 0;
     list-style: none;
     padding: 0;
 }
-.row4{
+.detailsOfDay{
     width: 100%;
     height: 1.66rem;
     border-bottom:0.02rem solid #dddddd;
@@ -139,14 +139,10 @@ p{margin-bottom: 0;
 .footer{
     width: 100%;
     height: 1.3rem;
-    position: fixed;
-    bottom: 0;
     background: rgba(41,189,224,.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 .footerButton1,.footerButton2{
+    float: left;
     height: 0.86rem;
     width: 42%;
     background-color: #f66f6f;
@@ -155,10 +151,12 @@ p{margin-bottom: 0;
     margin-left: 0.24rem;
     border: none;
     outline: none !important;
-    cursor: pointer;
     border-radius: 0.1rem;
+    padding: 0;
+    margin-top: 0.22rem;
 }
 .footerButton2{
+    float: right;
     background-color: #fbb435;
     margin-left: 0;
     margin-right: 0.24rem;

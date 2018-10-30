@@ -1,4 +1,5 @@
-html {font-size:312.5%  }
+html {
+    font-size: 312.5%; }
 * {
     margin: 0;
     padding: 0;
@@ -8,35 +9,35 @@ body {
 }
 .header {
     background-color: #29bde0;
-    height: 0.7rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
     text-align: center;
     line-height: 0.7rem;
+    font-size: 0.34rem;
     color: white;
+    min-height: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
 }
 .header p {
     font-size: 0.34rem;
     margin-bottom: 0;
 }
 .menuButton {
-    position: absolute;
-    left: 0.24rem;
-    top: 0.15rem;
+    float: left;
+    margin-left: 0.24rem;
+    margin-top:0.15rem;
     width: 0.41rem;
     height: 0.42rem;
     background: url(1.png) no-repeat;
-    background-size: 0.41em 0.42em;
+    background-size: 0.41rem 0.42rem;
     border: none;
     outline: none !important;
     cursor: pointer;
 }
 .closeButton {
-    position: absolute;
-    right: 0.24rem;
-    top: 0.15rem;
+   float: right;
+   margin-right: 0.24rem;
+   margin-top: 0.15rem;
     width: 0.38rem;
     height: 0.38rem;
     background: url(3.png) no-repeat;
@@ -49,7 +50,6 @@ body {
     height: 0.82rem;
     width: 100%;
     background-color: #b9e9f5;
-    position: fixed;
     line-height: 0.82rem;
     color: #464646;
     text-align: left;
@@ -61,7 +61,9 @@ body {
     border-right: solid 0.15rem #00800000;
     position: absolute;
     left: 11.25%;
-    top: 100%;
+}
+.navWidth{
+    width: 100%;
 }
 .dialogBox p {
     margin-left: 7.5%;
@@ -71,7 +73,7 @@ body {
 .musicButton {
     position: absolute;
     right: 0.18rem;
-    top: 0.15rem;
+    top: 0.85rem;
     width: 0.54rem;
     height: 0.54rem;
     background: url(2.png) no-repeat;
@@ -83,29 +85,32 @@ body {
 .footer {
     height: 1.9rem;
     width: 100%;
-    position: fixed;
-    bottom: 0;
     background-color:  #29bde0;
 }
+.footer:before{
+    content:"";
+    width: 87%;
+    border-top: 0.02rem solid white;
+    margin-left: 6.5%;
+ }
 .vote {
     height: 0.87rem;
-    margin: 0.42rem  0 0.61rem 11.7%;
+  margin-top: 0.5rem;
     background-color:  #fbb435;
     line-height: 0.87rem;
-    text-align: center;
     color: white;
     font-size: 0.4rem;
     width: 76.6%;
     border: none;
     outline: none !important;
-    cursor: pointer;
+    border-radius:0;
+    padding: 0;
 }
 .tips {
     height: 0.9rem;
     width: 100%;
     color: white;
     background-color: #29bde0;
-    margin-top: 0.82rem;
 }
 .tips p {
     margin-left: 11%;
@@ -118,7 +123,7 @@ body {
     display: flex;
     align-items:center;
     justify-content: space-between;
-    height: 2.09rem;
+    height: 33vw;
     width: 87%;
     margin-left: 6.5%;
 }
@@ -130,35 +135,36 @@ body {
     list-style: none;
     padding: 0;
     margin-top: 2.42rem;
+    margin-bottom: 3rem;
 }
 .role {
-    width: 1.36rem;
-    height: 2.09rem;
+    width: 21.25vw;
+    height: 32.65vw;
 }
 .diving {
-    width: 1.36rem;
-    height: 1.36rem;
+    width: 21.25vw;
+    height: 21.25vw;
     background-color: #f5c97b;
-    border: 0.04rem solid white;
+    border: 0.625vw solid white;
     text-align: center;
 }
 .name {
-    width: 1.26rem;
-    height: 1rem;
-    line-height: 1rem;
-    font-size: 0.3rem;
+    width: 20vw;
+    height: 15.6vw;
+    line-height: 15.6vw;
+    font-size: 4vw;
 }
 .number {
-    width: 1.28rem;
-    height: 0.28rem;
-    line-height: 0.26rem;
-    font-size: 0.22rem;
+    width: 20vw;
+    height: 4.4vw;
+    line-height: 4.4vw;
+    font-size: 3.1vw;
     color: white;
     background-color: #83b09a;
 }
 .operation {
-    height: 0.73rem;
-    width: 1.36rem;
+    height: 11.4vw;
+    width: 21.25vw;
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -169,25 +175,25 @@ body {
 .checkButton,
 .snipeButton,
 .reviveButton {
-    width: 0.3rem;
-    height: 0.3rem;
+    width: 4.7vw;
+    height: 4.7vw;
     background: white url(4.png) no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 4.7vw 4.7vw;
     border: none;
     outline: none !important;
     cursor: pointer;
 }
 .checkButton {
     background: white url(5.png) no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 4.7vw 4.7vw;
 }
 .snipeButton {
     background: white url(6.png) no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 4.7vw 4.7vw;
 }
 .reviveButton {
     background: white url(7.png) no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 4.7vw 4.7vw;
 }
 audio {
     opacity: 0;
