@@ -128,5 +128,6 @@ body{
 }
 .round1{color: #69d1e9 ;}
 .round2{ color: #f0f0f0 ;}
+a:hover{text-decoration:none;/*指鼠标在链接*/}
 
 
