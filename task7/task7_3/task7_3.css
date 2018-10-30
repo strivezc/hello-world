@@ -21,7 +21,6 @@ p{
     min-height: 0;
 }
 .menuButton{
-    float: left;
    margin-left: 0.20rem;
     margin-top: 0.22rem;
     width: 0.53rem;
@@ -33,7 +32,6 @@ p{
     cursor: pointer;
 }
 .explain{
-   float: right;
     margin-right: 0.20rem;
     margin-top: 0.24rem;
     width: 0.42rem;
@@ -137,27 +135,20 @@ p{
     line-height: 0.4rem;
 }
 .footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 1.3rem;
     background: rgba(41,189,224,.5);
 }
 .footerButton1,.footerButton2{
-    float: left;
     height: 0.86rem;
     width: 42%;
-    background-color: #f66f6f;
     font-size: 0.4rem;
     color: white;
-    margin-left: 0.24rem;
     border: none;
     outline: none !important;
     border-radius: 0.1rem;
     padding: 0;
-    margin-top: 0.22rem;
-}
-.footerButton2{
-    float: right;
-    background-color: #fbb435;
-    margin-left: 0;
-    margin-right: 0.24rem;
 }

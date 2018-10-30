@@ -23,7 +23,6 @@ body {
     margin-bottom: 0;
 }
 .menuButton {
-    float: left;
     margin-left: 0.24rem;
     margin-top:0.15rem;
     width: 0.41rem;
@@ -35,7 +34,6 @@ body {
     cursor: pointer;
 }
 .closeButton {
-   float: right;
    margin-right: 0.24rem;
    margin-top: 0.15rem;
     width: 0.38rem;
