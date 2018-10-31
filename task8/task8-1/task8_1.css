@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #fafafa;
+}
+h1{
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+}
+.elementHidden{
+    visibility: hidden;
+}
+.header{
+    background-color: white;
+    font-size: 14px;
+    color: #29b078;
+    height: 39px;
+    line-height: 39px;
+    width: 100%;
+}
+.clearheader{
+    min-height: 0;
+    margin-bottom: 0;
+    border: none;
+}
+.header span{
+    display: inline-block;
+    margin-left: 18.75%;
+}
+.spritesImg{
+    background: url(sprites-img.png) no-repeat;
+    background-size: 1861px 110px;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 39px;
+    width: 110px;
+    margin-right: 18.75%;
+}
+.wechat{
+    width: 27px;
+    height: 26px;
+    background-position: -22px 0;
+}
+.micro-blog{
+    width: 27px;
+    height: 26px;
+    background-position: -57px 0;
+}
+.qq{
+    width: 27px;
+    height: 26px;
+    background-position: -92px 0;
+}
+.option{
+    height: 99px;
+    width: 100%;
+    background-color: #29b078;
+
+}
+.optionsBar{
+    margin-right: 17.2%;
+    width: 400px;
+    height: 99px;
+}
+.career,.home,.recommend,.about{
+    background-color: #00800000;
+    width: 97px;
+    height: 99px;
+    text-align: center;
+    line-height: 99px;
+    border-radius: 0;
+}
+.nav>li>a:visited{
+   color: white;
+   background-color: #29b078;
+}
+.nav>li>a:hover {
+    background-color: #00800000;
+    color: white;
+}
+.career:hover{ border-bottom:4px solid white;}
+.home:hover{ border-bottom:4px solid white;}
+.recommend:hover{ border-bottom:4px solid white;}
+.about:hover{ border-bottom:4px solid white;}
+.clearA{
+    border-radius: 0!important;
+    padding: 0!important;
+    font-size: 16px;
+    color:white;
+}
+div.item img{
+    width:100%;
+}
+div#myCarousel{
+    width:100%;
+    margin:138px 0 0;
+}
+.advantage{
+    padding: 162px 0 95px 0;
+}
+.rocketIcon{
+    width: 47px;
+    height: 66px;
+    background-position: -183px 0;
+    margin: auto;
+}
+.standardIcon{
+    width: 62px;
+    height: 66px;
+    background-position: -399px 0;
+    margin: auto;
+}
+.connectionIcon{
+    width: 54px;
+    height: 66px;
+    background-position: -248px 0;
+    margin: auto;
+}
+.advantage span{
+    display: block;
+    color: #333333;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+.advantage p{
+    color: #999999;
+    font-size: 16px;
+}
+.statistics{
+    padding: 190px 0 95px 0;
+    font-size: 18px;
+    color: #999999;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 55px;
+}
+.statisticsIcon{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-position:0 0;
+}
+.statistics span{
+    display: inline-block;
+    color: #26a26f;
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+.step1{
+    padding: 40px 0 45px 0;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.circle{
+    width: 74px;
+    height: 74px;
+    background-size: 74px 74px;
+    background: url(8.png) no-repeat 0 0;
+}
+.circle span{
+    line-height: 74px;
+    color: #29b078;
+    font-size: 18px;
+}
+.step span{
+    display: inline-block;
+}
+.arrow{
+    display: inline-block;
+    width:30px;
+    height: 27px;
+    background-position:-136px 0;
+}
+.step2{
+    padding: 45px 0 115px 0;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.exhibition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    height: 370px;
+    margin: 60px auto auto;
+    border: 1px solid #eeeded;
+    background-color: white;
+}
+.exhibition span{
+    display: block;
+    color: #999999;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+.photo1,.photo2.photo3.photo4{
+    width:111px;
+    height: 110px;
+    background-position:-677px 0;
+    margin-top: 19px;
+}
+.photo2{
+    width:111px;
+    height: 110px;
+    background-position:-808px 0;
+    margin-top: 19px;
+}
+.photo3{
+    width:111px;
+    height: 110px;
+    background-position:-940px 0;
+    margin-top: 19px;
+}
+.photo4{
+    width:111px;
+    height: 110px;
+    background-position:-1072px 0;
+    margin-top: 19px;
+}
+.round {
+    font-size: 15px;
+    text-align: center;
+    line-height: 65px;
+}
+.round1{
+    color: #29b078;
+}
+.round2{
+    color: white;
+}
+.round a:hover{
+    text-decoration:none;
+}
+.company{
+    padding: 105px 0 67px 0;
+    text-align: center;
+}
+.rowBorder{border: 2px solid #e2e2e2;
+    margin-bottom: 90px;}
+.companyLogo{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 60px 0 60px 0;
+}
+@media screen and (min-width: 992px){
+    .col-md-20 {
+        float: left;
+        width: 20%;
+        box-sizing: border-box;
+    }}
+@media screen and (min-width: 992px){
+    .col-md-10 {
+        float: left;
+        width: 10%;
+        box-sizing: border-box;
+    }}
+@media screen and (max-width: 992px){
+    .col-sm-20 {
+        float: left;
+        width: 20%;
+        box-sizing: border-box;
+    }}
+@media screen and (max-width: 768px){
+    .col-xs-50 {
+        text-align: center;
+        width: 33.33%;
+        box-sizing: border-box;
+    }}
+@media (min-width: 768px){
+    .col-sm-6 {
+        text-align: center;
+    }}
+.aliIcon{
+    width:145px;
+    height: 55px;
+    background-position:-1517px 0;
+}
+.jinshanIcon{
+    width:55px;
+    height: 60px;
+    background-position:-321px 0;
+}
+.huanxincon{
+    width:141px;
+    height: 50px;
+    background-position:-1351px 0;
+}
+.huanXinBorder{
+    border-left: 2px solid #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+}
+.tongxinIcon{
+    width:171px;
+    height: 41px;
+    background-position:-1690px 0;
+}
+.cloudStorage{
+    width:126px;
+    height: 57px;
+    background-position:-1202px 0;
+}
+.link{
+    padding: 20px 0 20px 0;
+    text-align: center;
+    background-color: white;
+}
+.linkContent{
+    line-height: 32px;
+    font-size: 14px;
+    color: #999999;
+    background-color: white;
+    padding: 0;
+}
+.linkMargin{
+    margin-bottom: 11px;
+}
+
+
+
+
