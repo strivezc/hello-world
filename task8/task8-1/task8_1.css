@@ -6,10 +6,39 @@ body{
     font-family: "Microsoft YaHei", sans-serif;
     background-color: #fafafa;
 }
+ul{
+    list-style: none;
+    margin: 0;
+}
 h1{
     color: #333333;
     font-size: 18px;
     margin: 0;
+    padding-bottom: 40px;
+    text-align: center;
+
+}
+h2{
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 40px;
+}
+h3{
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    padding: 100px 0 65px 0;
+
+}
+h4{
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    padding: 21px 0 21px 0;
 }
 .elementHidden{
     visibility: hidden;
@@ -103,8 +132,15 @@ div#myCarousel{
     margin:138px 0 0;
 }
 .advantage{
-    padding: 162px 0 95px 0;
+    padding-top: 162px;
+    padding-bottom: 95px;
 }
+@media (max-width: 992px){
+    .advantage {
+        padding-top: 81px;
+        padding-bottom:47px;
+        text-align: center;
+    }}
 .rocketIcon{
     width: 47px;
     height: 66px;
@@ -142,6 +178,13 @@ div#myCarousel{
     margin-bottom: 0;
     margin-left: 55px;
 }
+@media (max-width: 992px){
+    .statistics{
+        margin: 0;
+        padding-top: 95px;
+        padding-bottom:47px;
+        text-align: center;
+    }}
 .statisticsIcon{
     display: inline-block;
     width: 13px;
@@ -155,17 +198,22 @@ div#myCarousel{
     margin: 10px 0 10px 0;
 }
 .step1{
-    padding: 40px 0 45px 0;
+    padding-bottom: 90px;
     color: #999999;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 1200px){
+    .step1{
+        padding-bottom: 45px;;
+    }}
 .circle{
     width: 74px;
     height: 74px;
     background-size: 74px 74px;
     background: url(8.png) no-repeat 0 0;
+    text-align: center;
 }
 .circle span{
     line-height: 74px;
@@ -181,23 +229,31 @@ div#myCarousel{
     height: 27px;
     background-position:-136px 0;
 }
+@media (max-width: 768px){
+    .arrow{
+        visibility: hidden;
+    }}
 .step2{
-    padding: 45px 0 115px 0;
+    padding: 0 0 115px 0;
     color: #999999;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 1200px){
+    .step2{
+        padding-bottom: 60px;;
+    }}
 .exhibition{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 270px;
+    width: 98%;
     height: 370px;
-    margin: 60px auto auto;
     border: 1px solid #eeeded;
     background-color: white;
+    margin-top: 20px;
 }
 .exhibition span{
     display: block;
@@ -230,26 +286,27 @@ div#myCarousel{
     background-position:-1072px 0;
     margin-top: 19px;
 }
-.round {
+.point{
     font-size: 15px;
     text-align: center;
     line-height: 65px;
 }
-.round1{
+.point1,.point2{
+    display: inline-block;
     color: #29b078;
+    cursor: pointer;
 }
-.round2{
+.point2{
     color: white;
 }
+.point2:hover {
+    color:#29b078; }
 .round a:hover{
     text-decoration:none;
 }
-.company{
-    padding: 105px 0 67px 0;
-    text-align: center;
-}
 .rowBorder{border: 2px solid #e2e2e2;
-    margin-bottom: 90px;}
+    margin-bottom: 90px;
+    list-style: none;}
 .companyLogo{
     display: flex;
     justify-content: center;
@@ -277,16 +334,12 @@ div#myCarousel{
 @media screen and (max-width: 768px){
     .col-xs-50 {
         text-align: center;
-        width: 33.33%;
+        width: 20%;
         box-sizing: border-box;
-    }}
-@media (min-width: 768px){
-    .col-sm-6 {
-        text-align: center;
     }}
 .aliIcon{
     width:145px;
-    height: 55px;
+    height: 60px;
     background-position:-1517px 0;
 }
 .jinshanIcon{
@@ -296,7 +349,7 @@ div#myCarousel{
 }
 .huanxincon{
     width:141px;
-    height: 50px;
+    height: 60px;
     background-position:-1351px 0;
 }
 .huanXinBorder{
@@ -305,28 +358,72 @@ div#myCarousel{
 }
 .tongxinIcon{
     width:171px;
-    height: 41px;
+    height: 60px;
     background-position:-1690px 0;
 }
 .cloudStorage{
     width:126px;
-    height: 57px;
+    height: 60px;
     background-position:-1202px 0;
 }
 .link{
     padding: 20px 0 20px 0;
     text-align: center;
-    background-color: white;
+
 }
 .linkContent{
     line-height: 32px;
     font-size: 14px;
     color: #999999;
-    background-color: white;
+
     padding: 0;
 }
 .linkMargin{
     margin-bottom: 11px;
+}
+
+.tips{
+    background-color: #26a26f;
+    font-size: 16px;
+    color: white;
+
+}
+.tipsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+}
+.tips p{
+    margin-top: 35px;
+}
+.tipsText span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+.qrCodeIcon{
+    float: right;
+    width:94px;
+    height: 92px;
+    background-position:-571px 0;
+}
+.qrCode{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 170px;
+}
+@media (max-width: 992px){
+    .qrCode{
+        align-items: flex-start;
+    }}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 1px solid #32c086;
 }
 
 
