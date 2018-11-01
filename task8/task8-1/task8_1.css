@@ -10,127 +10,86 @@ ul{
     list-style: none;
     margin: 0;
 }
-h1{
+h1,h2,h3,h4{
     color: #333333;
     font-size: 18px;
     margin: 0;
     padding-bottom: 40px;
     text-align: center;
-
 }
-h2{
-    color: #333333;
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    padding-bottom: 40px;
-}
-h3{
-    color: #333333;
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    padding: 100px 0 65px 0;
-
-}
-h4{
-    color: #333333;
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    padding: 21px 0 21px 0;
-}
-.elementHidden{
-    visibility: hidden;
-}
+h3{padding: 100px 0 65px 0;}
+h4{padding: 21px 0 21px 0;}
+.elementHidden{visibility: hidden;}
 .header{
-    background-color: white;
     font-size: 14px;
-    color: #29b078;
-    height: 39px;
-    line-height: 39px;
-    width: 100%;
+    color: #29b079;
+    background-color: white;
 }
-.clearheader{
-    min-height: 0;
-    margin-bottom: 0;
-    border: none;
-}
-.header span{
-    display: inline-block;
-    margin-left: 18.75%;
+.header p{
+    margin: 0;
+    line-height: 38px;
+    float: left;
 }
 .spritesImg{
     background: url(sprites-img.png) no-repeat;
     background-size: 1861px 110px;
 }
-.contact{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 39px;
-    width: 110px;
-    margin-right: 18.75%;
-}
-.wechat{
+.wechat,.micro-blog,.qq{
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    margin-left: 15px;
     width: 27px;
     height: 26px;
     background-position: -22px 0;
 }
-.micro-blog{
-    width: 27px;
-    height: 26px;
-    background-position: -57px 0;
-}
+.micro-blog{background-position: -57px 0;}
 .qq{
-    width: 27px;
-    height: 26px;
+    margin-left: 0;
     background-position: -92px 0;
 }
-.option{
-    height: 99px;
-    width: 100%;
+.navColor{
     background-color: #29b078;
-
+    margin: 0;
+    border:none;
 }
-.optionsBar{
-    margin-right: 17.2%;
-    width: 400px;
-    height: 99px;
-}
-.career,.home,.recommend,.about{
-    background-color: #00800000;
-    width: 97px;
-    height: 99px;
-    text-align: center;
-    line-height: 99px;
-    border-radius: 0;
-}
-.nav>li>a:visited{
-   color: white;
-   background-color: #29b078;
-}
-.nav>li>a:hover {
-    background-color: #00800000;
+@media (min-width: 768px){
+    .navbar-nav>li {
+        height: 104px;
+    }}
+.homePage{
     color: white;
 }
-.career:hover{ border-bottom:4px solid white;}
-.home:hover{ border-bottom:4px solid white;}
-.recommend:hover{ border-bottom:4px solid white;}
-.about:hover{ border-bottom:4px solid white;}
-.clearA{
-    border-radius: 0!important;
-    padding: 0!important;
+.navbar-default .navbar-nav > .homePage > a{
+    color: white;
+    border-bottom: 4px solid white;
+}
+@media (max-width: 768px){
+    .navbar-default .navbar-nav > .homePage > a{
+        border:none;
+        padding: 20px 15px;
+    }}
+.navbar-default .navbar-nav > li > a{
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    border-bottom: 4px solid white;
+}
+
+.navbar-nav>li>a{
     font-size: 16px;
-    color:white;
+    padding: 40px 31px;
+    color: white;
 }
-div.item img{
-    width:100%;
-}
-div#myCarousel{
-    width:100%;
-    margin:138px 0 0;
-}
+@media (min-width: 768px){
+    .navbar-nav {
+        float: right;
+    }}
+@media (max-width: 768px){
+    .navbar-nav>li>a{
+        padding: 20px 15px;
+    }}
+div.item img{width:100%;}
 .advantage{
     padding-top: 162px;
     padding-bottom: 95px;
@@ -375,18 +334,13 @@ div#myCarousel{
     line-height: 32px;
     font-size: 14px;
     color: #999999;
-
     padding: 0;
 }
-.linkMargin{
-    margin-bottom: 11px;
-}
-
+.linkMargin{margin-bottom: 11px;}
 .tips{
     background-color: #26a26f;
     font-size: 16px;
     color: white;
-
 }
 .tipsText{
     display: flex;
