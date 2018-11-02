@@ -63,6 +63,7 @@ ul{
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
 }
+
 @media (max-width: 768px){
     .navbar-default .navbar-nav > li > a:hover {
         border: none;
@@ -90,7 +91,9 @@ ul{
     color: #333333;
     line-height: 78px;
 }
-.part1 a{text-decoration: none;}
+.part1 a{
+    text-decoration: none;
+    color: #0f0f0f}
 .part1 span{color: #29b078;}
 .list{
     display: flex;
@@ -152,9 +155,9 @@ ul{
     padding-bottom: 180px;
     margin-bottom: 220px;
 }
-.introduce p{
+.introduce  p{
     margin-bottom: 0;
-    text-indent:28px;
+    text-indent:2rem;
 }
 .introduce br{line-height: 36px;}
 .tips{

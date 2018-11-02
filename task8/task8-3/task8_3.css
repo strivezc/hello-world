@@ -7,6 +7,7 @@ ul{
     margin: 0;
     padding: 0;
 }
+.textCenter{text-align: center;}
 .navCenter{
     text-align: center;
 }
@@ -105,14 +106,12 @@ ul{
     line-height: 60px;
     color: #999999;
 }
-
 .direction>.all{
     color: white;
     background-color: #29b078;
     border: none;
     margin-left:20px;
     margin-right: 10px;
-
     border-radius: 0;
 }
 .direction button{ padding: 3px;}
@@ -135,6 +134,39 @@ h1{
     color: #333333;
     overflow:hidden;
     margin-top:45px;
+    margin-right: 17px;
+    position: relative;
+}
+.clearPadding{padding: 0}
+.hover{
+    width: 100%;
+    height: 481px;
+    position: absolute;
+    color: white;
+    font-size: 0;
+    display: none;
+    background: rgba(0,0,0,.7);
+    animation:shade 4s;
+}
+@keyframes shade
+{
+    from {background: rgba(41,176,120,.8);}
+    to {background: #29b078;}
+}
+.hover span{
+    font-size: 16px;
+    display: block;
+    margin-top: 85px;
+}
+.hover p{
+    font-size: 16px;
+    padding-left:42px;
+    padding-right: 42px;
+    padding-top: 38px;
+    text-indent: 2rem;
+}
+.card:hover .hover{
+    display: block;
 }
 .lastCard{margin-bottom:230px;}
 .summary{
@@ -143,9 +175,7 @@ h1{
     align-items: center;
     border-bottom: 1px solid #d0d6d9;
 }
-.headPortrait{
-    padding: 18px 8px 16px 10px;
-}
+.headPortrait{padding: 18px 8px 16px 10px;}
 .professionalName,.describe{
     font-size: 16px;
     margin: 0;
@@ -160,17 +190,12 @@ h1{
     border-bottom: 1px solid #d0d6d9;
     border-right: 1px solid #d0d6d9;
 }
-.clearBorder{
-    border-right: none;
-}
-.keyWord span{
-    padding-left: 10px;
-}
+.clearBorder{border-right: none;}
+.keyWord span{padding-left: 10px;}
 .pay{
     line-height: 104px;
     width:40%;
     text-align: center;
-
 }
 .experience{
     width: 60%;
@@ -238,4 +263,20 @@ h1{
     text-align: center;
     line-height: 30px;
     border-top: 1px solid #32c086;
+}
+.logo{
+    max-width: 110px;
+    height: auto;
+    line-height: 104px;
+    display: inline-block;
+}
+@media (max-width: 768px){
+    .logo{
+        line-height: 50px;
+        max-width: 65px;
+        margin-left: 15px;
+    } }
+.logoIcon{
+    max-width: 100%;
+    height: auto;
 }
