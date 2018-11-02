@@ -1,0 +1,241 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #fafafa;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navCenter{
+    text-align: center;
+}
+.header{
+    font-size: 14px;
+    color: #29b079;
+    background-color: white;
+}
+.header p{
+    margin: 0;
+    line-height: 38px;
+    float: left;
+}
+.spritesImg{
+    background: url(../task8-1/sprites-img.png) no-repeat;
+    background-size: 1861px 110px;
+}
+.wechat,.micro-blog,.qq{
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    margin-left: 15px;
+    width: 27px;
+    height: 26px;
+    background-position: -22px 0;
+}
+.micro-blog{background-position: -57px 0;}
+.qq{
+    margin-left: 0;
+    background-position: -92px 0;
+}
+.navColor{
+    background-color: #29b078;
+    margin: 0;
+    border:none;
+}
+@media (min-width: 768px){
+    .navbar-nav>li {
+        height: 104px;
+        background-color: #29b078;
+    }}
+.homePage{color: white;}
+.navbar-default .navbar-nav > .homePage > a{
+    border-bottom: 4px solid white;
+}
+@media (max-width: 768px){
+    .navbar-default .navbar-nav > .homePage > a{
+        border:none;
+        padding: 20px 15px;
+    }}
+.navbar-default .navbar-nav > li > a{
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    border-bottom: 4px solid white;
+}
+@media (max-width: 768px){
+    .navbar-default .navbar-nav > li > a:hover {
+        border: none;
+    }}
+.navbar-nav>li>a{
+    font-size: 16px;
+    padding: 40px 31px;
+    color: white;
+}
+@media (min-width: 768px){
+    .navbar-nav {
+        float: right;
+    }}
+@media (max-width: 768px){
+    .navbar-nav>li>a{
+        padding: 20px 15px;
+    }}
+#myNavigation{border: none;}
+.backgroundImg{
+    width: 100%;
+    height: auto;
+}
+.part1{
+    font-size: 16px;
+    color: #333333;
+    line-height: 78px;
+}
+.part1 a{
+    text-decoration: none;
+    color: #0f0f0f
+}
+.part1 span{color: #29b078;}
+.direction{
+    border-top: 1px solid #d0d6d9;
+    border-bottom: 1px solid #edf1f2;
+    font-size: 14px;
+}
+.direction span{
+    display: inline-block;
+    line-height: 60px;
+    color: #999999;
+}
+
+.direction>.all{
+    color: white;
+    background-color: #29b078;
+    border: none;
+    margin-left:20px;
+    margin-right: 10px;
+
+    border-radius: 0;
+}
+.direction button{ padding: 3px;}
+.profession{
+    color: #333333;
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+}
+h1{
+    font-size: 16px;
+    line-height: 80px;
+    color: #333333;
+    border-bottom: 1px solid #d0d6d9;
+    margin: 0;
+}
+.card,.lastCard{
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    color: #333333;
+    overflow:hidden;
+    margin-top:45px;
+}
+.lastCard{margin-bottom:230px;}
+.summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d0d6d9;
+}
+.headPortrait{
+    padding: 18px 8px 16px 10px;
+}
+.professionalName,.describe{
+    font-size: 16px;
+    margin: 0;
+}
+.describe{font-size: 14px;}
+.keyWord,.pay,.experience,.online{
+    float: left;
+    width: 50%;
+    color: #999999;
+    font-size: 12px;
+    line-height: 42px;
+    border-bottom: 1px solid #d0d6d9;
+    border-right: 1px solid #d0d6d9;
+}
+.clearBorder{
+    border-right: none;
+}
+.keyWord span{
+    padding-left: 10px;
+}
+.pay{
+    line-height: 104px;
+    width:40%;
+    text-align: center;
+
+}
+.experience{
+    width: 60%;
+    color: #333333;
+    line-height: 34px;
+    border-right: none;
+    overflow:hidden;
+}
+.experience span{
+    padding-left: 25px;
+    padding-right: 12px;
+}
+.online{
+    width: 100%;
+    font-size: 14px;
+    color: #333333;
+    line-height: 38px;
+    padding-left:10px ;
+    border-right: none;
+}
+.online span{
+    color: #f01400;
+}
+.online p{
+    color: #999999;
+    margin: 0;
+    font-size: 12px;
+}
+.tips{
+    background-color: #26a26f;
+    font-size: 16px;
+    color: white;
+}
+.tipsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+}
+.tips p{margin-top: 35px;}
+.tipsText span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+.qrCodeIcon{
+    float: right;
+    width:94px;
+    height: 92px;
+    background-position:-571px 0;
+}
+.qrCode{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 170px;
+}
+@media (max-width: 992px){
+    .qrCode{
+        align-items: flex-start;
+    }}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 1px solid #32c086;
+}
