@@ -1,4 +1,3 @@
-
 body{
     font-family: "Microsoft YaHei", sans-serif;
     background-color: #fafafa;
@@ -6,9 +5,7 @@ body{
 ul{
     list-style: none;
     margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
+    padding: 0;
 }
 .header{
     font-size: 14px;
@@ -46,12 +43,10 @@ ul{
 @media (min-width: 768px){
     .navbar-nav>li {
         height: 104px;
+        background-color: #29b078;
     }}
-.homePage{
-    color: white;
-}
+.homePage{color: white;}
 .navbar-default .navbar-nav > .homePage > a{
-    color: white;
     border-bottom: 4px solid white;
 }
 @media (max-width: 768px){
@@ -78,6 +73,7 @@ ul{
     .navbar-nav>li>a{
         padding: 20px 15px;
     }}
+#myNavigation{border: none;}
 .backgroundImg{
     width: 100%;
     height: auto;
@@ -87,12 +83,8 @@ ul{
     color: #333333;
     line-height: 78px;
 }
-.part1 a{
-    text-decoration: none;
-}
-.part1 span{
-    color: #29b078;
-}
+.part1 a{text-decoration: none;}
+.part1 span{color: #29b078;}
 .list{
     display: flex;
     flex-direction: column;
@@ -102,7 +94,7 @@ ul{
     margin-bottom: 30px;
 }
 .company{
-    width: 98%;
+    width:99%;
     font-size: 16px;
     line-height: 62px;
     text-align: center;
@@ -116,9 +108,7 @@ ul{
     color: #29b078;
     line-height: 50px;
 }
-.companyName span{
-    color: #ff650e;
-}
+.companyName span{color: #ff650e;}
 .circle,.solidCircle{
     display: inline-block;
     width: 10px;
@@ -126,9 +116,7 @@ ul{
     border: 1px solid #ff9052;
     border-radius: 5px;
 }
-.solidCircle{
-    background-color: #ff9052;
-}
+.solidCircle{background-color: #ff9052;}
 .logo{
     height: 152px;
     text-align: center;
@@ -161,9 +149,7 @@ ul{
     margin-bottom: 0;
     text-indent:28px;
 }
-.introduce br{
-    line-height: 36px;
-}
+.introduce br{line-height: 36px;}
 .tips{
     background-color: #26a26f;
     font-size: 16px;
@@ -175,9 +161,7 @@ ul{
     justify-content: space-between;
     height: 170px;
 }
-.tips p{
-    margin-top: 35px;
-}
+.tips p{margin-top: 35px;}
 .tipsText span {
     display: block;
     font-size: 14px;
