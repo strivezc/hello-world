@@ -59,7 +59,7 @@ ul{
     border-bottom: 4px solid white;
     color: white;
 }
-.header .navbar-default .navbar-toggle:focus{
+.navbar-default .navbar-toggle:focus {
     background: #47d197;
 }
 .navbar-toggle{
@@ -93,7 +93,7 @@ ul{
     .navbar-nav {
         float: right;
     }}
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+ .navbar-default .navbar-toggle:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 .navbar-toggle {
