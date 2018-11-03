@@ -53,12 +53,20 @@ ul{
 .homePage{color: white;}
 .navbar-default .navbar-nav > .homePage > a{
     border-bottom: 4px solid white;
-}
-.navbar-default .navbar-nav > li > a:visited{
-   color: white;
+    color: white;
 }
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
+    color: white;
+}
+.header .navbar-default .navbar-toggle:focus{
+    background: #47d197;
+}
+.navbar-toggle{
+    border: none;
+}
+.navbar-default .navbar-nav > li > a:visited{
+   color: white;
 }
 @media (max-width: 768px){
     .navbar-default .navbar-nav > .homePage > a{
@@ -70,6 +78,7 @@ ul{
     }
     .navbar-default .navbar-nav > li > a:hover{
         border: none;
+        background: #38c58a;
     }
 }
 .navbar-default .navbar-nav > li > a{
@@ -98,9 +107,9 @@ ul{
     position: absolute;
     right: 0;
     line-height: 38px;
-    cursor: pointer;
     visibility: hidden;
 }
+.land a{color: black}
 @media (max-width: 768px){
     .navbar-nav>li>a{
         padding: 20px 15px;
@@ -164,6 +173,10 @@ h1{
     position: relative;
     border-radius: 5px;
 }
+.textPadding{
+    line-height: 14px;
+    padding: 12px 0 12px 0;
+}
 @media (max-width: 768px) {
     .card, .lastCard {
         width: 70%;
@@ -220,7 +233,10 @@ h1{
     font-size: 16px;
     margin: 0;
 }
-.describe{font-size: 14px;}
+.describe{
+    font-size: 14px;
+    padding-right: 8px;
+}
 .keyWord,.pay,.experience,.online{
     float: left;
     width: 50%;
@@ -287,7 +303,6 @@ h1{
     cursor: pointer;
     border-bottom: 1px solid white;
 }
-.incubator{border-bottom: 1px solid white;}
 .qrCodeIcon{
     float: right;
     width:94px;

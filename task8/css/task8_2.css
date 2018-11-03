@@ -63,13 +63,21 @@ ul{
 .navbar-default .navbar-nav > li > a:visited{
     color: white;
 }
+.header .navbar-default .navbar-toggle:focus{
+    background: #47d197;
+}
+.navbar-toggle{
+    border: none;
+}
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
+    color: white;
 }
 
 @media (max-width: 768px){
     .navbar-default .navbar-nav > li > a:hover {
         border: none;
+        background: #38c58a;
     }}
 .navbar-nav>li>a{
     font-size: 16px;
@@ -103,9 +111,9 @@ ul{
     position: absolute;
     right: 0;
     line-height: 38px;
-    cursor: pointer;
     visibility: hidden;
 }
+.land a{color: black}
 @media (max-width: 768px){
     .navbar-nav>li>a{
         padding: 20px 15px;
@@ -148,6 +156,7 @@ ul{
     width: 90px;
     margin: auto;
 }
+.center:hover .circle{background-color: #ff9052;}
 .companyName span{color: #ff650e;}
 .circle,.solidCircle{
     display: inline-block;
@@ -176,11 +185,6 @@ ul{
     color: #999999;
     border-radius: 10px;
 }
-@media (max-width: 768px) {
-    .rowBackground,.introduce {
-        margin: 0;
-    }
-}
 .rowBackground{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -199,6 +203,15 @@ ul{
     padding-top: 30px;
     padding-bottom: 180px;
     margin-bottom: 220px;
+}
+@media (max-width: 768px) {
+    .rowBackground,.introduce {
+        margin: 0;
+    }
+    .introduce{
+        margin-bottom: 100px;
+        padding-bottom: 80px;
+    }
 }
 .introduce  p{
     margin-bottom: 0;
@@ -228,7 +241,6 @@ ul{
     cursor: pointer;
     border-bottom: 1px solid white;
 }
-.incubator{border-bottom: 1px solid white;}
 .qrCodeIcon{
     float: right;
     width:94px;

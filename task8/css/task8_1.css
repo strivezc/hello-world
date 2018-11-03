@@ -73,12 +73,23 @@ h4{padding: 21px 0 21px 0;}
 .navbar-default .navbar-nav > li > a{
     color: white;
 }
+.navbar-default .navbar-nav > li > a:active{
+    background: #38c58a;
+}
+ .navbar-default .navbar-toggle:focus{
+    background: #47d197;
+}
+.navbar-toggle{
+    border: none;
+}
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
+    color: white;
 }
 @media (max-width: 768px){
     .navbar-default .navbar-nav > li > a:hover{
         border: none;
+        background: #38c58a;
     }}
     .navCenter{
         text-align: center;
@@ -92,7 +103,7 @@ h4{padding: 21px 0 21px 0;}
     .navbar-nav {
         float: right;
     }}
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+ .navbar-default .navbar-toggle:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 .navbar-toggle {
@@ -106,15 +117,18 @@ h4{padding: 21px 0 21px 0;}
     position: absolute;
     right: 0;
     line-height: 38px;
-    cursor: pointer;
     visibility: hidden;
 }
+.land a{color: black}
 @media (max-width: 768px){
     .navbar-nav>li>a{
         padding: 20px 15px;
     }
     .qq,.wechat,.micro-blog{visibility: hidden}
     .land{visibility: visible}
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #29b078;
 }
 div.item img{width:100%;}
 .advantage{
@@ -194,10 +208,6 @@ div.item img{width:100%;}
     align-items: center;
     justify-content: space-between;
 }
-@media (max-width: 1200px){
-    .step1{
-        padding-bottom: 45px;;
-    }}
 .circle{
     width: 74px;
     height: 74px;
@@ -220,6 +230,10 @@ div.item img{width:100%;}
     background: url(../image/9.png) no-repeat;
     background-size: 29px 27px;
 }
+.method{
+    width: 140px;
+    margin: 0;
+}
 .stepWidth{
     width: 100%;
 }
@@ -234,6 +248,7 @@ div.item img{width:100%;}
     .statistics{
         width: 50%;
         margin: auto;
+        border-left: none;
     }
 }
 @media (max-width: 425px){
@@ -255,7 +270,13 @@ div.item img{width:100%;}
 @media (max-width: 1200px){
     .step2{
         padding-bottom: 60px;;
-    }}
+        justify-content: space-around;
+    }
+    .step1{
+        padding-bottom: 45px;
+        justify-content: space-around;
+
+    }
 .exhibition{
     display: flex;
     flex-direction: column;
@@ -424,7 +445,6 @@ div.item img{width:100%;}
     cursor: pointer;
     border-bottom: 1px solid white;
 }
-.incubator{border-bottom: 1px solid white;}
 .qrCodeIcon{
     float: right;
     width:94px;
