@@ -21,7 +21,7 @@ ul{
     float: left;
 }
 .spritesImg{
-    background: url(../task8-1/sprites-img.png) no-repeat;
+    background: url(../image/sprites-img.png) no-repeat;
     background-size: 1861px 110px;
 }
 .wechat,.micro-blog,.qq{
@@ -60,6 +60,9 @@ ul{
 .navbar-default .navbar-nav > li > a{
     color: white;
 }
+.navbar-default .navbar-nav > li > a:visited{
+    color: white;
+}
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
 }
@@ -86,6 +89,30 @@ ul{
     width: 100%;
     height: auto;
 }
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+.navbar-toggle {
+    background-color: #47d197;
+}
+.contact{
+    overflow: hidden;
+    position: relative;
+}
+.land{
+    position: absolute;
+    right: 0;
+    line-height: 38px;
+    cursor: pointer;
+    visibility: hidden;
+}
+@media (max-width: 768px){
+    .navbar-nav>li>a{
+        padding: 20px 15px;
+    }
+    .qq,.wechat,.micro-blog{visibility: hidden}
+    .land{visibility: visible}
+}
 .part1{
     font-size: 16px;
     color: #333333;
@@ -96,12 +123,11 @@ ul{
     color: #0f0f0f}
 .part1 span{color: #29b078;}
 .list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
     background-color: white;
     border: 1px solid #e6e6e6;
-    margin-bottom: 30px;
+    border-radius: 10px;
 }
 .company{
     width:99%;
@@ -112,11 +138,15 @@ ul{
     border-bottom: 1px solid #e6e6e6;
 }
 .companyName{
-    width:85px;
     display: block;
     font-size: 14px;
     color: #29b078;
     line-height: 50px;
+    cursor: pointer;
+}
+.center{
+    width: 90px;
+    margin: auto;
 }
 .companyName span{color: #ff650e;}
 .circle,.solidCircle{
@@ -125,6 +155,7 @@ ul{
     height: 10px;
     border: 1px solid #ff9052;
     border-radius: 5px;
+
 }
 .solidCircle{background-color: #ff9052;}
 .logo{
@@ -143,6 +174,20 @@ ul{
     font-size: 14px;
     line-height: 28px;
     color: #999999;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .rowBackground,.introduce {
+        margin: 0;
+    }
+}
+.rowBackground{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.introduce{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 .abstract{
     display: block;
@@ -173,11 +218,17 @@ ul{
 }
 .tips p{margin-top: 35px;}
 .tipsText span {
-    display: block;
+    display: inline-block;
     font-size: 14px;
     margin-bottom: 20px;
-    line-height: 40px;
+    line-height: 25px;
+    height: 26px;
 }
+.tips span:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.incubator{border-bottom: 1px solid white;}
 .qrCodeIcon{
     float: right;
     width:94px;

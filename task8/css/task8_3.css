@@ -22,7 +22,7 @@ ul{
     float: left;
 }
 .spritesImg{
-    background: url(../task8-1/sprites-img.png) no-repeat;
+    background: url(../image/sprites-img.png) no-repeat;
     background-size: 1861px 110px;
 }
 .wechat,.micro-blog,.qq{
@@ -48,26 +48,33 @@ ul{
     .navbar-nav>li {
         height: 104px;
         background-color: #29b078;
-    }}
+    }
+}
 .homePage{color: white;}
 .navbar-default .navbar-nav > .homePage > a{
+    border-bottom: 4px solid white;
+}
+.navbar-default .navbar-nav > li > a:visited{
+   color: white;
+}
+.navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
 }
 @media (max-width: 768px){
     .navbar-default .navbar-nav > .homePage > a{
         border:none;
         padding: 20px 15px;
-    }}
+    }
+    .navbar-nav>li>a{
+        padding: 20px 15px;
+    }
+    .navbar-default .navbar-nav > li > a:hover{
+        border: none;
+    }
+}
 .navbar-default .navbar-nav > li > a{
     color: white;
 }
-.navbar-default .navbar-nav > li > a:hover{
-    border-bottom: 4px solid white;
-}
-@media (max-width: 768px){
-    .navbar-default .navbar-nav > li > a:hover {
-        border: none;
-    }}
 .navbar-nav>li>a{
     font-size: 16px;
     padding: 40px 31px;
@@ -77,10 +84,30 @@ ul{
     .navbar-nav {
         float: right;
     }}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+.navbar-toggle {
+    background-color: #47d197;
+}
+.contact{
+    overflow: hidden;
+    position: relative;
+}
+.land{
+    position: absolute;
+    right: 0;
+    line-height: 38px;
+    cursor: pointer;
+    visibility: hidden;
+}
 @media (max-width: 768px){
     .navbar-nav>li>a{
         padding: 20px 15px;
-    }}
+    }
+    .qq,.wechat,.micro-blog{visibility: hidden}
+    .land{visibility: visible}
+}
 #myNavigation{border: none;}
 .backgroundImg{
     width: 100%;
@@ -134,10 +161,22 @@ h1{
     color: #333333;
     overflow:hidden;
     margin-top:45px;
-    margin-right: 17px;
     position: relative;
+    border-radius: 5px;
 }
-.clearPadding{padding: 0}
+@media (max-width: 768px) {
+    .card, .lastCard {
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 425px) {
+    .card, .lastCard {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 .hover{
     width: 100%;
     height: 481px;
@@ -145,8 +184,9 @@ h1{
     color: white;
     font-size: 0;
     display: none;
-    background: rgba(0,0,0,.7);
+    background:  #29b078;
     animation:shade 4s;
+    border-radius: 5px;
 }
 @keyframes shade
 {
@@ -237,11 +277,17 @@ h1{
 }
 .tips p{margin-top: 35px;}
 .tipsText span {
-    display: block;
+    display: inline-block;
     font-size: 14px;
     margin-bottom: 20px;
-    line-height: 40px;
+    line-height: 25px;
+    height: 26px;
 }
+.tips span:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.incubator{border-bottom: 1px solid white;}
 .qrCodeIcon{
     float: right;
     width:94px;
