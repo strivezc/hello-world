@@ -73,7 +73,6 @@ ul{
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
     color: white;
-    background: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px){
