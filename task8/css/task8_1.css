@@ -247,6 +247,7 @@ div.item img{width:100%;}
         width: 50%;
         margin: auto;
         border-left: none;
+        background: none;
     }
     .circle{
         margin-right: 30px;
