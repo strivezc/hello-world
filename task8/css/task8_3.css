@@ -163,6 +163,7 @@ h1{
     color: #333333;
     border-bottom: 1px solid #d0d6d9;
     margin: 0;
+    font-weight: bold;
 }
 .card,.lastCard{
     background-color: white;
