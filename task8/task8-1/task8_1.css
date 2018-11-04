@@ -16,7 +16,6 @@ h1,h2,h3,h4{
     margin: 0;
     padding-bottom: 40px;
     text-align: center;
-    font-weight:bold;
 }
 h3{padding: 100px 0 65px 0;}
 h4{padding: 21px 0 21px 0;}
@@ -32,7 +31,7 @@ h4{padding: 21px 0 21px 0;}
     float: left;
 }
 .spritesImg{
-    background: url(../image/sprites-img.png) no-repeat;
+    background: url(sprites-img.png) no-repeat;
     background-size: 1861px 110px;
 }
 .wechat,.micro-blog,.qq{
@@ -54,9 +53,6 @@ h4{padding: 21px 0 21px 0;}
     margin: 0;
     border:none;
 }
-.navbar-default .navbar-nav > li > a:visited{
-    color: white;
-}
 @media (min-width: 768px){
     .navbar-nav>li {
         height: 104px;
@@ -74,23 +70,12 @@ h4{padding: 21px 0 21px 0;}
 .navbar-default .navbar-nav > li > a{
     color: white;
 }
-.navbar-default .navbar-nav > li > a:active{
-    background: #38c58a;
-}
- .navbar-default .navbar-toggle:focus{
-    background: #47d197;
-}
-.navbar-toggle{
-    border: none;
-}
 .navbar-default .navbar-nav > li > a:hover{
     border-bottom: 4px solid white;
-    color: white;
 }
 @media (max-width: 768px){
     .navbar-default .navbar-nav > li > a:hover{
         border: none;
-        background: #38c58a;
     }}
     .navCenter{
         text-align: center;
@@ -104,33 +89,10 @@ h4{padding: 21px 0 21px 0;}
     .navbar-nav {
         float: right;
     }}
- .navbar-default .navbar-toggle:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-.navbar-toggle {
-    background-color: #47d197;
-}
-.contact{
-    overflow: hidden;
-    position: relative;
-}
-.land{
-    position: absolute;
-    right: 0;
-    line-height: 38px;
-    visibility: hidden;
-}
-.land a{color: black}
 @media (max-width: 768px){
     .navbar-nav>li>a{
         padding: 20px 15px;
-    }
-    .qq,.wechat,.micro-blog{visibility: hidden}
-    .land{visibility: visible}
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #29b078;
-}
+    }}
 div.item img{width:100%;}
 .advantage{
     padding-top: 162px;
@@ -155,7 +117,7 @@ div.item img{width:100%;}
     margin: auto;
 }
 .connectionIcon{
-    background: url(../image/6.png) no-repeat;
+    background: url(6.png) no-repeat;
     background-size: 54px 57px;
     width: 54px;
     height: 67px;
@@ -173,22 +135,18 @@ div.item img{width:100%;}
     font-size: 16px;
 }
 .statistics{
-    margin: 130px 0 0 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 50px;
+    padding: 190px 0 95px 0;
     font-size: 18px;
     color: #999999;
     list-style: none;
-    background-image: url(../image/dashed.png);
-    background-repeat: repeat-y;
+    margin-bottom: 0;
+    margin-left: 55px;
 }
 @media (max-width: 992px){
     .statistics{
-        padding-top: 45px;
-        padding-left: 0;
-        margin: 40px 0 0;
-        padding-bottom: 47px;
+        margin: 0;
+        padding-top: 95px;
+        padding-bottom:47px;
         text-align: center;
     }}
 .statisticsIcon{
@@ -210,11 +168,15 @@ div.item img{width:100%;}
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 1200px){
+    .step1{
+        padding-bottom: 45px;;
+    }}
 .circle{
     width: 74px;
     height: 74px;
     background-size: 74px 74px;
-    background: url(../image/8.png) no-repeat 0 0;
+    background: url(8.png) no-repeat 0 0;
     text-align: center;
 }
 .circle span{
@@ -229,29 +191,13 @@ div.item img{width:100%;}
     display: inline-block;
     width:30px;
     height: 27px;
-    background: url(../image/9.png) no-repeat;
+    background: url(9.png) no-repeat;
     background-size: 29px 27px;
-}
-.method{
-    width: 112px;
-    margin: 0;
-}
-.stepWidth{
-    width: 100%;
 }
 @media (max-width: 768px){
     .arrow,.arrow2{
-       display: none;
-    }
-    .statistics{
-        width: 50%;
-        margin: auto;
-        border-left: none;
-    }
-    .circle{
-        margin-right: 30px;
-    }
-}
+        visibility: hidden;
+    }}
 @media (max-width: 1200px){
     .arrow2 {
         visibility: hidden;
@@ -266,19 +212,7 @@ div.item img{width:100%;}
 @media (max-width: 1200px){
     .step2{
         padding-bottom: 60px;;
-        justify-content: space-around;
-    }
-    .step1{
-        padding-bottom: 45px;
-        justify-content: space-around;
-    }
-}
-@media (max-width: 768px){
-    .step1 ,.step2{
-        padding-bottom: 45px;
-        justify-content: center;
-    }
-}
+    }}
 .exhibition{
     display: flex;
     flex-direction: column;
@@ -290,12 +224,6 @@ div.item img{width:100%;}
     background-color: white;
     margin-top: 20px;
 }
-@media screen and (max-width: 768px){
-    .exhibition{
-        width: 80%;
-        margin: auto;
-        margin-top: 20px;
-    }}
 .exhibition span{
     display: block;
     color: #999999;
@@ -328,41 +256,31 @@ div.item img{width:100%;}
     margin-top: 19px;
 }
 .point{
+    font-size: 15px;
     text-align: center;
-    margin: auto;
-    line-height: 56px;
+    line-height: 65px;
 }
 .point1,.point2{
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    box-shadow: 0 0 5px  #a1a1a1;
-    background-color: white;
+    color: #29b078;
     cursor: pointer;
 }
-.point1{background-color:#29b078;}
-.point2:hover {background-color:#29b078; }
-.rowBorder{
-    box-shadow: 0 0 4px  #dbdbdb;
-    margin-bottom: 90px;
-    list-style: none;
+.point2{
+    color: white;
 }
-@media screen and (max-width: 768px){
-    .rowBorder{
-        margin-left: 40px;
-        margin-right: 40px;
-    }}
+.point2:hover {
+    color:#29b078; }
+.round a:hover{
+    text-decoration:none;
+}
+.rowBorder{border: 2px solid #e2e2e2;
+    margin-bottom: 90px;
+    list-style: none;}
 .companyLogo{
     display: flex;
     justify-content: center;
     background-color: white;
     padding: 60px 0 60px 0;
-}
-.companyLogo:hover{
-    box-shadow: 0 0 10px  #dbdbdb;
-    z-index: 1;
 }
 @media screen and (min-width: 992px){
     .col-md-20 {
@@ -403,6 +321,10 @@ div.item img{width:100%;}
     height: 60px;
     background-position:-1351px 0;
 }
+.huanXinBorder{
+    border-left: 2px solid #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+}
 .tongxinIcon{
     width:171px;
     height: 60px;
@@ -437,15 +359,10 @@ div.item img{width:100%;}
 }
 .tips p{margin-top: 35px;}
 .tipsText span {
-    display: inline-block;
+    display: block;
     font-size: 14px;
     margin-bottom: 20px;
-    line-height: 25px;
-    height: 26px;
-}
-.tips span:hover{
-    cursor: pointer;
-    border-bottom: 1px solid white;
+    line-height: 40px;
 }
 .qrCodeIcon{
     float: right;
