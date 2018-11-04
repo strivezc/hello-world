@@ -326,10 +326,11 @@ h1{
     border-top: 1px solid #32c086;
 }
 .logo{
+    display: inline-block;
     max-width: 110px;
     height: auto;
     line-height: 104px;
-    display: inline-block;
+    margin-left: 15px;
 }
 @media (max-width: 768px){
     .logo{
