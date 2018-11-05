@@ -69,7 +69,11 @@ ul{
     font-size: 0;
     float: right;
 }
-.process{
+.process span{
+    font-size: 18px;
+    line-height: 66px;
+}
+.process1,.process{
     display: inline-block;
     color: #cccccc;
     padding-top:38px;
@@ -81,11 +85,7 @@ ul{
     background-color:#ff7f02 ;
 }
 .process:hover  span{color:#ff7f02 ;}
-.process span{
-    font-size: 18px;
-    line-height: 66px;
-}
-.circle{
+.circle1,.circle{
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -94,13 +94,15 @@ ul{
     color: white;
     font-size: 16px;
 }
-.line{
+.line1,.line{
     display: inline-block;
-    width: 62px;
+    width: 60px;
     height: 5px;
     background-color: #cccccc;
     font-size: 18px;
 }
+.line1,.circle1{  background-color:#ff7f02 ;}
+.bcg{color:#ff7f02 ;}
 h1{
     font-size: 22px;
     margin-top: 15px;
@@ -111,6 +113,8 @@ h1{
 }
 .next{
     text-align: center;
+    padding: 100px 0;
+    border:  1px solid #e7e7e7;
     }
 .nextButton{
     font-size: 24px;
@@ -157,9 +161,7 @@ h1{
     }
     .align{float: left}
     .footer p{padding: 36px 0 36px 0;}
-    .about{
-        padding: 33px 0 33px 0;
-    }
+    .about{padding: 33px 0 33px 0;}
 }
 .align{overflow: hidden;}
 .copyright {
@@ -168,4 +170,152 @@ h1{
     line-height: 30px;
    background-color: #1d7ad9;
     color: white;
+}
+
+.choice,.choice1{
+    font-size: 18px;
+    color: #1d7ad9;
+    line-height: 45px;
+    background-color: #f2f2f2;
+    border: 1px solid #e7e7e7;;
+}
+.choice1{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.icon{margin-left: 15px;}
+.box,.externalDiameter{
+    display: inline-block;
+    font-weight: inherit;
+    line-height: 0;
+    margin: 30px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666666;
+    position: relative;
+}
+.externalDiameter{margin-top: 15px}
+input[type=radio]{display: none}
+label:before{
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #d6d6d6;
+    margin-right: 15px;
+   vertical-align: middle;
+}
+input:checked+label:before{
+    background-color: #1d7ad9;
+}
+input:checked+label::after{
+    display: inline-block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    bottom: 7px;
+    background-color: white;
+}
+.text{
+    width: 68px;
+    height: 28px;
+    border: 1px solid #e8e8e8;
+}
+.parameter{
+    display: inline-block;
+    font-size: 18px;
+    color: #666666;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px 0;
+}
+.li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbfcff;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+}
+@media (max-width: 620px){
+    .line {
+        float: none;
+        text-align: center;
+    }
+    .process span {
+        font-size: 13px;
+        line-height: 45px;
+    }
+    .line {width: 35px;}
+    .circle {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    h1{font-size: 18px}
+}
+@media (max-width: 425px){
+    .line {width: 24px;}
+}
+.size{display: inline-block}
+@media (max-width: 992px){
+    .box,.externalDiameter{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    .parameter{font-size: 15px;}
+}
+.margin{margin-bottom: 50px}
+.homePage{
+    background-color: #1d7ad9;
+    color: white;
+}
+.detail{margin-right: 15px;}
+.detailButton{
+    border-radius: 0;
+    color: #999999;
+    padding: 6px 5px 6px 20px;
+}
+.blueBlock{
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 15px;
+    width: 24px;
+    height: 28px;
+    background-color: #1d7ad9;
+    border-radius: 2px;
+}
+.triangle{
+    content: "";
+    border-top: solid 7px white;
+    border-left: solid 6px #00800000;
+    border-right: solid 6px #00800000;
+    position: absolute;
+    top: 11px;
+    left: 6px;
+}
+.detailMenu{ min-width: 126px;}
+@media (max-width: 768px){
+    .box, .externalDiameter{
+    }
+    .parameter{margin-right: 15px}
+    .flowLine{
+        float: none;
+        text-align: center;}
+    .detailButton{ padding: 5px;}
+    .blueBlock{margin-left: 8px;}
+    .detailMenu{ min-width: 104px;}
+    .nextButton {
+        font-size: 18px;
+        padding: 8px 30px;
+        line-height: 18px;
+}
+.dropdown-menu>li>a{
+    text-align: center;
+    padding: 3px 0px;
 }
