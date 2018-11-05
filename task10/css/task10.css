@@ -290,7 +290,7 @@ input:checked+label::after{
     background-color: #1d7ad9;
     border-radius: 2px;
 }
-.triangle{
+.blueBlock:before{
     content: "";
     border-top: solid 7px white;
     border-left: solid 6px #00800000;
