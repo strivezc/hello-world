@@ -293,8 +293,8 @@ input:checked+label::after{
 .blueBlock:before{
     content: "";
     border-top: solid 7px white;
-    border-left: solid 6px #00800000;
-    border-right: solid 6px #00800000;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
     position: absolute;
     top: 11px;
     left: 6px;
