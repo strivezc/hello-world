@@ -250,8 +250,8 @@ input:checked+label::after{
         font-size: 13px;
         line-height: 45px;
     }
-    .line {width: 35px;}
-    .circle {
+    .line,.line1{width: 35px;}
+    .circle,.circle1 {
         font-size: 12px;
         line-height: 24px;
     }
