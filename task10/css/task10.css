@@ -52,7 +52,7 @@ ul{
     border: none;
     padding: 15px 17px;
     margin: 20px 25px;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 1px 1px 1px #e6e6e6;
 }
 .btn-primary:active{background-color: #1d7ad9}
@@ -94,14 +94,22 @@ ul{
     color: white;
     font-size: 16px;
 }
-.line1,.line{
+.line1,.line2,.line{
     display: inline-block;
     width: 60px;
     height: 5px;
     background-color: #cccccc;
     font-size: 18px;
 }
-.line1,.circle1{  background-color:#ff7f02 ;}
+.line1{
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.line2{
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.line1,.line2,.circle1{  background-color:#ff7f02 ;}
 .bcg{color:#ff7f02 ;}
 h1{
     font-size: 22px;
@@ -171,7 +179,6 @@ h1{
    background-color: #1d7ad9;
     color: white;
 }
-
 .choice,.choice1{
     font-size: 18px;
     color: #1d7ad9;
@@ -250,7 +257,7 @@ input:checked+label::after{
         font-size: 13px;
         line-height: 45px;
     }
-    .line,.line1{width: 35px;}
+    .line,.line1,.line2{width: 35px;}
     .circle,.circle1 {
         font-size: 12px;
         line-height: 24px;
@@ -274,48 +281,38 @@ input:checked+label::after{
     background-color: #1d7ad9;
     color: white;
 }
-.detail{margin-right: 15px;}
-.detailButton{
-    border-radius: 0;
-    color: #999999;
-    padding: 6px 5px 6px 20px;
-}
-.blueBlock{
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 15px;
-    width: 24px;
-    height: 28px;
-    background-color: #1d7ad9;
-    border-radius: 2px;
-}
-.blueBlock:before{
-    content: "";
-    border-top: solid 7px white;
-    border-left: solid 6px transparent;
-    border-right: solid 6px transparent;
-    position: absolute;
-    top: 11px;
-    left: 6px;
+.detail{
+    display: block;
+    appearance:none;
+    -webkit-appearance:none;
+    border: 1px solid #e8e8e8;
+    margin:15px 15px 15px 0;
+    width: 118px;
+    color:#999999;
+    background: url("../image/5.png") no-repeat 85px;
+    padding: 10px 45px 10px 15px;
+    outline:none;
 }
 .detailMenu{ min-width: 126px;}
-@media (max-width: 768px){
-    .box, .externalDiameter{
+@media (max-width: 768px) {
+    .parameter {
+        margin-right: 15px
     }
-    .parameter{margin-right: 15px}
-    .flowLine{
+    .flowLine {
         float: none;
-        text-align: center;}
-    .detailButton{ padding: 5px;}
-    .blueBlock{margin-left: 8px;}
-    .detailMenu{ min-width: 104px;}
+        text-align: center;
+    }
+    .detailMenu {min-width: 104px;}
     .nextButton {
         font-size: 18px;
         padding: 8px 30px;
         line-height: 18px;
+    }
 }
 .dropdown-menu>li>a{
     text-align: center;
-    padding: 3px 0px;
+    padding: 3px 0;}
+@media (max-width: 425px) {
+    .li{flex-direction: column;
+    align-items: center;}
 }
