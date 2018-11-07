@@ -27,115 +27,117 @@
         </div>
     </nav>
     <div class="container">
-    <div class="flowLine">
-        <div class="process">
-            <div class="line1"></div>
-            <div class="circle1">1</div>
-            <div class="line2"></div><br>
-            <span class="bcg">1.定制纸箱</span>
+        <div class="flowLine">
+            <div class="process">
+                <div class="line1"></div>
+                <div class="circle1">1</div>
+                <div class="line2"></div>
+                <br>
+                <span class="bcg">1.定制纸箱</span>
+            </div>
+            <div class="process">
+                <div class="line"></div>
+                <div class="circle">2</div>
+                <div class="line"></div>
+                <br>
+                <span>2.选择数量</span>
+            </div>
+            <div class="process">
+                <div class="line"></div>
+                <div class="circle">3</div>
+                <div class="line"></div>
+                <br>
+                <span>3.上传附件</span>
+            </div>
+            <div class="process">
+                <div class="line"></div>
+                <div class="circle">4</div>
+                <div class="line"></div>
+                <br>
+                <span>4.确认下单</span>
+            </div>
         </div>
-        <div class="process">
-            <div class="line"></div>
-            <div class="circle">2</div>
-            <div class="line"></div><br>
-            <span>2.选择数量</span>
-        </div>
-        <div class="process">
-            <div class="line"></div>
-            <div class="circle">3</div>
-            <div class="line"></div><br>
-            <span>3.上传附件</span>
-        </div>
-        <div class="process">
-            <div class="line"></div>
-            <div class="circle">4</div>
-            <div class="line"></div><br>
-            <span>4.确认下单</span>
-        </div>
-    </div>
     </div>
     <div class="container">
         <h1>请您按照以下步骤来定制您的纸箱</h1>
         <form action="">
-        <ul class="margin">
-            <li class="choice1">
-                <img  class="icon" src="../image/1.png">
-                选择箱型
-            </li>
-            <li class="li">
+            <ul class="margin">
+                <li class="choice1">
+                    <img class="icon" src="../image/1.png">
+                    选择箱型
+                </li>
+                <li class="li">
                     <div>
-                    <input type="radio" name="box" id="box1" checked="checked" >
-                    <label for="box1" class="box">对口箱</label>
-                    <input type="radio" name="box" id="box2"  >
-                    <label for="box2" class="box">对口箱</label>
-                    <input type="radio" name="box" id="box3"  >
-                    <label for="box3" class="box">对口箱</label>
+                        <input type="radio" name="box" id="box1" checked="checked">
+                        <label for="box1" class="box">对口箱</label>
+                        <input type="radio" name="box" id="box2">
+                        <label for="box2" class="box">对口箱</label>
+                        <input type="radio" name="box" id="box3">
+                        <label for="box3" class="box">对口箱</label>
                     </div>
-                <select class="detail" name="details">
-                    <option value="volvo">查看详情</option>
-                    <option value="saab">对口箱</option>
-                    <option value="fiat">飞机盒</option>
-                    <option value="audi">天地盖</option>
-                </select>
-            </li>
-            <li class="choice">
-                <img  class="icon" src="../image/2.png">
-                确定尺寸
-            </li>
-            <li class="li">
-                <div>
-                    <input type="radio" name="size" id="externalDiameter" checked="checked" >
-                    <label for="externalDiameter" class="box">外径</label>
-                    <div class="size">
-                    <div class="parameter"> 长：<input class="text" type="text" id="long">mm</div>
-                    <div class="parameter"> 宽：<input class="text" type="text" id="long">mm</div>
-                    <div class="parameter"> 高：<input class="text" type="text" id="long">mm</div>
+                    <select class="detail" name="details">
+                        <option value="volvo">查看详情</option>
+                        <option value="saab">对口箱</option>
+                        <option value="fiat">飞机盒</option>
+                        <option value="audi">天地盖</option>
+                    </select>
+                </li>
+                <li class="choice">
+                    <img class="icon" src="../image/2.png">
+                    确定尺寸
+                </li>
+                <li class="li">
+                    <div>
+                        <input type="radio" name="size" id="externalDiameter" checked="checked">
+                        <label for="externalDiameter" class="box">外径</label>
+                        <div class="size">
+                            <div class="parameter"> 长：<input class="text" type="text" id="long">mm</div>
+                            <div class="parameter"> 宽：<input class="text" type="text" id="long">mm</div>
+                            <div class="parameter"> 高：<input class="text" type="text" id="long">mm</div>
+                        </div>
+                        <br>
+                        <input type="radio" name="size" id="internalDiameter">
+                        <label for="internalDiameter" class="externalDiameter">内径</label>
+                        <div class="size">
+                            <div class="parameter"> 长：<input class="text" type="text" id="long">mm</div>
+                            <div class="parameter"> 宽：<input class="text" type="text" id="long">mm</div>
+                            <div class="parameter"> 高：<input class="text" type="text" id="long">mm</div>
+                        </div>
                     </div>
-                    <br>
-                    <input type="radio" name="size" id="internalDiameter"  >
-                    <label for="internalDiameter" class="externalDiameter">内径</label>
-                    <div class="size">
-                    <div class="parameter"> 长：<input class="text" type="text" id="long">mm</div>
-                    <div class="parameter"> 宽：<input class="text" type="text" id="long">mm</div>
-                    <div class="parameter"> 高：<input class="text" type="text" id="long">mm</div>
+                    <select class="detail" name="details">
+                        <option value="volvo">查看详情</option>
+                        <option value="saab">内径</option>
+                        <option value="fiat">内径</option>
+                    </select>
+                </li>
+                <li class="choice">
+                    <img class="icon" src="../image/3.png">
+                    选择材质
+                </li>
+                <li class="li">
+                    <div>
+                        <input type="radio" name="material" id="material1" checked="checked">
+                        <label for="material1" class="box">三层A瓦优质</label>
+                        <input type="radio" name="material" id="material2">
+                        <label for="material2" class="box">三层A瓦优质</label>
+                        <input type="radio" name="material" id="material3">
+                        <label for="material3" class="box">三层A瓦优质</label>
+                        <input type="radio" name="material" id="material4">
+                        <label for="material4" class="box">三层A瓦优质</label>
+                        <input type="radio" name="material" id="material5">
+                        <label for="material5" class="box">三层A瓦优质</label>
                     </div>
-                    </div>
-                <select class="detail" name="details">
-                    <option value="volvo">查看详情</option>
-                    <option value="saab">内径</option>
-                    <option value="fiat">内径</option>
-                </select>
-            </li>
-            <li class="choice">
-                <img  class="icon" src="../image/3.png">
-                选择材质
-            </li>
-            <li class="li">
-                <div>
-                    <input type="radio" name="material" id="material1" checked="checked" >
-                    <label for="material1" class="box">三层A瓦优质</label>
-                    <input type="radio" name="material" id="material2"  >
-                    <label for="material2" class="box">三层A瓦优质</label>
-                    <input type="radio" name="material" id="material3"  >
-                    <label for="material3" class="box">三层A瓦优质</label>
-                    <input type="radio" name="material" id="material4"  >
-                    <label for="material4" class="box">三层A瓦优质</label>
-                    <input type="radio" name="material" id="material5"  >
-                    <label for="material5" class="box">三层A瓦优质</label>
-                </div>
-                <select class="detail" name="details">
-                    <option value="volvo">查看详情</option>
-                    <option value="saab">三层A瓦优质</option>
-                    <option value="fiat">三层A瓦优质</option>
-                    <option value="audi">三层A瓦优质</option>
-                </select>
-            </li>
-            <li>
-                <div class="next">
-                    <button type="button" class="btn btn-danger nextButton">下一步</button>
-                </div>
-            </li>
-        </ul>
+                    <select class="detail" name="details">
+                        <option value="volvo">查看详情</option>
+                        <option value="saab">三层A瓦优质</option>
+                        <option value="fiat">三层A瓦优质</option>
+                        <option value="audi">三层A瓦优质</option>
+                    </select>
+                </li>
+                <li class="next">
+                    <input class="nextButton" type="submit" value="下一步">
+                </li>
+            </ul>
         </form>
     </div>
 </main>
@@ -158,18 +160,19 @@
             </div>
             <div class="col-md-4 col-xs-12">
                 <div class="align">
-                <div class=" qrCode"><img src="../image/4.png"></div>
-                <div class="contact">
-                    TEL：400-0000-000<br>
-                    企业QQ：123456789<br>
-                    微信号：XXXXXXX
-                </div>
+                    <div class=" qrCode"><img src="../image/4.png"></div>
+                    <div class="contact">
+                        TEL：400-0000-000<br>
+                        企业QQ：123456789<br>
+                        微信号：XXXXXXX
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="copyright">
-        北京五一包装科技有限公司Copyright ©2015&nbsp;&nbsp;&nbsp;51baozhuang.com015 &nbsp; All rights reserved. &nbsp; 京icp备99999999-1
+        北京五一包装科技有限公司Copyright ©2015&nbsp;&nbsp;&nbsp;51baozhuang.com015 &nbsp; All rights reserved. &nbsp;
+        京icp备99999999-1
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
