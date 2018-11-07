@@ -265,7 +265,7 @@ input:checked+label::after{
     h1{font-size: 18px}
 }
 @media (max-width: 425px){
-    .line,.line1 {width: 24px;}
+    .line, .line1,.line2{width: 24px;}
 }
 .size{display: inline-block}
 @media (max-width: 992px){
