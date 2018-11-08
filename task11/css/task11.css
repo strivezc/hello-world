@@ -2,12 +2,15 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #eff0f4;
 }
+
 html {
   font-size: 312.5%;
 }
+
 header, .landing {
   display: block;
   overflow: hidden;
@@ -30,6 +33,7 @@ header .register, .landing .register {
 header span, .landing span {
   font-size: 0.36rem;
 }
+
 .landing {
   font-size: 0.36rem;
   border: none;
@@ -37,6 +41,7 @@ header span, .landing span {
   width: 100%;
   cursor: pointer;
 }
+
 .phone {
   overflow: hidden;
   background-color: white;
@@ -60,10 +65,16 @@ header span, .landing span {
   outline: none;
   width: calc(100% - 1.5rem);
 }
+
+.img {
+  width: 14.5px;
+  height: 22.5px;
+  display: block;
+}
+
 a {
   font-size: 0.32rem;
   color: #5fc0cd;
-  text-decoration: none;
   float: right;
   margin-top: 0.3rem;
   margin-right: 0.3rem;
