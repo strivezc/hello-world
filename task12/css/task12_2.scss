@@ -1,0 +1,221 @@
+html{font-size:312.5% }
+*{margin: 0;
+  padding: 0;}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p{margin: 0}
+body{color: #999999;}
+$blue-color:#5fc0cd;
+$white-color:#ffffff;
+$normal-border:1px solid #e1e5e7;
+$gray-color:#999999;
+$clear-float:hidden;
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin fixed-header($height, $bck-color,$alignment ){
+  position: fixed;
+  display: flex;
+  justify-content: $alignment;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: $height;
+  background-color: $bck-color;
+}
+@mixin sprite-img($width,$height,$bck-position){
+  width: $width;
+  height:$height;
+  background-position: $bck-position;
+}
+@mixin clear-border{
+  border: none;
+  outline: none;
+}
+@mixin absolute($top,$left,$right){
+  position: absolute;
+  top: $top;
+  left: $left;
+  right:$right;
+}
+@mixin main-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+}
+header{
+  @include fixed-header(0.86rem,$blue-color,center);
+  top: 0;
+  .button1,.button2{
+    float: left;
+    margin-left: 0;
+    background-color: #55a8b3;
+    color: $white-color;
+    border: 0;
+    padding: 0.15rem 0.3rem;
+    outline: none;
+    border-radius: 0.08rem;
+    cursor: pointer;
+  }
+  .button2{
+    margin-left: -0.05rem;
+    background-color: $white-color;
+    color: $blue-color;
+  }
+}
+.sprite{
+  background: url(../image/task12-2/img.png) no-repeat;
+  background-size: 4.92rem 0.96rem;
+}
+.map{
+  @include sprite-img(0.42rem,0.45rem,  -2.44rem 0);
+  @include absolute(0.2rem,none,0.3rem);
+  @include clear-border;
+  cursor: pointer;
+}
+.list {
+  @include fixed-header(0.8rem, $white-color, center);
+  border-bottom: $normal-border;
+  margin-top: 0.86rem;
+  line-height: 0.8rem;
+  text-align: center;
+  .dropDown {
+    position: relative;
+    display: inline-block;
+    width: 33.33%;
+    .dropDown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 0.02rem 0.02rem 0.02rem #999999;
+      span{
+        font-size: 0.28rem;
+        color: black;
+        display: block;
+        &:hover{background-color: $blue-color}
+      }
+    }
+    &:hover .dropDown-content{
+      display: block;
+    }
+  }
+  .dropbtn,.last-dropbtn {
+    display: block;
+    color: $gray-color;
+    background-color: $white-color;
+    cursor: pointer;
+    width: 100%;
+    @include clear-border;
+    line-height: 0.8rem;
+    border-right: $normal-border;
+  }
+  .last-dropbtn{border:none }
+}
+.triangle{
+  @include sprite-img(0.15rem,0.1rem,  -0.11rem 0);
+  @include absolute(0.4rem,none,10%);
+}
+.main{
+  margin-top: 1.66rem;
+  margin-bottom: 2rem;
+  li{
+    height: 1.79rem;
+    border-bottom: $normal-border;
+    overflow: $clear-float;
+    .icon{
+      @include main-flex;
+      height: 1.79rem;
+    }
+  }
+}
+.date-icon,.address-icon{
+  @include sprite-img(0.25rem,0.25rem,  -1.25rem 0);
+  margin: {
+    left: 0.32rem;
+    top: 0.3rem;
+  };
+}
+.address-icon{
+  background-position: -0.44rem 0;
+  margin: {
+    top:0;
+    bottom: 0.3rem;
+  };
+}
+.text{
+  @include main-flex;
+  padding: 0.25rem 0 0.25rem 0.2rem;
+  font-size: 0.28rem;
+  width: calc(100% - 40% - 0.7rem);
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .date{
+    line-height: 0.5rem;
+    color: #333333;
+
+  }
+}
+.price{
+  float: right;
+  height: 1.79rem;
+  width:39% ;
+  @include flex-center;
+  justify-content: flex-end;
+  p{
+    color: #e63b0e;
+    font-size: 0.3rem;
+  }
+}
+.arrow{
+  @include sprite-img(0.22rem,0.35rem,  -0.83rem 0);
+  margin: {
+    left: 0.22rem;
+    right: 0.32rem;
+  };
+}
+footer{
+  @include fixed-header(1rem,#f8fafb,space-between);
+  bottom: 0;
+  .home-page,.my{
+    display: flex;
+    margin-left: 23%;
+    height: 1rem;
+    flex-direction: column;
+    span{
+      font-size: 0.2rem;
+      color: $blue-color;
+    }
+  }
+  .my{;
+    margin-left: 0;
+    margin-right: 23%;
+    span{color: $gray-color}
+  }
+}
+.home-page-btn,.my-btn{
+  @include sprite-img(0.48rem,0.41rem,  -3.11rem 0);
+  @include clear-border;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+.word{
+  @include sprite-img(0.96rem,0.96rem,  -3.96rem 0);
+  @include clear-border;
+  cursor: pointer;
+}
+.my-btn{
+  @include sprite-img(0.48rem,0.41rem,  -1.72rem 0);
+}
