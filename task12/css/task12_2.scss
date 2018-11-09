@@ -49,6 +49,11 @@ $clear-float:hidden;
   justify-content: space-between;
   float: left;
 }
+@mixin P-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 header{
   @include fixed-header(0.86rem,$blue-color,center);
   top: 0;
@@ -156,9 +161,7 @@ header{
   font-size: 0.28rem;
   width: calc(100% - 40% - 0.7rem);
   p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+ @include P-ellipsis;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -171,10 +174,11 @@ header{
 .price{
   float: right;
   height: 1.79rem;
-  width:39% ;
+  width:38% ;
   @include flex-center;
   justify-content: flex-end;
   p{
+    @include P-ellipsis;
     color: #e63b0e;
     font-size: 0.3rem;
   }

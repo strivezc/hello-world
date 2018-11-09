@@ -1,4 +1,6 @@
-html {font-size: 312.5%;}
+html {
+  font-size: 312.5%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +10,12 @@ ul {
   margin: 0;
   padding: 0;
 }
-p {margin: 0;}
-body {color: #999999;}
+p {
+  margin: 0;
+}
+body {
+  color: #999999;
+}
 header {
   position: fixed;
   display: flex;
@@ -165,13 +171,16 @@ header .button2 {
 .price {
   float: right;
   height: 1.79rem;
-  width: 39%;
+  width: 38%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-end;
 }
 .price p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #e63b0e;
   font-size: 0.3rem;
 }
