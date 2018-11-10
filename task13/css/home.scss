@@ -1,0 +1,78 @@
+$blue-color:#29bde0;
+$white-color:white;
+$gray-color:#c9c9c9;
+$normal-border:0.02rem solid $gray-color;
+$big-size:0.35rem;
+$small-size:0.25rem;
+@mixin li-font-color($color,$line-height,$bcg-color,$font-size){
+  background-color: $bcg-color;
+  line-height: $line-height;
+  color: $color;
+  font-size: $font-size;
+}
+body{
+  background-color: #f0f0f0;
+}
+.menu{
+  margin: 0.21rem 0 0.22rem 0.21rem;
+}
+.list{
+  margin: 0.95rem 0.35rem 0.5rem;
+}
+.last-game{
+  @include li-font-color($gray-color,1.18rem,$white-color,$big-size);
+  border: $normal-border;
+  margin-bottom: 0.25rem;
+}
+.arrow{
+  margin-right: 0.15rem;
+  margin-top: 0.38rem;
+}
+.arrow2{
+  position: absolute;
+  top: 4rem;
+  right: 0.08rem;
+  margin-right: 0.1rem;
+}
+.catalog{
+  position: relative;
+  background-color: $white-color;
+  border: $normal-border;
+  .game{
+    line-height: 0.93rem;
+    font-size: $big-size;
+    border-bottom: 0.02rem solid #fde1ae
+  }
+}
+.simple{
+  width: 80%;
+  margin: 0.29rem auto auto;
+  line-height: 1.36rem;
+}
+.simple:hover{
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+  cursor: pointer;
+}
+.text{
+  line-height: 0.77rem;
+  font-size: $small-size;
+}
+.point{
+  display: block;
+  line-height: 0.3rem;
+}
+.point1,.point2{
+  display: inline-block;
+  width: 0.15rem;
+  height: 0.15rem;
+  border-radius: 0.15rem;
+  box-shadow: 0 0 0.01rem #a1a1a1;
+  margin-bottom: 0.3rem;
+  border: $normal-border;
+  background-color: $blue-color;
+  cursor: pointer;
+}
+.point2{background-color: $white-color}
+.point2:hover{background-color: #31b0d5;}
