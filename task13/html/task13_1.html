@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <title>task13-1</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/sprite.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/home.css">
 </head>
 <body>
+<input type='checkbox' id='sidebar'>
 <header class="clearfix">
-    <button class="menu fl sprite bg-8"></button>
+
+   <aside>
+       <ul>
+           <li class="li tl"><span class="fa-stack "><i class="fa fa-circle-o fa-stack-2x fs-15"></i><i class="fa fa-volume-off fa-stack-1x lh15"></i></span>
+               公告
+           </li>
+           <li class="li tl"><span class="fa-stack "><i class="fa fa-circle-o fa-stack-2x fs-15"></i> <i class="fa fa-cog fa-stack-1x lh15"></i></span>
+               设置
+           </li>
+           <li class="li tl"><span class="fa-stack "><i class="fa fa-question-circle-o fa-lg"></i></span>
+               帮助
+           </li>
+           <li class="li tl"><span class="fa-stack "><i class="fa fa-exclamation-circle fa-lg"></i></span>
+               关于
+           </li>
+       </ul>
+   </aside>
+   <div id="wrap"><label id='sideMenuControl' for='sidebar' class="menu fl sprite bg-8"></label></div>
 </header>
 <main>
     <ul class="list  tc">
