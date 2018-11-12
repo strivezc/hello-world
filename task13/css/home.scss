@@ -97,8 +97,8 @@ display: none;
 #sidebar:checked ~main{
   padding-left:50%;
   width: 100%;
-  transition: 0.4s ease-out;
 }
+main{  transition: 0.4s ease-out;}
 aside{
   @include width-height(50%,100vh);
   @include absolute(0,none,0,-52%);
