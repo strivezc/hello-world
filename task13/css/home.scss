@@ -94,11 +94,12 @@ display: none;
 #sidebar:checked + header #wrap{
   padding-left:50%;
 }
+#wrap{  transition: 0.4s ease-out;}
 #sidebar:checked ~main{
   padding-left:50%;
-  width: 100%;
 }
-main{  transition: 0.4s ease-out;}
+main{ width: 100%;
+  transition: 0.4s ease-out;}
 aside{
   @include width-height(50%,100vh);
   @include absolute(0,none,0,-52%);

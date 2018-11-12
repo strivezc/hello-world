@@ -82,11 +82,14 @@ body {
 #sidebar:checked + header #wrap {
   padding-left: 50%; }
 
+#wrap {
+  transition: 0.4s ease-out; }
+
 #sidebar:checked ~ main {
-  padding-left: 50%;
-  width: 100%; }
+  padding-left: 50%; }
 
 main {
+  width: 100%;
   transition: 0.4s ease-out; }
 
 aside {
