@@ -1,0 +1,174 @@
+.contact {
+  position: relative; }
+
+.land {
+  position: absolute;
+  top: 0;
+  left: 35px;
+  right: 0;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .land {
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .bg-1, .bg-2, .bg-3 {
+    visibility: hidden; } }
+.efficiency {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  padding: 162px 0 95px 0;
+  width: 25%;
+  float: left; }
+  @media (max-width: 997px) {
+    .efficiency {
+      width: 50%;
+      padding: 80px 0 45px 0;
+      text-align: center; } }
+  @media (max-width: 768px) {
+    .efficiency {
+      width: 100%;
+      padding: 80px 0 45px 0;
+      text-align: center; } }
+
+.statistics {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  background: url(../image/dashed.png) repeat-y; }
+  @media (max-width: 997px) {
+    .statistics {
+      padding-left: 0;
+      margin-left: 50px; } }
+  @media (max-width: 768px) {
+    .statistics {
+      padding-left: 0;
+      margin-left: 0;
+      background: none; } }
+
+.bg-7 {
+  display: inline-block; }
+
+.step {
+  float: left;
+  width: 50%;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  .step p {
+    width: 112px; }
+  @media (min-width: 1200px) {
+    .step {
+      width: 25%;
+      justify-content: space-between; } }
+  @media (max-width: 768px) {
+    .step {
+      width: 100%;
+      justify-content: center; } }
+
+.bg-9 {
+  margin-right: 30px; }
+
+@media (max-width: 768px) {
+  .bg-8 {
+    margin-right: 30px; }
+
+  .bg-9 {
+    display: none; } }
+@media (max-width: 1200px) {
+  .arrow {
+    visibility: hidden; } }
+@media (min-width: 1200px) {
+  .arrow1 {
+    visibility: hidden; } }
+.exhibition {
+  width: 25%;
+  height: 370px;
+  display: inline-block; }
+  .exhibition .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 0 40px 0;
+    margin: 0 15px;
+    background: white;
+    border: 1px solid #eeeded; }
+    @media (max-width: 997px) {
+      .exhibition .card {
+        width: 70%;
+        margin: auto; } }
+    @media (max-width: 768px) {
+      .exhibition .card {
+        width: 80%;
+        margin: auto; } }
+  @media (max-width: 997px) {
+    .exhibition {
+      width: 50%; } }
+  @media (max-width: 768px) {
+    .exhibition {
+      width: 100%; } }
+
+.point {
+  text-align: center;
+  line-height: 56px; }
+  .point .point1, .point .point2 {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: 0 0 2px #a1a1a1;
+    background-color: white;
+    cursor: pointer; }
+    .point .point1:hover, .point .point2:hover {
+      background-color: #29b078; }
+  .point .point1 {
+    background-color: #29b078; }
+
+.company {
+  box-shadow: 0 0 4px #dbdbdb;
+  margin-bottom: 90px;
+  width: 100%; }
+  @media (max-width: 997px) {
+    .company {
+      width: 80%;
+      margin: 0 auto 50px; } }
+  .company .companyLogo {
+    display: inline-block;
+    width: 20%;
+    height: 180px;
+    position: relative; }
+    .company .companyLogo:hover {
+      box-shadow: 0 0 10px #dbdbdb; }
+    @media (max-width: 997px) {
+      .company .companyLogo {
+        width: 100%; } }
+
+.bg-14, .bg-15, .bg-16, .bg-17, .bg-18 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }
+
+.linkName {
+  display: inline-block;
+  width: 10%;
+  color: #999999;
+  line-height: 32px;
+  font-size: 14px; }
+  .linkName a {
+    color: #999999; }
+  @media (max-width: 997px) {
+    .linkName {
+      width: 20%; } }
+  @media (max-width: 480px) {
+    .linkName {
+      width: 33.3%; } }
+
+/*# sourceMappingURL=home.css.map */
