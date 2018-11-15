@@ -36,6 +36,7 @@
 .lh38{line-height: 38px}
 .lh78{line-height: 78px}
 .lh26{line-height: 26px}
+.lh28{line-height: 28px}
 .lh80{line-height: 80px}
 .lh22{line-height: 22px}
 .lh42{line-height: 42px}
@@ -55,6 +56,7 @@
 .mb10{margin-bottom: 10px}
 .pdlr{padding: 0 15px}
 .pt100{padding-top: 100px}
+.bt1{border-bottom: 1px solid #e6e6e6}
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -79,14 +81,6 @@
 body{
     background-color: #fafafa}
 .dinb{display: inline-block}
-.cleartd{
-    border: none;
-}
-.cleartbl{
-    width: 6%;
-    border-left: none}
-.cleartbr{
-    border-right: none;
-}
+.navBorder{border-bottom: 4px solid white;}
 
 

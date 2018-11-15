@@ -1,5 +1,35 @@
 @charset "UTF-8";
 /*导航栏*/
+.contact {
+  position: relative; }
+
+.land {
+  position: absolute;
+  top: 0;
+  left: 35px;
+  right: 0;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .land {
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .bg-1, .bg-2, .bg-3 {
+    visibility: hidden; } }
+.logo {
+  display: inline-block;
+  float: left;
+  max-width: 110px;
+  height: auto;
+  margin-top: 25px; }
+  .logo .icon {
+    max-width: 100%;
+    height: auto; }
+  @media screen and (max-width: 768px) {
+    .logo {
+      max-width: 65px;
+      margin-top: 8px; } }
+
 .navbar {
   background-color: #29b079;
   height: 100px;
@@ -7,12 +37,18 @@
   font-size: 16px; }
 
 .navbar .nav-list {
-  position: relative; }
+  position: relative;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #29b079;
+  float: right; }
+  @media (max-width: 768px) {
+    .navbar .nav-list {
+      height: 0; } }
 
 .navbar .nav-list li {
   list-style: none;
   float: left;
-  padding: 0 30px;
   line-height: 96px;
   cursor: pointer; }
 
@@ -21,7 +57,8 @@
 
 .navbar .nav-list a {
   color: white;
-  text-decoration-line: none; }
+  text-decoration-line: none;
+  padding: 37px 30px; }
 
 .navbar .nav-list a:hover {
   color: white; }
@@ -39,21 +76,13 @@
 .icon-bar, .icon-bar1 + .icon-bar {
   margin-top: 5px; }
 
-.navbar input:checked ~ .nav-list {
-  display: block;
-  background-color: #29b079;
-  float: left; }
-
-.navbar input:checked ~ .nav-list a {
-  visibility: visible; }
-
-@media (min-width: 768px) {
-  .navbar .nav-list {
-    float: right; } }
 @media (max-width: 768px) {
   .navbar .nav-list {
-    transition: .4s ease;
-    width: 100%; } }
+    width: 100%; }
+
+  #nav-toggle:checked ~ .nav-list {
+    display: block;
+    height: 200px; } }
 .navbar label {
   display: none; }
 
@@ -81,12 +110,6 @@
   .navbar label {
     display: block; }
 
-  .navbar .nav-list {
-    overflow: hidden; }
-
-  .navbar .nav-list a {
-    visibility: hidden; }
-
   .navbar .nav-list li {
     float: none;
     text-align: center;
@@ -94,6 +117,7 @@
     .navbar .nav-list li:hover {
       background-color: #38c58a;
       border: none; } }
+/*导航栏*/
 /*按钮*/
 .btn-all {
   color: white;
@@ -108,6 +132,7 @@
   margin: 10px;
   padding: 3px; }
 
+/*按钮*/
 /*footer*/
 .footer {
   background-color: #29b078; }
@@ -144,5 +169,6 @@
 @media (min-width: 997px) {
   .footer .qrCode {
     align-items: flex-end; } }
+/*footer*/
 
 /*# sourceMappingURL=style.css.map */

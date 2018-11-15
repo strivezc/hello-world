@@ -1,94 +1,89 @@
-@mixin land($top,$left,$right){
-  position: absolute;
-  top: $top;
-  left: $left;
-  right: $right;
-}
-.contact{position: relative}
-.land {
-  @include land(0, 35px, 0);
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-}
-@media screen and (max-width: 768px){
-  .bg-1,.bg-2,.bg-3{visibility: hidden}
-}
-.logo{
-  display: inline-block;
-  float: left;
-  max-width: 110px;
+$normal-border:1px solid #e6e6e6;
+.backgroundImg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   height: auto;
-  margin-top: 25px;
-  .icon{max-width: 100%;
-  height: auto}
-  @media screen and (max-width: 768px) {
-    max-width: 65px;
-    margin-top: 8px;
-  }
 }
-.direction{
-border-top: 1px solid #d0d6d9;
-border-bottom: 1px solid #edf1f2;
-font-size: 14px;
-  span{
-    display: inline-block;
-    line-height: 60px;
-  }
-}
-.btn-process:hover{
-  color: #fff;
-  background-color: #449d44;
-  border-radius: 2px;
-}
-h1{
-  border-bottom: 1px solid #d0d6d9;
-}
-.card{
-  width: 33.3%;
-  float: left;
-  @media screen and (max-width: 997px) {
-   width: 50%;
-  }
-  @media screen and (max-width: 768px) {
+.list{
+  width: 25%;
+  font-size: 0;
+  display: inline-block;
+  @media screen and(max-width: 997px){
     width: 100%;
   }
-  table{
-    width: 100%;
-    background-color: white;
-    span{display: inline-block};
-    @media screen and (max-width: 997px) {
-      width: 90%;
-    }
-    @media screen and (max-width: 768px) {
-      width: 80%;
-      margin: auto;
-    }
-    @media screen and (max-width: 425px) {
-      width: 100%;
-    }
-  }
 }
-.bg-21{
-  display: inline-block;
-  margin: 18px 8px 16px 10px;}
-.bg-22{
-  vertical-align: middle;
-  display: inline-block;
-}
-.pay{
+.cooperation{
+  border-radius: 10px;
+ border: $normal-border;
+  margin: 0 15px 30px 0;
   text-align: center;
-  vertical-align: middle;
-}
-.tips{
-  padding: 12px 10px 12px 10px;
-  font-size: 12px;
-  line-height: 14px;
-}
-.table-margin{
-  margin: 45px 15px 0 0;
-  @media screen and (max-width: 425px) {
-    margin: 45px 0 0 0;
+  @media screen and(max-width: 997px){
+    margin-right: 0;
   }
+  .company{
+    line-height: 62px;
+    border-bottom: $normal-border;
+  }
+  .companyName{
+    display: inline-block;
+    line-height: 50px;
+    width: 100%;
+    & :hover .circle{background-color:#ff9052 ;};
+    @media screen and(max-width: 997px){
+      width: 33.3%;
+    }
+    @media screen and(max-width: 768px){
+      width: 50%;
+    }
+  }
+}
+.circle, .solidCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ff9052;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.solidCircle {background-color:#ff9052 ;}
+.center{
+  display: inline-block;
+  width: 91px;
+  text-align: left;
+}
+.introduce{
+  width: 75%;
+  text-indent: 2em;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  @media screen and(max-width: 997px){
+    width: 100%;
+  }
+}
+.tudou{  padding: 20px 15px 180px 15px;
+  @media screen and(max-width: 997px){
+  padding-bottom: 50px;
+}
+}
+.tudouIcon{
+  display: inline-block;
+  width: 25%;
+  line-height: 137px;
+  @media screen and(max-width: 768px){
+    width: 100%;
+    line-height: 78px;
+  }
+}
+.summary{
+  width: 75%;
+  display: inline-block;
+  padding-bottom: 15px;
+  @media screen and(max-width: 768px){
+    width: 100%;
+  }
+}
+@media screen and(max-width: 997px){
+ .footer{margin-top: 100px}
 }
