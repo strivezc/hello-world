@@ -113,7 +113,8 @@
   .navbar .nav-list li {
     float: none;
     text-align: center;
-    line-height: 50px; }
+    line-height: 50px;
+    border-bottom: 0; }
     .navbar .nav-list li:hover {
       background-color: #38c58a;
       border: none; } }
