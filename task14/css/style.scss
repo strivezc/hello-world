@@ -108,13 +108,20 @@
     float: none;
     text-align: center;
     line-height: 50px;
+    height: 50px;
     border-bottom: 0;
     &:hover{
       background-color: #38c58a;
       border: none;
     }
   }
+  .navbar .container{
+    padding-left:0 ;
+    padding-right: 0;
+  }
+  .logo .icon{padding-left: 15px}
 }
+
 /*导航栏*/
 
 /*按钮*/

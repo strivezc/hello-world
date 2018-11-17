@@ -28,9 +28,15 @@ h1{
   table{
     width: 100%;
     background-color: white;
+    border: none;
     span{display: inline-block};
+}
+  .table-radius{
+    overflow: hidden;
+    border: 1px solid #d0d6d9;
+    border-radius: 10px;
     @media screen and (max-width: 997px) {
-      width: 90%;
+        width: 90%;
     }
     @media screen and (max-width: 768px) {
       width: 80%;
@@ -39,8 +45,48 @@ h1{
     @media screen and (max-width: 425px) {
       width: 100%;
     }
+    .hiddenText{
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      height:0;
+      color: white;
+      border-radius: 5px;
+      background: rgba(41,176,120,.8);
+      font-size: 16px;
+      transition: 0.5s ease;
+      @media screen and(max-width: 997px){
+        width: 90%;
+        margin: auto;
+        right: 36px;
+      }
+      @media screen and(max-width: 768px){
+        width: 80%;
+        margin: auto;
+        right: 0;
+      }
+      @media screen and(max-width: 425px){
+        width: 100%;
+        right: 0;
+      }
+      span{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        display: block;
+      }
+      p{
+        text-indent: 2rem;
+        padding-left: 42px;
+        padding-right: 42px;
+      }
+    }
+    &:hover .hiddenText{height: 461px}
+  }
 
-}
+
+
 .bg-21{
   display: inline-block;
   margin: 18px 8px 16px 10px;}
@@ -63,44 +109,7 @@ h1{
   @media screen and (max-width: 425px) {
     margin: 45px 0 0 0;
   }
-  .hiddenText{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    overflow: hidden;
-    height:0;
-    color: white;
-    border-radius: 5px;
-    background: rgba(41,176,120,.8);
-    font-size: 16px;
-    transition: 0.5s ease;
-    @media screen and(max-width: 997px){
-      width: 90%;
-      margin: auto;
-      right: 36px;
-    }
-    @media screen and(max-width: 768px){
-      width: 80%;
-      margin: auto;
-      right: 0;
-    }
-    @media screen and(max-width: 425px){
-      width: 100%;
-      right: 0;
-    }
-    span{
-      margin-top: 60px;
-      margin-bottom: 30px;
-      display: block;
-    }
-    p{
-      text-indent: 2rem;
-      padding-left: 42px;
-      padding-right: 42px;
-    }
-  }
-  &:hover .hiddenText{height: 461px}
+
 }
 }
 .cleartd{
@@ -110,6 +119,13 @@ h1{
   width: 6%;
   border-left: none}
 .cleartbr{
+  border-right: none;
+  border-left: none;
+}
+.cleartbb{
+  border-bottom: none;
+}
+.clearbri{
   border-right: none;
 }
 .rare{
