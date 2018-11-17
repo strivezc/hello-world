@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: space-around; }
   .step p {
-    width: 112px; }
+    width: 128px; }
   @media (min-width: 1200px) {
     .step {
       width: 25%;
@@ -80,7 +80,8 @@
     padding: 19px 0 40px 0;
     margin: 0 15px;
     background: white;
-    border: 1px solid #eeeded; }
+    border: 1px solid #eeeded;
+    border-radius: 10px; }
     @media (max-width: 997px) {
       .exhibition .card {
         width: 70%;
@@ -116,7 +117,8 @@
 .company {
   box-shadow: 0 0 4px #dbdbdb;
   margin-bottom: 90px;
-  width: 100%; }
+  width: 100%;
+  border-radius: 5px; }
   @media (max-width: 997px) {
     .company {
       width: 80%;

@@ -48,6 +48,7 @@
 .navbar .nav-list li{
   list-style: none;
   float: left;
+  height: 96px;
   line-height: 96px;
   cursor: pointer;
 }
@@ -122,6 +123,7 @@
   background-color: #29b078;
   margin-left: 20px;
   margin-right: 10px;
+  padding: 5px 10px;
 }
 .btn-process{
   color: #333333;
@@ -184,7 +186,7 @@ $green-color:#29b078;
   overflow: hidden;
 }
 .carousel-open:checked + .carousel-item {
-  position: static;
+  position: relative;
   opacity: 1;
 }
 .carousel-item {

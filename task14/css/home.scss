@@ -58,7 +58,7 @@ $normal-border:1px solid #eeeded;
   width: 50%;
   padding-bottom: 90px;
   @include flex(row,center,space-around);
-  p{width: 112px}
+  p{width: 128px}
   @media  (min-width: 1200px){
     width: 25%;
     justify-content: space-between;
@@ -89,6 +89,7 @@ $normal-border:1px solid #eeeded;
     margin: 0 15px;
     background: $white-color;
     border: $normal-border;
+    border-radius: 10px;
     @media  (max-width: 997px){
       width: 70%;
       margin: auto;
@@ -125,6 +126,7 @@ $normal-border:1px solid #eeeded;
   box-shadow: 0 0 4px #dbdbdb;
   margin-bottom: 90px;
   width: 100%;
+  border-radius: 5px;
   @media  (max-width: 997px){
     width: 80%;
     margin: 0 auto 50px;
