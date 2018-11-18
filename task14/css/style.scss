@@ -200,7 +200,10 @@ $green-color:#29b078;
   position: absolute;
   opacity: 0;
   transition: opacity 0.6s ease-out;
+  animation: myimg 12s linear infinite normal;
 }
+
+
 .carousel-control {
   background: rgba(0, 0, 0, 0.28);
   border-radius: 50%;
@@ -256,3 +259,51 @@ $green-color:#29b078;
 #carousel-4:checked ~.instructions li:nth-child(4) .bullet,
 #carousel-5:checked ~.instructions li:nth-child(5) .bullet
 {background: white}
+
+/*自动轮播*/
+.banner {
+  position: relative;
+  overflow: auto;
+  text-align: center;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+#b04 {
+  width: 100%!important;
+  height: 31.25vw !important;}
+#b04 .dots {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 10px;
+  margin: 0;}
+#b04 .dots li
+{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .4;
+
+  transition:  .6s ease;
+}
+#b04 .dots li.active
+{
+  background: #fff;
+  opacity: 1;
+}
+#b04 .arrow2 { position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}
+.img{
+  width: 100%; height: auto
+}
+.broadcast{
+  height: 31.25vw!important;
+}
+

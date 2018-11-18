@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <title>task14-home</title>
+    <script src="../css/jquery-1.11.1.min.js"></script>
+    <script src="../css/unslider.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/sprites.css">
@@ -47,55 +49,30 @@
         </ul>
         </div>
     </nav>
-    <div class="carousel">
-        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-        <div class="carousel-item">
-            <img src="../image/2.png">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img src="../image/3.png">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img src="../image/4.png">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img src="../image/5.jpg">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-            <img src="../image/6.jpg">
-        </div>
-        <label for="carousel-5" class="carousel-control prev control-1">‹</label>
-        <label for="carousel-2" class="carousel-control next control-1">›</label>
-        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-        <label for="carousel-3" class="carousel-control next control-2">›</label>
-        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-        <label for="carousel-4" class="carousel-control next control-3">›</label>
-        <label for="carousel-3" class="carousel-control prev control-4">‹</label>
-        <label for="carousel-5" class="carousel-control next control-4">›</label>
-        <label for="carousel-4" class="carousel-control prev control-5">‹</label>
-        <label for="carousel-1" class="carousel-control next control-5">›</label>
-        <ol class="instructions">
-            <li>
-                <label for="carousel-1" class="bullet"></label>
-            </li>
-            <li>
-                <label for="carousel-2" class="bullet"></label>
-            </li>
-            <li>
-                <label for="carousel-3" class="bullet"></label>
-            </li>
-            <li>
-                <label for="carousel-4" class="bullet"></label>
-            </li>
-            <li>
-                <label for="carousel-5" class="bullet"></label>
-            </li>
-        </ol>
+    <div class="banner" id="b04">
+        <ul class="broadcast">
+            <li><img class="img" src="../image/2.png" alt=""  ></li>
+            <li><img class="img" src="../image/3.png" alt=""  ></li>
+            <li><img class="img" src="../image/4.png" alt=""  ></li>
+            <li><img class="img"  src="../image/5.jpg" alt=""  ></li>
+            <li><img class="img" src="../image/6.jpg" alt="" ></li>
+        </ul>
+        <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow2" id="al" src="../image/arrowl.png" alt="prev" width="20" height="35"></a>
+        <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow2" id="ar" src="../image/arrowr.png" alt="next" width="20" height="37"></a>
     </div>
+    <script>
+        $(document).ready(function(e) {
+            var unslider04 = $('#b04').unslider({
+                    dots: true
+                }),
+                data04 = unslider04.data('unslider');
+
+            $('.unslider-arrow04').click(function() {
+                var fn = this.className.split(' ')[1];
+                data04[fn]();
+            });
+        });
+    </script>
 </header>
 <main>
     <div class="container">
