@@ -3,8 +3,8 @@
     font-size: 0;
     overflow: hidden;
     margin: auto;
+    padding-left: 2%;
 }
-.mr{margin-right: -1%}
 .grid{
     width:30% ;
     padding-top: 33.3%;
@@ -21,4 +21,6 @@
     margin: auto;
     height: 50px;
     margin-top: 10px;
+    border-radius: 10px;
 }
+button:hover{background-color: orange}
