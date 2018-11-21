@@ -1,40 +1,50 @@
-//获取盒子的节点
-var grid=document.getElementsByClassName("grid");
-//定义定时器time变量
 var time;
-//每次循环重置颜色和生成随机数，并改变随机格子的颜色
-function begin() {
+var aNewBlock=[];
+var aGrid=document.getElementsByClassName("grid");
+var oButton1=document.getElementById("btn1");
+var oButton2=document.getElementById("btn2");
+//重置颜色
+function reset() {
     for(i=0;i<9;i++){
-        grid[i].style.backgroundColor="orange";
+        aGrid[i].style.backgroundColor="orange";
     }
-    var blocks = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    var newBlock =  [];
-    var runNum = 3;
-    for (i = 0; i < runNum; i++) {
-        var ran = Math.floor(Math.random() * (blocks.length));
-        newBlock.push(blocks[ran]);
-        blocks.splice(ran, 1);
-    }
-    grid[newBlock[0]].style.background=color();
-    grid[newBlock[1]].style.background=color();
-    grid[newBlock[2]].style.background=color();
 }
-//用rgb颜色值生成随机颜色
+//随机颜色
 function color() {
     var r=Math.floor(Math.random()*256);
     var g=Math.floor(Math.random()*256);
     var b=Math.floor(Math.random()*256);
     return "rgb(" +r + "," + g + "," + b + ")";
 }
+//随机数
+function random() {
+    var aBlocks=[];
+    var runNum = 3;
+    aNewBlock =  [];
+    for (i = 0; i < aGrid.length; i++){
+        aBlocks.push(i);
+    }
+    for (i = 0; i < runNum; i++) {
+        var ran = Math.floor(Math.random() * (aBlocks.length));
+        aNewBlock.push(aBlocks[ran]);
+        aBlocks.splice(ran, 1);
+    }
+}
+//循环
+function begin() {
+    random();
+    reset();
+    aGrid[aNewBlock[0]].style.background=color();
+    aGrid[aNewBlock[1]].style.background=color();
+    aGrid[aNewBlock[2]].style.background=color();
+}
 //按钮事件
-function start() {
+oButton1.onclick=function () {
     clearInterval(time);
     time=setInterval(
         begin ,1000);
 }
-function stop() {
+oButton2.onclick=function () {
     clearInterval(time);
-    for(i=0;i<9;i++){
-        grid[i].style.backgroundColor="orange";
-    }
+    reset();
 }
