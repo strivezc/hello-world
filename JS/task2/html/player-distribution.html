@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <title>player</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/player.css">
+</head>
+<body>
+<header class="clearfix white-color parameter">
+    <span> 参数设置</span>
+    <button class="sprite bg-11 fl"></button>
+    <button class="sprite bg-12 fr"></button>
+</header>
+<main>
+<div class="container">
+    <div class="text"><p>玩家配比</p></div>
+    <div class="detail">
+        <div class="role">
+            杀手 <span id="killer" >1</span><br>
+            水民 <span id="people" >3</span>
+        </div>
+        <button class="setting">点击设置</button>
+    </div>
+</div>
+    <ul>
+        <li>
+            <input type="text" placeholder="水民词组" class="word">
+        </li>
+        <li>
+            <input type="text" placeholder="幽灵词组" class="word">
+        </li>
+    </ul>
+    <form action="">
+    <div class="number">
+        玩家人数 <input type="number" value="4"  id="number" class="numberBox"> 人（4-18人）<br>
+        <input type="button" class="reduce" id="reduce">
+        <input type="range" value="4" id="myRange" class="range" min="4" max="18" >
+        <input type="button" class="plus" id="plus">
+    </div>
+        <input type="button" value="去发牌" class="start ">
+    </form>
+</main>
+<script src="../js/distribution.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>

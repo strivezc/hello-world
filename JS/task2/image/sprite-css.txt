@@ -1,0 +1,78 @@
+
+X
+.bg-1 {
+    宽度：41px; 身高：42px;
+    background：url（'css_sprites.png'）-219px -235px;
+}
+
+X
+.bg-2 {
+    宽度：54px; 身高：54px;
+    background：url（'css_sprites.png'） -  10px -235px;
+}
+
+X
+.bg-3 {
+    宽度：38px; 身高：38px;
+    background：url（'css_sprites.png'）-280px -235px;
+}
+
+X
+.bg-4 {
+    宽度：30px; 身高：30px;
+    background：url（'css_sprites.png'）-380px -248px;
+}
+
+X
+.bg-5 {
+    宽度：30px; 身高：30px;
+    background：url（'css_sprites.png'）-380px -198px;
+}
+
+X
+.bg-6 {
+    宽度：30px; 身高：30px;
+    background：url（'css_sprites.png'）-380px -148px;
+}
+
+X
+.bg-7 {
+    宽度：30px; 身高：30px;
+    background：url（'css_sprites.png'） -  10px -358px;
+}
+
+X
+.bg-8 {
+    宽度：36px; 身高：29px;
+    background：url（'css_sprites.png'） -  10px -309px;
+}
+
+X
+.bg-9 {
+    宽度：30px; 身高：56px;
+    background：url（'css_sprites.png'）-380px -10px;
+}
+
+X
+.bg-10 {
+    宽度：26px; 身高：42px;
+    background：url（'css_sprites.png'）-380px -86px;
+}
+
+X
+.bg-11 {
+    宽度：53px; 身高：45px;
+    background：url（'css_sprites.png'） -  84px -235px;
+}
+
+X
+.bg-12 {
+    宽度：42px; 身高：42px;
+    background：url（'css_sprites.png'） -  157px -235px;
+}
+
+X
+.bg-13 {
+    宽度：350px; 身高：205px;
+    background：url（'css_sprites.png'） -  10px -10px;
+}
