@@ -1,4 +1,4 @@
 var oSimple=document.getElementById("simple");
 oSimple.onclick = function () {
-    window.location.href='../html/player-distribution.html'
+    window.location.href='../html/player-distribution.html';
 }

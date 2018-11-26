@@ -27,18 +27,25 @@ body{background: #29bde0;
   margin: 1.8rem  auto 0;
   &:before{
     position: absolute;
-    content: "1";
-    font-size: 0.4rem;
-    text-align: center;
-    color:#f56b81 ;
-    line-height: 0.75rem;
+    content: "";
     background: white;
-    left: 1.86rem;
+    left: 1.84rem;
     top: -0.5rem;
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 0.75rem;
     border: 2px solid #ffedc5;
+  }
+  .number{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.48rem;
+    margin: auto;
+    text-align: center;
+    font-size: 0.4rem;
+    color:#f56b81 ;
+    line-height: 0.75rem;
   }
 }
 .portrait1{
@@ -50,10 +57,22 @@ body{background: #29bde0;
     height: 2.24rem;
   }
 }
+.card1{
+  display: none;
+}
+.card2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 3.03rem;
+  height: 3.03rem;
+  margin: auto;
+}
 .portrait2{
-  width: 2.24rem;
-  height: 2.24rem;
-  margin: 0.55rem auto 0;
+  width: 3.03rem;
+  height: 3.03rem;
 }
 .words{
   height: 1.6rem;
@@ -72,12 +91,19 @@ body{background: #29bde0;
   width: 4rem;
   font-size: 0.26rem;
 }
-.btn{
-  margin: 1.2rem auto 0;
+.btn1,.btn2{
+  position: absolute;
   width: 4.9rem;
   height: 0.85rem;
   background:#fca000;
   font-size: 0.4rem;
   color: white;
   text-align: center;
+}
+.btn2{display: none}
+.footer{
+  margin: 1.2rem auto 0;
+  width: 4.9rem;
+  height: 0.85rem;
+  position: relative;
 }

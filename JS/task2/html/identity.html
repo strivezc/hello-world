@@ -11,27 +11,39 @@
 <body>
 <header class="clearfix white-color parameter">
     <span> 查看身份</span>
-    <button class="fl"><img src="../image/return.png" class=" return"></button>
+    <button class="fl" id="return"><img src="../image/return.png" class=" return"></button>
     <button class="fr"><img src="../image/close.png" class=" close"></button>
 </header>
 <main>
     <div class="card">
-        <div class="portrait1">
-            <img src="../image/翻牌-2.png" alt="">
+        <span class="number">1</span>
+        <div class="card1">
+            <div class="portrait1">
+                <img src="../image/翻牌-2.png" alt="">
+            </div>
+            <div class="words">
+                <span id="role">角色：</span><br>
+
+            </div>
+            <div class="text">
+                想办法猜到人的词，同时还要注意不要暴露自己哦！
+            </div>
         </div>
-        <div class="words">
-            <span>角色：</span><br>
-            <span>词组：</span>
-        </div>
-        <div class="text">
-            想办法猜到人的词，同时还要注意不要暴露自己哦！
+        <div class="card2">
+            <img src="../image/翻牌.png" alt="" class="portrait2" >
         </div>
     </div>
-    <button class="btn">
-        隐藏并传递给
-    </button>
 </main>
-<script src="../js/identity.js"></script>
+<footer class="footer">
+    <button class="btn1">
+        查看1号身份
+    </button>
+    <button class="btn2">
+        隐藏并传递给2号
+    </button>
+</footer>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="../js/identity.js"></script>
+
 </body>
 </html>
