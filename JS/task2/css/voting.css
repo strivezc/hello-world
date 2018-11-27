@@ -37,21 +37,20 @@
     height: 38px; }
 
 .list {
-  width: 100%;
+  width: 100vw;
   margin-top: 2.22rem;
   padding-bottom: 3rem;
   background-color: #29bde0; }
 
 .li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 33vw;
-  padding-left: 7%;
-  padding-right: 7%; }
+  overflow: hidden;
+  padding-left: 5vw;
+  padding-right: 5vw; }
   .li .role {
+    float: left;
     width: 21.25vw;
-    height: 32.65vw; }
+    height: 32.65vw;
+    margin: 0 4.375vw; }
     .li .role .diving {
       background-color: #f5c97b;
       border: 0.625vw solid white; }

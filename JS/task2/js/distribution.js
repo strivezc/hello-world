@@ -14,6 +14,7 @@ var allRole = aKillers.concat(aPeople);
 function aPlayer() {
     aKillers = [];
     aPeople = [];
+    allRole = aKillers.concat(aPeople);
     for (var i = 0; i < killer.innerText; i++) {
         aKillers.push(roleKllers);
     }
@@ -23,6 +24,7 @@ function aPlayer() {
     allRole = aKillers.concat(aPeople);
     return allRole;
 }
+aPlayer();
 
 //洗牌
 function shuffle() {
@@ -32,13 +34,10 @@ function shuffle() {
         allRole[i] = allRole[random];
         allRole[random] = temp;
     }
-
     sessionStorage.setItem('role',JSON.stringify(allRole));
-    console.log(allRole);
     return allRole;
 }
-
-
+shuffle();
 
 //正则表达式数字验证
 function regExp() {
@@ -48,7 +47,6 @@ function regExp() {
 
 //数字框与滑块联动
 number.onchange = function () {
-
     if (regExp()) {
         myRange.value = number.value;
     }
@@ -64,7 +62,6 @@ number.onchange = function () {
 
 //滑块与数字框联动
 myRange.oninput = function () {
-
     number.value = myRange.value;
     killer.innerText = Math.round((myRange.value) * 0.25);
     people.innerText = myRange.value - killer.innerText;
@@ -73,24 +70,20 @@ myRange.oninput = function () {
 }
 //加减按钮分别与数字框滑块联动
 reduce.onclick = function () {
-
     myRange.value = --myRange.value;
     number.value = myRange.value;
     killer.innerText = Math.round((number.value) * 0.25);
     people.innerText = number.value - killer.innerText;
     aPlayer();
     shuffle();
-
 }
 plus.onclick = function () {
-
     myRange.value = ++myRange.value;
     number.value = myRange.value;
     killer.innerText = Math.round((number.value) * 0.25);
     people.innerText = number.value - killer.innerText;
     aPlayer();
     shuffle();
-
 }
 
 var oStart=document.getElementById("123");
