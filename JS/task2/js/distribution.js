@@ -1,14 +1,14 @@
-var number = document.getElementById("number");
-var myRange = document.getElementById("myRange");
-var killer = document.getElementById("killer");
-var people = document.getElementById("people");
-var plus = document.getElementById("plus");
-var reduce = document.getElementById("reduce");
-var roleKllers = "杀手";
-var rolePeople = "平民";
-var aKillers = [];
-var aPeople = [];
-var allRole = aKillers.concat(aPeople);
+var number = document.getElementById("number"),
+    myRange = document.getElementById("myRange"),
+    killer = document.getElementById("killer"),
+    people = document.getElementById("people"),
+    plus = document.getElementById("plus"),
+    reduce = document.getElementById("reduce"),
+    roleKllers = "杀手",
+    rolePeople = "平民",
+    aKillers = [],
+    aPeople = [],
+    allRole = aKillers.concat(aPeople);
 
 //创建玩家角色数组：
 function aPlayer() {

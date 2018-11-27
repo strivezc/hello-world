@@ -2,7 +2,7 @@ var btn1 = $(".btn1"); //正面按钮元素
 var btn2 = $(".btn2"); //背面按钮元素
 var identity = $("#role"); //身份词元素
 var number = $(".number"); //玩家序号元素
-var num = 0;         //定义初始数组序号
+var num = 0;         //定义初始角色数组序号
 var aRole = JSON.parse(sessionStorage.getItem('role')); //页面的数组传递
 console.log(aRole);
 
