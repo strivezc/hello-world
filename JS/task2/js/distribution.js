@@ -1,43 +1,81 @@
 var number = document.getElementById("number"),
     myRange = document.getElementById("myRange"),
-    killer = document.getElementById("killer"),
-    people = document.getElementById("people"),
     plus = document.getElementById("plus"),
     reduce = document.getElementById("reduce"),
-    roleKllers = "杀手",
-    rolePeople = "平民",
+    start = document.getElementById("start"),
+    oRoleKillers = {
+        id: 0,
+        name: "杀手",
+        state: "存活",
+        day: 0,
+    },
+    oRolePeople = {
+        id: 0,
+        name: "平民",
+        state: "存活",
+        day: 0,
+    },
     aKillers = [],
     aPeople = [],
-    allRole = aKillers.concat(aPeople);
+    allRole = [];
 
-//创建玩家角色数组：
-function aPlayer() {
-    aKillers = [];
+
+//判断人数配比
+function distribution() {
+    var killer;
+    var people;
+    aKillers = [];//每次新建玩家数组的时候清空前一次
     aPeople = [];
-    allRole = aKillers.concat(aPeople);
-    for (var i = 0; i < killer.innerText; i++) {
-        aKillers.push(roleKllers);
+    if (number.value >= 4 && number.value < 6) {
+        killer = 1;
+        people = number.value - killer;
     }
-    for (i = 0; i <people.innerText; i++) {
-        aPeople.push(rolePeople);
+    else if (number.value >= 6 && number.value < 9) {
+        killer = 2;
+        people = number.value - killer;
     }
-    allRole = aKillers.concat(aPeople);
-    return allRole;
+    else if (number.value >= 9 && number.value < 11) {
+        killer = 3;
+        people = number.value - killer;
+    }
+    else if (number.value >= 11 && number.value < 16) {
+        killer = 4;
+        people = number.value - killer;
+    }
+    else {
+        killer = 5;
+        people = number.value - killer;
+    }
+    for (i = 0; i < killer; i++) {
+        var newORoleKillers = JSON.parse(JSON.stringify(oRoleKillers));//JSON对象序列化方法克隆对象
+        aKillers.push(newORoleKillers);
+    }
+    for (i = 0; i < people; i++) {
+        var newORolePeople = JSON.parse(JSON.stringify(oRolePeople));//JSON对象序列化方法克隆对象
+        aPeople.push(newORolePeople);
+    }
+    return allRole = aKillers.concat(aPeople);
+
 }
-aPlayer();
+
 
 //洗牌
 function shuffle() {
+    var a;
     for (var i = allRole.length; i--;) {
         var random = Math.floor(Math.random() * (i + 1));
         var temp = allRole[i];
         allRole[i] = allRole[random];
         allRole[random] = temp;
     }
-    sessionStorage.setItem('role',JSON.stringify(allRole));
-    return allRole;
+    for (var b = 0; b < allRole.length; b++) {
+        a = b;
+        allRole[a].id = a + 1;
+    }
+    sessionStorage.setItem('role', JSON.stringify(allRole));
+    console.log(allRole);
 }
-shuffle();
+
 
 //正则表达式数字验证
 function regExp() {
@@ -54,47 +92,42 @@ number.onchange = function () {
         alert("请输入正确范围（4-18）");
         myRange.value = number.value = 4;
     }
-    killer.innerText = Math.round((number.value) * 0.25);
-    people.innerText = number.value - killer.innerText;
-    aPlayer();
+    distribution();
     shuffle();
-}
+};
+
 
 //滑块与数字框联动
-myRange.oninput = function () {
+myRange.onchange = function () {
     number.value = myRange.value;
-    killer.innerText = Math.round((myRange.value) * 0.25);
-    people.innerText = myRange.value - killer.innerText;
-    aPlayer();
+    distribution();
     shuffle();
-}
+
+};
 //加减按钮分别与数字框滑块联动
 reduce.onclick = function () {
     myRange.value = --myRange.value;
     number.value = myRange.value;
-    killer.innerText = Math.round((number.value) * 0.25);
-    people.innerText = number.value - killer.innerText;
-    aPlayer();
+    distribution();
     shuffle();
-}
+};
 plus.onclick = function () {
     myRange.value = ++myRange.value;
     number.value = myRange.value;
-    killer.innerText = Math.round((number.value) * 0.25);
-    people.innerText = number.value - killer.innerText;
-    aPlayer();
+    distribution();
     shuffle();
-}
+};
 
-var oStart=document.getElementById("123");
-oStart.onclick = function () {
-    window.location.href='../html/identity.html';
-}
+start.onclick = function () {
+    window.location.href = '../html/identity.html';
+};
+distribution();
+shuffle();
+
 
 /* 洗牌操作
 方法一
 var test = ["苹果", "香蕉", "榴莲", "雪梨", "水蜜桃", "西瓜", "橙子"];
-
 function aTest() {
     var tLength = test.length;
     for (var i = tLength;i--;) {
@@ -106,6 +139,7 @@ function aTest() {
     return test;
 }
 console.log(aTest());
+
 方法二
 function bTest() {
     var lenght=test.length;

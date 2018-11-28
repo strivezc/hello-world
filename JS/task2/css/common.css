@@ -76,10 +76,21 @@ header {
 .fs-34 {
   font-size: 0.34rem; }
 
+.bcg-trp {
+  background: transparent; }
+
 .fs-26 {
   font-size: 0.26rem; }
 
 .fs-24 {
   font-size: 0.24rem; }
+
+html, body {
+  margin: 0 auto;
+  max-width: 750px;
+  height: 100vh; }
+
+html {
+  background: #ffedc5; }
 
 /*# sourceMappingURL=common.css.map */

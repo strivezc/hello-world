@@ -7,7 +7,9 @@ body {
 .parameter {
   font-size: 0.34rem;
   line-height: 0.88rem;
-  border-bottom: 1px solid #74d4eb; }
+  border-bottom: 1px solid #74d4eb;
+  width: 100%;
+  max-width: 750px; }
 
 .return {
   width: 11px;
@@ -19,13 +21,16 @@ body {
   height: 18px;
   padding: 0.26rem 0.3rem; }
 
+main {
+  padding-top: 1.8rem; }
+
 .card {
   position: relative;
   width: 4.5rem;
   height: 6.4rem;
   border: 6px solid white;
   background: #ffedc5;
-  margin: 1.8rem  auto 0; }
+  margin: auto; }
   .card:before {
     position: absolute;
     content: "";
@@ -104,6 +109,7 @@ body {
   margin: 1.2rem auto 0;
   width: 4.9rem;
   height: 0.85rem;
-  position: relative; }
+  position: relative;
+  padding-bottom: 1rem; }
 
 /*# sourceMappingURL=identity.css.map */

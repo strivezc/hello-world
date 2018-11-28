@@ -1,9 +1,14 @@
 $normal-border:1px solid #d9d9d9;
 $px2-border:2px solid #d9d9d9;
-body{background: #f0f0f0}
+body{
+
+  background: #f0f0f0;
+}
 .parameter{
   font-size: 0.34rem;
   line-height: 0.88rem;
+  width: 100%;
+  max-width: 750px;
 }
 .text{
   float: left;

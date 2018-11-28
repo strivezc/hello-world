@@ -1,5 +1,11 @@
+body {
+  background: #29bde0; }
+
 .voting {
-  line-height: 0.7rem; }
+  line-height: 0.7rem;
+  border-bottom: 1px solid #74d4eb;
+  width: 100%;
+  max-width: 750px; }
   .voting p {
     padding-left: 7.5%; }
 
@@ -38,14 +44,14 @@
 
 .list {
   width: 100vw;
-  margin-top: 2.22rem;
-  padding-bottom: 3rem;
-  background-color: #29bde0; }
+  margin-top: 0.7rem;
+  padding-bottom: 4rem; }
 
 .li {
   overflow: hidden;
   padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-right: 5vw;
+  padding-top: 0.5rem; }
   .li .role {
     float: left;
     width: 21.25vw;
@@ -86,6 +92,7 @@ footer {
     bottom: 1.9rem;
     content: "";
     width: 86%;
+    max-width: 400px;
     border-top: 0.02rem solid white; }
 
 .voteButton {
@@ -96,5 +103,14 @@ footer {
   width: 76.6%; }
   .voteButton:hover {
     background-color: #ec971f; }
+
+.return {
+  width: 11px;
+  height: 22px;
+  padding: 0.15rem 0 0 0.24rem; }
+
+.footer {
+  width: 100%;
+  max-width: 750px; }
 
 /*# sourceMappingURL=voting.css.map */

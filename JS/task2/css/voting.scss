@@ -4,13 +4,21 @@
   left:$left;
   right: $right;
 }
+@mixin picture-size($with,$height){
+  width: $with;
+  height: $height;
+}
 @mixin flex-between{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+body{background: #29bde0}
 .voting{
   line-height: 0.7rem;
+  border-bottom: 1px solid #74d4eb;
+  width: 100%;
+  max-width: 750px;
   p{
     padding-left: 7.5%;
   }
@@ -45,14 +53,14 @@
 }
 .list{
   width: 100vw;
-  margin-top: 2.22rem;
-  padding-bottom: 3rem;
-  background-color: #29bde0;
+  margin-top: 0.7rem;
+  padding-bottom: 4rem;
 }
 .li{
   overflow: hidden;
   padding-left: 5vw;
   padding-right: 5vw;
+  padding-top: 0.5rem;
   .role{
     float: left;
     width: 21.25vw;
@@ -93,6 +101,7 @@ footer{
     bottom: 1.9rem;
     content: "";
     width: 86%;
+    max-width: 400px;
     border-top: 0.02rem solid white;
   }
 }
@@ -104,3 +113,9 @@ footer{
   width: 76.6%;
   &:hover{background-color: #ec971f;}
 }
+.return{
+  @include picture-size(11px,22px);
+  padding: 0.15rem 0 0 0.24rem;
+}
+.footer{ width: 100%;
+  max-width: 750px;}

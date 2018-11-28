@@ -9,6 +9,8 @@ body{background: #29bde0;
   font-size: 0.34rem;
   line-height: 0.88rem;
   border-bottom: 1px solid #74d4eb;
+  width: 100%;
+  max-width: 750px;
 }
 .return{
   @include picture-size(11px,22px);
@@ -18,13 +20,14 @@ body{background: #29bde0;
   @include picture-size(18px,18px);
   padding: 0.26rem 0.3rem;
 }
+main{padding-top: 1.8rem;}
 .card{
   position: relative;
   width: 4.5rem;
   height: 6.4rem;
   border: 6px solid white;
   background: #ffedc5;
-  margin: 1.8rem  auto 0;
+  margin: auto;
   &:before{
     position: absolute;
     content: "";
@@ -106,4 +109,5 @@ body{background: #29bde0;
   width: 4.9rem;
   height: 0.85rem;
   position: relative;
+  padding-bottom: 1rem;
 }
