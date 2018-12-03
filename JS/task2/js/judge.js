@@ -1,12 +1,12 @@
 var aRole = JSON.parse(sessionStorage.getItem('role'));//页面数组传递
 console.log(aRole);
 $(document).ready(function () {
-    $(".menuButton").click(function () {
-        window.location.href = '../html/player-distribution.html';
+    $(".voteButton").click(function () {
+        window.location.href = '../html/Judge-Diary.html';
     });//下一页
     $(".return").click(function () {
         window.location.href = '../html/identity.html';
-    })
+    });
 
     //for循环添加玩家身份div
     for (var i = 0; i < aRole.length; i++) {

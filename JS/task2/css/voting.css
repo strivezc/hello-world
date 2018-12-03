@@ -71,16 +71,20 @@ body {
         line-height: 4.4vw;
         font-size: 3.1vw;
         background-color: #83b09a; }
-    .li .role:hover .operation {
-      visibility: visible; }
 
 .operation {
   height: 11.4vw;
   width: 21.25vw;
-  visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
+  display: none;
+  position: relative; }
+
+.killButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
 
 footer {
   justify-content: center;

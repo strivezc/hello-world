@@ -3,7 +3,13 @@ header {
 
 .result {
   font-size: 0.34rem;
-  line-height: 0.88rem; }
+  line-height: 0.88rem;
+  width: 100%;
+  max-width: 750px; }
+
+.footer {
+  width: 100%;
+  max-width: 750px; }
 
 .bg-11 {
   margin-top: 0.22rem;

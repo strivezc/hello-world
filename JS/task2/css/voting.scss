@@ -1,102 +1,125 @@
-@mixin absolute($top,$left,$right){
+@mixin absolute($top,$left,$right) {
   position: absolute;
-  top:$top;
-  left:$left;
+  top: $top;
+  left: $left;
   right: $right;
 }
-@mixin picture-size($with,$height){
+
+@mixin picture-size($with,$height) {
   width: $with;
   height: $height;
 }
-@mixin flex-between{
+
+@mixin flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body{background: #29bde0}
-.voting{
+
+body {
+  background: #29bde0
+}
+
+.voting {
   line-height: 0.7rem;
   border-bottom: 1px solid #74d4eb;
   width: 100%;
   max-width: 750px;
-  p{
+  p {
     padding-left: 7.5%;
   }
 }
-.menuButton{
+
+.menuButton {
   margin-left: 0.24rem;
   margin-top: 0.15rem;
 }
-.close{
+
+.close {
   margin-right: 0.24rem;
   margin-top: 0.15rem;
 }
-.dialogBox{
+
+.dialogBox {
   line-height: 0.82rem;
   background-color: #b9e9f5;
   width: 100%;
   padding-left: 7.5%;
-  &:after{
+  &:after {
     content: "";
     border-top: solid 0.20rem #b9e9f5;
     border-left: solid 0.15rem #00800000;
     border-right: solid 0.15rem #00800000;
-    @include absolute(1.52rem,11.25%,none);
+    @include absolute(1.52rem, 11.25%, none);
   }
 }
-.musicButton{
+
+.musicButton {
   display: inline-block;
-  @include absolute(0.85rem,none,0.18rem);
-  audio{
+  @include absolute(0.85rem, none, 0.18rem);
+  audio {
     opacity: 0;
-    height: 38px}
+    height: 38px
+  }
 }
-.list{
+
+.list {
   width: 100vw;
   margin-top: 0.7rem;
   padding-bottom: 4rem;
 }
-.li{
+
+.li {
   overflow: hidden;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 0.5rem;
-  .role{
+  .role {
     float: left;
     width: 21.25vw;
     height: 32.65vw;
     margin: 0 4.375vw;
-    .diving{
+    .diving {
       background-color: #f5c97b;
       border: 0.625vw solid white;
-      .name{
+      .name {
         width: 20vw;
         height: 15.6vw;
         line-height: 15.6vw;
         font-size: 4vw;
       }
-      .number{width: 20vw;
+      .number {
+        width: 20vw;
         height: 4.4vw;
         line-height: 4.4vw;
         font-size: 3.1vw;
-        background-color: #83b09a;}
-    }
-    &:hover .operation{
-      visibility: visible;
+        background-color: #83b09a;
+      }
     }
   }
 }
+
 .operation {
   height: 11.4vw;
   width: 21.25vw;
-  visibility: hidden;
-  @include flex-between;}
-footer{
+  display: none;
+  position: relative;
+}
+.killButton{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+footer {
   justify-content: center;
   background-color: #29bde0;
   width: 100%;
   height: 1.9rem;
-  &:before{
+  &:before {
     position: fixed;
     bottom: 1.9rem;
     content: "";
@@ -105,17 +128,24 @@ footer{
     border-top: 0.02rem solid white;
   }
 }
-.voteButton{
+
+.voteButton {
   height: 0.87rem;
   background-color: #fbb435;
   line-height: 0.87rem;
   font-size: 0.4rem;
   width: 76.6%;
-  &:hover{background-color: #ec971f;}
+  &:hover {
+    background-color: #ec971f;
+  }
 }
-.return{
-  @include picture-size(11px,22px);
+
+.return {
+  @include picture-size(11px, 22px);
   padding: 0.15rem 0 0 0.24rem;
 }
-.footer{ width: 100%;
-  max-width: 750px;}
+
+.footer {
+  width: 100%;
+  max-width: 750px;
+}

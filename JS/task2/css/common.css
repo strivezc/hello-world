@@ -85,10 +85,12 @@ header {
 .fs-24 {
   font-size: 0.24rem; }
 
+.pt3rem
 html, body {
   margin: 0 auto;
   max-width: 750px;
-  height: 100vh; }
+  min-height: 100vh;
+  background-color: white; }
 
 html {
   background: #ffedc5; }
