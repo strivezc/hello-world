@@ -1,6 +1,11 @@
 body {
   background-color: #f0f0f0; }
 
+header {
+  width: 100%;
+  max-width: 750px;
+  overflow: hidden; }
+
 .menu {
   margin: 0.21rem 0 0.22rem 0.21rem;
   cursor: pointer; }
