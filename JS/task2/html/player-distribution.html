@@ -15,15 +15,16 @@
     <button class="sprite bg-12 fr"></button>
 </header>
 <main>
-<div class="container">
-    <div class="text"><p>玩家配比</p></div>
-    <div class="detail">
-        <div class="role">
-
+    <div class="container">
+        <div class="text"><p>玩家配比</p></div>
+        <div class="detail">
+            <div class="role">
+                <span></span>
+                <span></span>
+            </div>
+            <button class="setting">点击设置</button>
         </div>
-        <button class="setting">点击设置</button>
     </div>
-</div>
     <ul>
         <li>
             <input type="text" placeholder="水民词组" class="word">
@@ -33,14 +34,14 @@
         </li>
     </ul>
     <form action="">
-    <div class="number">
-        玩家人数 <input type="number" value="4"  id="number" class="numberBox"> 人（4-18人）<br>
-        <input type="button" class="reduce" id="reduce">
-        <input type="range" value="4" id="myRange" class="range" min="4" max="18" >
-        <input type="button" class="plus" id="plus">
-    </div>
+        <div class="number">
+            玩家人数 <input type="number" value="4" id="number" class="numberBox"> 人（4-18人）<br>
+            <input type="button" class="reduce" id="reduce">
+            <input type="range" value="4" id="myRange" class="range" min="4" max="18">
+            <input type="button" class="plus" id="plus">
+        </div>
     </form>
-        <button class="start" id="start">去发牌</button>
+    <button class="start" id="start">去发牌</button>
 
 </main>
 <script src="../js/distribution.js"></script>

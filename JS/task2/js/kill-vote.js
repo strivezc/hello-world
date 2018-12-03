@@ -73,9 +73,10 @@ $(document).ready(function () {
                 confirm("当前玩家已死亡，请选择其他玩家")
             }
             else {
-                fsm.killed();
+
                 var result = confirm("你确定要杀这个人吗");
                 if (result === true) {
+                    fsm.killed();
                     role.css("background-color", "#83b09a");
                     allPeople[a].state = "被杀死";           //更改玩家数组角色的死活状态
                     allPeople[a].day = day;
