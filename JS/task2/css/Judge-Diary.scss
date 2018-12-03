@@ -17,6 +17,9 @@ body{background: #f7f7f7}
 main{
   margin: 0 auto 2rem;
   width: 90%;
+  & ul:not(:last-child) li span{
+    background-color: #83b09a;
+  }
 }
 .day{
   display: inline-block;

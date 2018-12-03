@@ -38,8 +38,7 @@ $(document).ready(function () {
     //返回按钮
     $(".return").click(function () {
         window.location.href = '../html/task13_2.html';
-        sessionStorage.removeItem("state");
-        sessionStorage.removeItem("death");
+       sessionStorage.clear();
     });
 
 
@@ -53,11 +52,6 @@ $(document).ready(function () {
             {name: 'stepFour', from: 'stepThree', to: 'stepFour'},
             {name: 'stepFive', from: 'ready', to: 'ready'}
         ],
-        methods: {
-            onStepFive: function () {
-                $("#killing1,#words1,#speak1,#vote1").css("background", "#83b09a");
-            }
-        }
     });
     //4个步骤
     $(killing).click(function () {
@@ -73,9 +67,10 @@ $(document).ready(function () {
 
     $(words).click(function () {
         if (fsm.state === "stepOne") {
-            fsm.stepTwo();
-            confirm("请死者亮明身份并且发表遗言");
-            $(words).css("background", "#83b09a");
+            let result= confirm("请死者亮明身份并且发表遗言");
+            if (result===true) {
+                fsm.stepTwo();
+            $(words).css("background", "#83b09a");}
         }
         else if (fsm.state === "stepTwo" || fsm.state === "stepThree") {
             confirm("请进行下一项活动")
@@ -88,9 +83,10 @@ $(document).ready(function () {
 
     $(speak).click(function () {
         if (fsm.state === "stepTwo") {
-            fsm.stepThree();
-            confirm("请玩家依次发言");
-            $(speak).css("background", "#83b09a");
+            let result=confirm("请玩家依次发言");
+            if (result===true) {
+                fsm.stepThree();
+                $(speak).css("background", "#83b09a");}
         }
         else if (fsm.state === "stepThree") {
             confirm("请进行下一项活动")
@@ -131,7 +127,6 @@ $(document).ready(function () {
         }
     }
     if (state === "stepFour") {
-        fsm.stepFive();
         for (let i=0;i<(day-1);i++){
             let item="#item" + (i+1)+" p";
             $(item).eq(0).text(aBeKilled[i].id + "号被杀手杀死,身份是" + aBeKilled[i].name);

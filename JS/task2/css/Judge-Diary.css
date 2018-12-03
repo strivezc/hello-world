@@ -21,6 +21,8 @@ body {
 main {
   margin: 0 auto 2rem;
   width: 90%; }
+  main ul:not(:last-child) li span {
+    background-color: #83b09a; }
 
 .day {
   display: inline-block;
