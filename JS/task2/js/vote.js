@@ -1,12 +1,9 @@
 var aBeKilled = JSON.parse(sessionStorage.getItem('aBeKilled')),//被殺玩家
     aVoted = JSON.parse(sessionStorage.getItem('aBeVoted')),//被投玩家
-    days = JSON.parse(sessionStorage.getItem("days")),
+    days = JSON.parse(sessionStorage.getItem("days")),//天数
     allPeople = JSON.parse(sessionStorage.getItem("role"));//全部玩家
-
-
-console.log(aBeKilled);
-console.log(aVoted);
 console.log(allPeople);
+console.log(aBeKilled,aVoted);
 
 $(document).ready(function () {
     if (days) {
@@ -15,18 +12,18 @@ $(document).ready(function () {
     else {
         day = 1;
     }
-    console.log(day);
+    //返回法官台本
+    //保存时间，每次点击天数+1
     $(".voteButton").click(function () {
         if (fsm.state === "off") {
             alert("杀个人再走吧")
         }
         else {
-            fsm.initial();
             window.history.go(-1);
             day++;
-            JSON.stringify(sessionStorage.setItem("days", day));//保存时间，每次点击确定+1
+            JSON.stringify(sessionStorage.setItem("days", day));
         }
-    });//返回法官台本
+    });
     //for循环添加玩家身份div
     for (var i = 0; i < allPeople.length; i++) {
         var display = "<div class=\"role\">\n" +
@@ -40,7 +37,7 @@ $(document).ready(function () {
             "</div>";
         $(".li").append(display);
     }
-
+    //状态机，判断是否已完成杀人
     var fsm = new StateMachine({
         init: "off",
         transitions: [
@@ -48,12 +45,13 @@ $(document).ready(function () {
             {name: 'initial', from: 'on', to: 'off'}
         ]
     });
-
+    //点击头像显示小刀
     $(".role").click(function () {
         $(this).find(".operation").show();
         $(this).siblings().find(".operation").hide();
     });
 
+    //渲染头像背景颜色
     if (aBeKilled) {
         for (var b = 0; b < aBeKilled.length; b++) {
             $(".diving").eq(aBeKilled[b].id - 1).css("background-color", "#83b09a");
@@ -65,15 +63,13 @@ $(document).ready(function () {
         }
     }
 
-//创建被投玩家数组
+    //创建被投玩家数组
     if (aVoted) {
         aVotedPeople = aVoted;
     }
     else {
         aVotedPeople = [];
     }
-    console.log(aVotedPeople);
-
     //小刀
     $(".killButton").click(function () {
             var role = $(this).parent().prev(".diving");//获取刀按钮div的兄弟元素

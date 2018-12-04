@@ -1,26 +1,27 @@
-var number = document.getElementById("number"),
-    myRange = document.getElementById("myRange"),
-    plus = document.getElementById("plus"),
-    reduce = document.getElementById("reduce"),
-    start = document.getElementById("start"),
-    oRoleKillers = {
-        id: 0,
-        name: "杀手",
-        state: "存活",
-        day: 0,
-    },
+var number = document.getElementById("number"),//数字框
+    myRange = document.getElementById("myRange"),//滑块
+    plus = document.getElementById("plus"),// + 号
+    reduce = document.getElementById("reduce"),//- 号
+    start = document.getElementById("start"),//开始游戏按钮
+    numPeople = document.getElementsByClassName("people"),//平民数量
+    numKiller = document.getElementsByClassName("killer");//杀手数量
+oRoleKillers = {
+    id: 0,
+    name: "杀手",
+    state: "存活",
+    day: 0,
+},
     oRolePeople = {
         id: 0,
         name: "平民",
         state: "存活",
         day: 0,
     },
-    aKillers = [],
-    aPeople = [],
-    allRole = [];
+    aKillers = [],//杀手数组
+    aPeople = [],//平民数组
+    allRole = [];//全部玩家
 
-
-//判断人数配比
+//判断游戏人数配比
 function distribution() {
     var killer;
     var people;
@@ -54,13 +55,13 @@ function distribution() {
         var newORolePeople = JSON.parse(JSON.stringify(oRolePeople));//JSON对象序列化方法克隆对象
         aPeople.push(newORolePeople);
     }
+    numPeople[0].innerHTML = " 平 民 " + aPeople.length + " 人";
+    numKiller[0].innerHTML = " 杀 手 " + aKillers.length + " 人";
     return allRole = aKillers.concat(aPeople);
-
 }
 
-
-//洗牌
 function shuffle() {
+    //洗牌
     var a;
     for (var i = allRole.length; i--;) {
         var random = Math.floor(Math.random() * (i + 1));
@@ -68,6 +69,7 @@ function shuffle() {
         allRole[i] = allRole[random];
         allRole[random] = temp;
     }
+    //洗牌后给角色添加序号
     for (var b = 0; b < allRole.length; b++) {
         a = b;
         allRole[a].id = a + 1;
@@ -76,8 +78,7 @@ function shuffle() {
     console.log(allRole);
 }
 
-
-//正则表达式数字验证
+//正则表达式数字验证 4-18
 function regExp() {
     var reg = /^[4-9]$|^1[0-8]$/g;
     return reg.test(number.value);
@@ -96,13 +97,11 @@ number.onchange = function () {
     shuffle();
 };
 
-
 //滑块与数字框联动
 myRange.onchange = function () {
     number.value = myRange.value;
     distribution();
     shuffle();
-
 };
 //加减按钮分别与数字框滑块联动
 reduce.onclick = function () {
@@ -123,12 +122,6 @@ start.onclick = function () {
 };
 distribution();
 shuffle();
-
-
-
-
-
-
 
 
 /* 洗牌操作

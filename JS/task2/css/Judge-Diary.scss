@@ -15,18 +15,25 @@ body{background: #f7f7f7}
 .close{margin-right: 0.24rem;
   margin-top: 0.15rem;}
 main{
-  margin: 0 auto 2rem;
+  margin: 0.7rem auto 2rem;
+  font-size: 0;
   width: 90%;
+  position: relative;
   & ul:not(:last-child) li span{
     background-color: #83b09a;
+    &:before{
+      border-right: solid 0.20rem #83b09a;
+    }
   }
   & ul:not(:last-child){
     display: none;
+    padding-bottom: 0.3rem;
   }
 }
+
 .day{
   display: inline-block;
-  margin-top: 0.9rem;
+  margin-top: 0.3rem;
   width: 100%;
   line-height: 0.8rem;
   background: white;
@@ -37,17 +44,20 @@ main{
   cursor: pointer;
 }
 .item{
-  margin-top: 0.3rem;
+  position: relative;
   width: 100%;
   background: white;
   text-align: center;
   overflow: hidden;
   border: $normal-border;
+
+  li{position: relative;
+  };
   p{
     font-size: 0.3rem;
     width: 70%;
     text-align: left;
-    margin: auto;
+    margin: 0 10% 0 20%;
   }
   /*伪元素三角形
   &:before{
@@ -66,7 +76,7 @@ main{
     font-size: 0.3rem;
     line-height: 0.8rem;
     width: 70%;
-    margin: 0.3rem auto;
+    margin: 0.3rem 10% 0.3rem 20%;
     cursor: pointer;
     &:before{
       content: "";
@@ -78,6 +88,9 @@ main{
       top: 12px;
     }
   }
+}
+.item span.change:before{
+  border-right: solid 0.20rem #83b09a;
 }
 .footer{
   position: fixed;
@@ -96,4 +109,19 @@ main{
     background: #fbb435;
     color: white;
   }
+}
+.icon{
+  left: -1rem;
+  top: 0.1rem;
+  position: absolute;
+  width: 0.62rem;
+  height: 0.6rem;
+}
+ul li:first-child span:after{
+  position: absolute;
+  content: "";
+  height: 3.5rem;
+  left: -0.7rem;
+  top: 0.7rem;
+  border-left: 0.04rem solid #dbdbdb;
 }

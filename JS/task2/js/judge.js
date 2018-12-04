@@ -1,4 +1,7 @@
-var aRole = JSON.parse(sessionStorage.getItem('role'));//页面数组传递
+var aRole = JSON.parse(sessionStorage.getItem('role')),//页面数组传递
+    aDeath = JSON.parse(sessionStorage.getItem('aBeKilled')),//被杀
+    aVoted = JSON.parse(sessionStorage.getItem('aBeVoted')),//被投
+    state = sessionStorage.getItem("state");
 console.log(aRole);
 $(document).ready(function () {
     $(".voteButton").click(function () {
@@ -20,5 +23,19 @@ $(document).ready(function () {
             "</div>\n" +
             "</div>";
         $(".li").append(display);
+    }
+//改变已死玩家背景颜色
+    if (aDeath) {
+        for (var b = 0; b < aDeath.length; b++) {
+            $(".diving").eq(aDeath[b].id - 1).css("background-color", "#83b09a");
+        }
+    }
+    if (aVoted) {
+        for (var c = 0; c < aVoted.length; c++) {
+            $(".diving").eq(aVoted[c].id - 1).css("background-color", "#83b09a");
+        }
+    }
+    if (state) {
+        $(".voteButton").text("返回");
     }
 });

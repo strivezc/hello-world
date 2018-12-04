@@ -1,9 +1,9 @@
-var btn1 = $(".btn1"),//正面按钮元素
-    btn2 = $(".btn2"), //背面按钮元素
-    identity = $("#role"), //身份词元素
-    number = $(".number"), //玩家序号元素
+var btn1 = $(".btn1"),//正面按钮
+    btn2 = $(".btn2"), //背面按钮
+    identity = $("#role"), //身份词
+    number = $(".number"), //玩家序号
     num = 0,       //定义初始角色数组序号
-    allPeople = JSON.parse(sessionStorage.getItem('role')); //页面的数组传递
+    allPeople = JSON.parse(sessionStorage.getItem('role')); //全部玩家数组
 console.log(allPeople);
 
 $(function () {

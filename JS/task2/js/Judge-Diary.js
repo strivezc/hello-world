@@ -1,10 +1,11 @@
-var aBeKilled = JSON.parse(sessionStorage.getItem('aBeKilled')),//被杀玩家
+var allPeople = JSON.parse(sessionStorage.getItem('role')),//所有玩家
+    aBeKilled = JSON.parse(sessionStorage.getItem('aBeKilled')),//被杀玩家
     aVoted = JSON.parse(sessionStorage.getItem('aBeVoted')),//被投玩家
-    num = JSON.parse(sessionStorage.getItem("days"));//天数传递
-
-
-console.log(aBeKilled);
-console.log(aVoted);
+    num = JSON.parse(sessionStorage.getItem("days")),//天数传递
+    state = sessionStorage.getItem("state");
+console.log(allPeople);
+console.log(aBeKilled, aVoted);
+console.log(state);
 
 $(document).ready(function () {
     if (num) {
@@ -14,13 +15,13 @@ $(document).ready(function () {
         day = 1;//初始的时间
     }
 
-    var killing = "#killing" + (day),//选择动态killing的id
+//选择动态killing的id
+    var killing = "#killing" + (day),
         words = "#words" + (day),
         speak = "#speak" + (day),
         vote = "#vote" + (day);
-    console.log(killing, words, speak, vote);
-    //生成下一天的信息
 
+    //生成下一天的信息
     if (day > 1) {
         for (var i = 0; i < day - 1; i++) {
             var a = $("#day").clone(true);
@@ -34,15 +35,16 @@ $(document).ready(function () {
             $("main").append(a, b);
         }
     }
-    console.log(day);
-    //返回按钮
+    //返回与法官日志按钮
     $(".return").click(function () {
         window.location.href = '../html/task13_2.html';
-       sessionStorage.clear();
+        sessionStorage.clear();
+    });
+    $("#diary").click(function () {
+        window.location.href = '../html/task13_2.html';
     });
 
-
-    //状态机
+    //4个步骤的状态机
     var fsm = new StateMachine({
         init: "ready",
         transitions: [
@@ -50,10 +52,28 @@ $(document).ready(function () {
             {name: 'stepTwo', from: 'stepOne', to: 'stepTwo'},
             {name: 'stepThree', from: 'stepTwo', to: 'stepThree'},
             {name: 'stepFour', from: 'stepThree', to: 'stepFour'},
-            {name: 'stepFive', from: 'ready', to: 'ready'}
         ],
+        methods: {
+            onStepOne: function () {
+                $(killing).css("background", "#83b09a");//改变步骤颜色
+                $(killing).addClass("change");         //改变伪元素三角形颜色
+            },
+            onStepTwo: function () {
+                $(words).css("background", "#83b09a");
+                $(words).addClass("change");
+            },
+            onStepThree: function () {
+                $(speak).css("background", "#83b09a");
+                $(speak).addClass("change");
+            },
+            onStepFour: function () {
+                $(vote).css("background", "#83b09a");
+                $(vote).addClass("change");
+            }
+        }
     });
-    //4个步骤
+
+    //4个步骤，每次操作保存当前的状态
     $(killing).click(function () {
         if (fsm.state === "ready") {
             fsm.stepOne();
@@ -64,13 +84,13 @@ $(document).ready(function () {
             confirm("请进行下一项活动");
         }
     });
-
     $(words).click(function () {
         if (fsm.state === "stepOne") {
-            let result= confirm("请死者亮明身份并且发表遗言");
-            if (result===true) {
+            let result = confirm("请死者亮明身份并且发表遗言");
+            if (result === true) {
                 fsm.stepTwo();
-            $(words).css("background", "#83b09a");}
+                sessionStorage.setItem("state", fsm.state);
+            }
         }
         else if (fsm.state === "stepTwo" || fsm.state === "stepThree") {
             confirm("请进行下一项活动")
@@ -80,13 +100,13 @@ $(document).ready(function () {
         }
         console.log(fsm.state, fsm.transitions());
     });
-
     $(speak).click(function () {
         if (fsm.state === "stepTwo") {
-            let result=confirm("请玩家依次发言");
-            if (result===true) {
+            let result = confirm("请玩家依次发言");
+            if (result === true) {
                 fsm.stepThree();
-                $(speak).css("background", "#83b09a");}
+                sessionStorage.setItem("state", fsm.state);
+            }
         }
         else if (fsm.state === "stepThree") {
             confirm("请进行下一项活动")
@@ -99,7 +119,6 @@ $(document).ready(function () {
     $(vote).click(function () {
         if (fsm.state === "stepThree") {
             fsm.stepFour();
-            $(vote).css("background", "#83b09a");
             window.location.href = '../html/vote.html';
             sessionStorage.setItem("state", fsm.state);
         }
@@ -111,30 +130,37 @@ $(document).ready(function () {
         }
     });
 
-    var state = sessionStorage.getItem("state");
-
-    //生成文字
+    //生成文字，状态机每次重新跳转页面都会重置为ready，
+    // 所以每次跳转的时候给它重新转换成当前本地保存的状态
     if (state === "stepOne") {
         fsm.stepOne();
-        $(killing).css("background", "#83b09a");
-        for (let i=0;i<day;i++){
-        let item="#item" + (i+1)+" p";   //获取item div下的 P 元素
-        $(item).eq(0).text(aBeKilled[i].id + "号被杀手杀死,身份是" + aBeKilled[i].name);
-    }
-        for (let i=0;i<(day-1);i++){
-            let item="#item" + (i+1)+" p";
+        for (let i = 0; i < day; i++) {
+            let item = "#item" + (i + 1) + " p";   //获取item div下的 P 元素
+            $(item).eq(0).text(aBeKilled[i].id + "号被杀手杀死,身份是" + aBeKilled[i].name);
+        }
+        for (let i = 0; i < (day - 1); i++) {
+            let item = "#item" + (i + 1) + " p";
             $(item).eq(1).text(aVoted[i].id + "号被投死,身份是" + aVoted[i].name);
         }
     }
+    if (state === "stepTwo") {
+        fsm.stepOne();
+        fsm.stepTwo();
+    }
+    if (state === "stepThree") {
+        fsm.stepOne();
+        fsm.stepTwo();
+        fsm.stepThree();
+    }
     if (state === "stepFour") {
-        for (let i=0;i<(day-1);i++){
-            let item="#item" + (i+1)+" p";
+        for (let i = 0; i < (day - 1); i++) {
+            let item = "#item" + (i + 1) + " p";
             $(item).eq(0).text(aBeKilled[i].id + "号被杀手杀死,身份是" + aBeKilled[i].name);
-            $(item).eq(1).text(aVoted[i].id + "号被投死,身份是" + aVoted[i].name);
+            $(item).eq(1).text(aVoted[i].id + "号被全民投死,身份是" + aVoted[i].name);
         }
     }
     //toggle()点击天数隐藏/显示内容
-    $(".day").click(function(){
+    $(".day").click(function () {
         $(this).next(".item").slideToggle(500);
     });
 });

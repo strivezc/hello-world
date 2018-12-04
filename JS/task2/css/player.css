@@ -127,4 +127,18 @@ input[type=range]::-webkit-slider-thumb {
   background: url("../image/line.png");
   background-size: cover; }
 
+.people, .killer {
+  width: 40%;
+  text-align: left;
+  padding-left: 10%; }
+  .people:before, .killer:before {
+    content: " ";
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: #2aabd2; }
+
+.killer:before {
+  background: #ed9708; }
+
 /*# sourceMappingURL=player.css.map */
