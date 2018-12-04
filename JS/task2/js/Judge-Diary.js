@@ -135,6 +135,6 @@ $(document).ready(function () {
     }
     //toggle()点击天数隐藏/显示内容
     $(".day").click(function(){
-        $(this).next(".item").toggle();
+        $(this).next(".item").slideToggle(500);
     });
 });

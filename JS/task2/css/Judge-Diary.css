@@ -23,6 +23,8 @@ main {
   width: 90%; }
   main ul:not(:last-child) li span {
     background-color: #83b09a; }
+  main ul:not(:last-child) {
+    display: none; }
 
 .day {
   display: inline-block;

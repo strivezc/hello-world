@@ -20,6 +20,9 @@ main{
   & ul:not(:last-child) li span{
     background-color: #83b09a;
   }
+  & ul:not(:last-child){
+    display: none;
+  }
 }
 .day{
   display: inline-block;
