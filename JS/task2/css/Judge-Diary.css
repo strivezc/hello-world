@@ -110,7 +110,8 @@ main {
   top: 0.1rem;
   position: absolute;
   width: 0.62rem;
-  height: 0.6rem; }
+  height: 0.6rem;
+  background: white; }
 
 ul li:first-child span:after {
   position: absolute;
