@@ -6,12 +6,13 @@ console.log(allPeople);
 console.log(aBeKilled,aVoted);
 
 $(document).ready(function () {
-    if (days) {
+    /*if (days) {
         day = days;
     }
     else {
         day = 1;
-    }
+    }*/
+    var day=(days?days:1);
     //返回法官台本
     //保存时间，每次点击天数+1
     $(".voteButton").click(function () {
@@ -64,12 +65,13 @@ $(document).ready(function () {
     }
 
     //创建被投玩家数组
-    if (aVoted) {
+    /*if (aVoted) {
         aVotedPeople = aVoted;
     }
     else {
         aVotedPeople = [];
-    }
+    }*/
+    aVotedPeople=(aVoted?aVoted:[]);
     //小刀
     $(".killButton").click(function () {
             var role = $(this).parent().prev(".diving");//获取刀按钮div的兄弟元素

@@ -7,12 +7,13 @@ console.log( aDeath, aVoted);
 
 $(document).ready(function () {
     //判断第几天
-    if (days) {
+    /*if (days) {
         day = days;
     }
     else {
         day = 1;
-    }
+    }*/
+    var day=(days?days:1);
     //返回法官台本
     $(".voteButton").click(function () {
         if (fsm.state === "off") {
@@ -51,12 +52,13 @@ $(document).ready(function () {
         $(this).siblings().find(".operation").hide();
     });
     //判断初始被杀数组
-    if (aDeath) {
+    /*if (aDeath) {
         aDiePeople = aDeath;
     }
     else {
         aDiePeople = [];
-    }
+    }*/
+    aDiePeople=(aDeath?aDeath:[]);
     //杀人按钮
     $(".killButton").click(function () {
             var role = $(this).parent().prev(".diving");//获取刀按钮的兄弟元素头像div

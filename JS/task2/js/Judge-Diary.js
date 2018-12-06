@@ -8,12 +8,42 @@ console.log(aBeKilled, aVoted);
 console.log(state);
 
 $(document).ready(function () {
-    if (num) {
+    //4个步骤的状态机
+    var fsm = new StateMachine({
+        init: "ready",
+        transitions: [
+            {name: 'stepOne', from: 'ready', to: 'stepOne'},
+            {name: 'stepTwo', from: 'stepOne', to: 'stepTwo'},
+            {name: 'stepThree', from: 'stepTwo', to: 'stepThree'},
+            {name: 'stepFour', from: 'stepThree', to: 'stepFour'},
+        ],
+        methods: {
+            onStepOne: function () {
+                $(killing).css("background", "#83b09a");//改变步骤颜色
+                $(killing).addClass("change");         //改变伪元素三角形颜色
+            },
+            onStepTwo: function () {
+                $(words).css("background", "#83b09a");
+                $(words).addClass("change");
+            },
+            onStepThree: function () {
+                $(speak).css("background", "#83b09a");
+                $(speak).addClass("change");
+            },
+            onStepFour: function () {
+                $(vote).css("background", "#83b09a");
+                $(vote).addClass("change");
+            }
+        }
+    });
+
+    /*if (num) {
         day = num;//保存的时间
     }
     else {
         day = 1;//初始的时间
-    }
+    }*/
+   var day=(num?num:1);
 
 //选择动态killing的id
     var killing = "#killing" + (day),
@@ -42,35 +72,6 @@ $(document).ready(function () {
     });
     $("#diary").click(function () {
         window.location.href = '../html/task13_2.html';
-    });
-
-    //4个步骤的状态机
-    var fsm = new StateMachine({
-        init: "ready",
-        transitions: [
-            {name: 'stepOne', from: 'ready', to: 'stepOne'},
-            {name: 'stepTwo', from: 'stepOne', to: 'stepTwo'},
-            {name: 'stepThree', from: 'stepTwo', to: 'stepThree'},
-            {name: 'stepFour', from: 'stepThree', to: 'stepFour'},
-        ],
-        methods: {
-            onStepOne: function () {
-                $(killing).css("background", "#83b09a");//改变步骤颜色
-                $(killing).addClass("change");         //改变伪元素三角形颜色
-            },
-            onStepTwo: function () {
-                $(words).css("background", "#83b09a");
-                $(words).addClass("change");
-            },
-            onStepThree: function () {
-                $(speak).css("background", "#83b09a");
-                $(speak).addClass("change");
-            },
-            onStepFour: function () {
-                $(vote).css("background", "#83b09a");
-                $(vote).addClass("change");
-            }
-        }
     });
 
     //4个步骤，每次操作保存当前的状态

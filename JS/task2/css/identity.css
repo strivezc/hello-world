@@ -112,4 +112,10 @@ main {
   position: relative;
   padding-bottom: 1rem; }
 
+.none {
+  display: none; }
+
+.block {
+  display: block; }
+
 /*# sourceMappingURL=identity.css.map */

@@ -4,22 +4,19 @@ var number = document.getElementById("number"),//数字框
     reduce = document.getElementById("reduce"),//- 号
     start = document.getElementById("start"),//开始游戏按钮
     numPeople = document.getElementsByClassName("people"),//平民数量
-    numKiller = document.getElementsByClassName("killer");//杀手数量
-oRoleKillers = {
-    id: 0,
-    name: "杀手",
-    state: "存活",
-    day: 0,
-},
-    oRolePeople = {
-        id: 0,
-        name: "平民",
-        state: "存活",
-        day: 0,
-    },
+    numKiller = document.getElementsByClassName("killer"),//杀手数量
+    oRoleKillers = new Person(0, "杀手", "存活", 0),
+    oRolePeople = new Person(0, "平民", "存活", 0),
     aKillers = [],//杀手数组
     aPeople = [],//平民数组
     allRole = [];//全部玩家
+
+function Person(id, name, state, day) {
+    this.id = id;
+    this.name = name;
+    this.state = state;
+    this.day = day;
+}
 
 //判断游戏人数配比
 function distribution() {
@@ -120,8 +117,10 @@ plus.onclick = function () {
 start.onclick = function () {
     window.location.href = '../html/identity.html';
 };
-distribution();
-shuffle();
+(function () {
+    distribution();
+    shuffle();
+}());
 
 
 /* 洗牌操作
