@@ -24,9 +24,9 @@ $small-size:0.25rem;
 body{
   background-color: #f0f0f0;
 }
+html{max-width: 750px}
 header{width: 100%;
-max-width: 750px;
-overflow: hidden}
+max-width: 750px;}
 .menu{
   margin: 0.21rem 0 0.22rem 0.21rem;
   cursor: pointer;
@@ -105,7 +105,7 @@ main{ width: 100%;
   transition: 0.4s ease-out;}
 aside{
   @include width-height(50%,100vh);
-  @include absolute(0,none,0,-52%);
+  @include absolute(0,none,0,-51%);
   background: $white-color;
   transition: 0.4s ease-out;
   border-right: 0.1rem solid $blue-color;

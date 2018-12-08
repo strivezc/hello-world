@@ -42,4 +42,9 @@ $(function () {
             btn1.text("查看" + (num + 1) + "号身份");
         }
     })
+
+    var xhr=new XMLHttpRequest();
+    xhr.open("get","example.txt",false);
+    xhr.send(null);
+
 });
