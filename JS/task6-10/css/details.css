@@ -1,0 +1,41 @@
+.list {
+  margin: 20px auto 0;
+  width: 95%;
+  border: 1px solid #ddd; }
+
+.form-group {
+  width: 95%;
+  margin: auto;
+  word-spacing: 25px;
+  padding: 10px; }
+
+.form {
+  width: 95%;
+  margin: auto;
+  background: white; }
+  .form label {
+    padding-top: 7px; }
+  .form table {
+    margin-top: 3px; }
+    .form table th {
+      padding: 10px 20px;
+      text-align: center; }
+    .form table td {
+      text-align: center; }
+    .form table tr:nth-child(1) {
+      border-bottom: 2px solid #ddd; }
+
+.details-btn-group {
+  display: flex; }
+
+.mg5 {
+  margin: 5px; }
+
+.details-progress {
+  margin-bottom: 0; }
+
+.editor {
+  width: 100%;
+  height: 200px; }
+
+/*# sourceMappingURL=details.css.map */

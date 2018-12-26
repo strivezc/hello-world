@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.bg-img {
+  background: url("../image/登录.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh; }
+
+.land {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 430px;
+  text-align: center;
+  background: #d3d8e0; }
+  .land p {
+    font-size: 20px;
+    color: #03a9f4;
+    margin: 1em; }
+  .land .form-group {
+    margin-bottom: 0; }
+
+.login {
+  padding: 46px 15px; }
+  .login .form-group {
+    margin-bottom: 15px; }
+
+.passWord {
+  height: 50px;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 6px;
+  padding: 8px 16px 8px 50px;
+  border: 1px solid #ccc; }
+
+.icon1 {
+  background: url(http://dev.admin.carrots.ptteng.com/images/SBAdmin/loginpsd.png) 0 0;
+  width: 22px;
+  height: 25px;
+  position: absolute;
+  top: 80px;
+  left: 85px; }
+
+.icon2 {
+  background: url(http://dev.admin.carrots.ptteng.com/images/SBAdmin/loginuser.png) 0 0;
+  width: 23px;
+  height: 26px;
+  position: absolute;
+  top: 160px;
+  left: 85px; }
+
+.login-alert {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  width: 287px;
+  margin: auto;
+  text-align: left;
+  color: red;
+  font-size: 14px; }
+
+.login-btn {
+  color: #fff;
+  font-size: 20px;
+  background-color: #03a9f4;
+  margin: 0 auto 0;
+  display: block;
+  width: 285px;
+  border-radius: 6px;
+  line-height: 40px;
+  border: none; }
+
+.input-validation {
+  height: 30px;
+  line-height: 30px;
+  width: 287px;
+  margin: auto;
+  text-align: left;
+  color: red; }
+
+/*# sourceMappingURL=task5.css.map */

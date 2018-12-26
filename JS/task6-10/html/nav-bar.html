@@ -1,0 +1,74 @@
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#menu">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <span class="top-nav">萝卜多后台管理系统</span>
+    </div>
+    <div class="top-content">
+        <ul class="clearfix">
+            <li>
+                <a href="">猎头</a>
+                <span> | </span>
+                <a href="">uesr</a>
+                <span> | </span>
+                <a href="" ng-click="close()">close</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="collapse navbar-collapse sidebar" id="menu">
+    <div class="panel-group" id="accordion2">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse"
+                 data-parent="#accordion2" href="#collapseOne">
+                <a class="accordion-toggle">信息管理</a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#">公司信息</a></li>
+                        <li><a href="#">职位信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse"
+                 data-parent="#accordion2" href="#collapseTwo">
+                <a class="accordion-toggle">Article管理</a>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li ui-sref=".article"><a href="#">Article信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse"
+                 data-parent="#accordion2" href="#collapseThree">
+                <a class="accordion-toggle">后台管理</a>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse"
+                 style="height: 0px;">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#">账号管理</a></li>
+                        <li><a href="#">角色管理</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">模块管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view=""></div>
+
