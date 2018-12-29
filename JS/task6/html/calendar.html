@@ -1,0 +1,39 @@
+<div>
+<div class="col-md-4 mt-15">
+    <div class="row">
+        <span class="col-md-4">发布时间</span>
+        <div class="col-md-8">
+            <input type="text" class="form-control "
+                   uib-datepicker-popup="{{format}}"
+                   ng-model="date1"
+                   is-open="popup1.opened"
+                   eclose-text="关闭"
+                   clear-text="清空"
+                   current-text="今天"
+                   alt-input-formats="altInputFormats"
+                   datepicker-append-to-body="true"
+                   datepicker-options="{maxDate:today}"
+                   ng-click="open1()"
+            ></div>
+    </div>
+</div>
+<div class="col-md-4 mt-15">
+    <div class="row">
+        <span class="col-md-4"> — </span>
+        <div class="col-md-8">
+            <input type="text" class="form-control "
+                   uib-datepicker-popup="{{format}}"
+                   ng-model="date2"
+                   is-open="popup2.opened"
+                   close-text="关闭"
+                   clear-text="清空"
+                   current-text="今天"
+                   alt-input-formats="altInputFormats"
+                   datepicker-append-to-body="true"
+                   datepicker-options="{minDate:date1,maxDate:today}"
+                   ng-click="open2()"
+            >
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,120 @@
+.fl {float: left; }
+
+.fr {float: right; }
+
+.tl {text-align: left; }
+
+.tc {text-align: center; }
+
+.tr {text-align: right; }
+
+.hide {display: none; }
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both; }
+.clearmp{
+    margin-right: 0;
+    margin-left: 0;
+}
+.ml-15{margin-left: 15px}
+.mr-15{margin-right: 15px}
+.mt-15{margin-top: 15px}
+.mg15{margin: 15px}
+.fc-ff{color: white}
+.fc-99{color: #999999}
+.mg20{margin: 20px}
+
+.pdr15{padding-right: 15px}
+.pdl15{padding-left: 15px}
+.pdb15{padding-bottom: 15px}
+.pdtb-10{padding-top: 10px;
+    padding-bottom: 10px;
+}
+.f16{font-size: 16px}
+.f20{font-size: 20px}
+/*导航栏模块*/
+
+body {
+    background: #f5f5f5; }
+
+.navbar-default {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid white; }
+.navbar-default .navbar-toggle:hover {
+    background: #fdbb6b; }
+.navbar-default .navbar-toggle span.icon-bar {
+    background: white; }
+@media (max-width: 768px) {
+    .navbar-default .navbar-toggle {
+        float: left;
+        position: absolute;
+        right: 0; } }
+
+.top-nav {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    background: #fdbb6b;
+    text-align: center; }
+@media (max-width: 768px) {
+    .top-nav {
+        width: 100%;
+        text-align: left;
+        padding-left: 30px; } }
+
+.sidebar {
+    width: 250px;
+    background: #fdbb6b;
+    float: left; }
+
+.panel {
+    border: none;
+    box-shadow: none;
+    background: #fdbb6b; }
+.panel a {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; }
+.panel .panel-heading {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+
+.panel-default > .panel-heading {
+    background: #fdbb6b; }
+
+@media (min-width: 768px) {
+    .navbar-collapse.collapse {
+        height: calc(100vh - 51px) !important; } }
+.top-content {
+    height: 50px;
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid white; }
+.top-content li {
+    float: right; }
+.top-content li a {
+    padding: 17px;
+    line-height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none; }
+.top-content li a:hover {
+    background: #f5f5f5; }
+main{width: calc(100% - 250px);}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; }
+main{width: 100%}
+}
+/*# sourceMappingURL=backstage.css.map */
+
+
+
+
