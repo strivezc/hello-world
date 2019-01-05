@@ -1,43 +1,8 @@
-<main class="fl" ng-controller="myCtrl">
+<main class="fr" ng-controller="myCtrl">
     <div class="row clearmp form1">
         <form class="form-horizontal">
-            <div class="col-md-4 mt-15">
-                <div class="row">
-                    <span class="col-md-4">发布时间</span>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control "
-                               uib-datepicker-popup="{{format}}"
-                               ng-model="date1"
-                               is-open="popup1.opened"
-                               eclose-text="关闭"
-                               clear-text="清空"
-                               current-text="今天"
-                               alt-input-formats="altInputFormats"
-                               datepicker-append-to-body="true"
-                               datepicker-options="{maxDate:today}"
-                               ng-click="open1()"
-                    ></div>
-                </div>
-            </div>
-            <div class="col-md-4 mt-15">
-                <div class="row">
-                    <span class="col-md-4"> — </span>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control "
-                               uib-datepicker-popup="{{format}}"
-                               ng-model="date2"
-                               is-open="popup2.opened"
-                               close-text="关闭"
-                               clear-text="清空"
-                               current-text="今天"
-                               alt-input-formats="altInputFormats"
-                               datepicker-append-to-body="true"
-                               datepicker-options="{minDate:date1,maxDate:today}"
-                               ng-click="open2()"
-                        >
-                    </div>
-                </div>
-            </div>
+            <!--日历-->
+            <div my-calendar></div>
             <div class="col-md-4 mt-15">
                 <div class="row">
                     <span class="col-md-4">类型</span>
@@ -108,34 +73,7 @@
             </table>
         </div>
     </div>
-    <div class="row paging">
-        <div class="col-xs-12">
-            <uib-pagination class="fr" boundary-links="true" ng-click="page()"
-                            total-items="totalItems"
-                            rotate="false"
-                            ng-change="pageChanged()"
-                            max-size="maxSize"
-                            ng-model="currentPage"
-                            items-per-page="pageSize"
-                            first-text="首页"
-                            last-text="最后一页"
-                            next-text="下一页"
-                            previous-text="上一页">
-            </uib-pagination>
-        </div>
-    </div>
+    <!--分页-->
+    <div my-pagination></div>
 </main>
-<!--模态框-->
-    <!--<script type="text/ng-template" id="modal.html">-->
-        <!--<div class="modal-header">-->
-            <!--<h3 class="modal-title">操作提示</h3>-->
-        <!--</div>-->
-        <!--<div class="modal-body tc">-->
-            <!--<span class="fc-99 f16">{{operationTips1}}</span><br><span class="f20">-->
-        <!--{{operationTips2}}</span>-->
-<!--</div>-->
-<!--<div class="modal-footer">-->
-<!--<button class="btn btn-primary" type="button" ng-click="ok()">取消</button>-->
-<!--<button class="btn btn-warning" type="button" ng-click="cancel()">确定</button>-->
-<!--</div>-->
-<!--</script>-->
+

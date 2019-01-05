@@ -1,43 +1,7 @@
-//控制器间数据交互
-// app.factory("Data", function () {
-//     return {
-//         status: ""
-//     };
-// })
-// //
-app.controller("myCtrl", function ($scope, $http, $state,$stateParams) {
-    //分页
-    $scope.totalItems = 999; //初始分页数据的总条数
-    $scope.maxSize = 10;
-    $scope.pageSize = "5";
-    $http({
-        method: 'get',
-        url: "/abc/a/article/search",
-        params: {
-            size: $scope.pageSize,
-            page: $stateParams.page,
-            type: $stateParams.type,
-            status: $stateParams.status,
-            startAt: $stateParams.startAt,
-            endAt: $stateParams.endAt
-        }
-    }).then(function (response) {
-        if (response.data.code === 0) {
-            console.log(response);
-            $scope.articleList = response.data.data.articleList;
-            $scope.totalItems = response.data.data.total;
-            console.log($scope.articleList)
-        }
-    });
-    //当面分页与url参数保持一致
-    $scope.currentPage = ($stateParams.page === undefined) ? 1 : $stateParams.page;
-
-    //点击分页按钮时跳转
-    $scope.page = function () {
-        $state.go("navBar.article", {page: $scope.currentPage}, {reload: true});
-        console.log($scope.currentPage);
-    };
-    //点击搜索时跳转
+angular.module('myApp').controller("myCtrl", function ($scope, $http, $state, $stateParams,MyService) {
+    //判断cookies是否有值
+    if (MyService.getcookies("user")==null){$state.go("login")}
+    //判断cookies结束
     $scope.search = function () {
         $state.go("navBar.article",
             {
@@ -83,28 +47,6 @@ app.controller("myCtrl", function ($scope, $http, $state,$stateParams) {
             {id: "1", name: "草稿",},
             {id: "2", name: "上线"},
         ];
-
-    //日历
-
-
-    $scope.today = new Date();//变量今天
-    //输入框的url保持一致 ，后台传的时间戳是string格式，转为number格式，再转成Date对象
-    $scope.date1 = ($stateParams.startAt === undefined) ? "" :
-        new Date(Number($stateParams.startAt));
-    console.log($scope.date1);
-    $scope.date2 = ($stateParams.endAt === undefined) ? "" :
-        new Date(Number($stateParams.endAt - 86399999));
-    console.log($scope.date2);
-    $scope.format = "yyyy-MM-dd";
-    $scope.altInputFormats = ['yyyy-M!-d!'];
-    $scope.popup1 = {opened: false};
-    $scope.popup2 = {opened: false};
-    $scope.open1 = function () {
-        $scope.popup1.opened = true;
-    };
-    $scope.open2 = function () {
-        $scope.popup2.opened = true;
-    };
 
     //模态框
     //上下线
@@ -177,18 +119,18 @@ app.controller("myCtrl", function ($scope, $http, $state,$stateParams) {
                     label: "确定",
                     className: 'btn btn-primary'
                 },
-                cancel:{
-                    label:"取消",
-                    className:'btn btn-warning'
+                cancel: {
+                    label: "取消",
+                    className: 'btn btn-warning'
                 }
             },
-            callback:function (result) {
+            callback: function (result) {
                 if (result) {
                     $http({
-                        method:"delete",
-                        url:"/abc/a/u/article/"+$scope.currentId,
+                        method: "delete",
+                        url: "/abc/a/u/article/" + $scope.currentId,
                     }).then(function (response) {
-                        if (response.data.code===0){
+                        if (response.data.code === 0) {
                             $scope.page();
                             bootbox.alert({
                                 title: "提示",
@@ -207,10 +149,9 @@ app.controller("myCtrl", function ($scope, $http, $state,$stateParams) {
         })
     };
     //编辑
-    $scope.edit=function () {
+    $scope.edit = function () {
         $scope.currentId = this.x.id;
-        $state.go("navBar.page2",{id:$scope.currentId});
-
+        $state.go("navBar.page2", {id: $scope.currentId});
     }
 });
 

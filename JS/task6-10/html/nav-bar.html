@@ -1,5 +1,5 @@
-
-<nav class="navbar navbar-default" role="navigation">
+<div ng-controller="homeCtrl">
+<nav class="navbar navbar-default" role="navigation" >
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target="#menu">
@@ -17,58 +17,27 @@
                 <span> | </span>
                 <a href="">uesr</a>
                 <span> | </span>
-                <a href="" ng-click="close()">close</a>
+                <a href="" ng-click="close()"><span class="glyphicon glyphicon-off closeButton" ></span></a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="collapse navbar-collapse sidebar" id="menu">
-    <div class="panel-group" id="accordion2">
-        <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse"
-                 data-parent="#accordion2" href="#collapseOne">
-                <a class="accordion-toggle">信息管理</a>
+    <ul class="nav navbar-nav">
+        <li  ng-repeat="x in nav">
+            <div ng-click="first()" class="li" ng-class="{'head-highlight':x.state,'head-highlight-reset':x.highlightReset}">
+                <span class="glyphicon glyphicon-pencil pencil"></span>
+                <span class="accordion-toggle">{{x.first}}</span>
+                <span class="glyphicon  fr fc-ff pdr15" ng-class="x.state?'glyphicon-chevron-down':'glyphicon-chevron-left'"></span>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#">公司信息</a></li>
-                        <li><a href="#">职位信息</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse"
-                 data-parent="#accordion2" href="#collapseTwo">
-                <a class="accordion-toggle">Article管理</a>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li ui-sref=".article"><a href="#">Article信息</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse"
-                 data-parent="#accordion2" href="#collapseThree">
-                <a class="accordion-toggle">后台管理</a>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse"
-                 style="height: 0px;">
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#">账号管理</a></li>
-                        <li><a href="#">角色管理</a></li>
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="#">模块管理</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+            <ul ng-show="x.state">
+                <li ng-repeat="y in x.second"
+                    ui-sref="{{y.url}}"
+                    ng-click="second()"
+                ng-class="{'li-highlight':y.state}"><a href="#">{{y.name}}</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
 <div ui-view=""></div>
-
+</div>

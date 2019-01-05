@@ -1,10 +1,6 @@
-app.controller("detailsCtrl", function ($scope, $http, $state, $stateParams) {
-    var oMyForm = new FormData(),
-        // reader = new FileReader(),
-        fileInput = document.getElementById("file"),
-        img = document.getElementById('img1');
-    img.height = 200;
-    $scope.toggle = false;
+angular.module('myApp').controller("detailsCtrl", function ($scope, $http, $state, $stateParams,MyService) {
+    //判断cookies
+    if (MyService.getcookies("user")==null){$state.go("login")}
     //判断是否为编辑状态,true则渲染页面数据
     if ($stateParams.id) {
         $http({
@@ -12,7 +8,6 @@ app.controller("detailsCtrl", function ($scope, $http, $state, $stateParams) {
             url: " /abc/a/article/" + $stateParams.id,
         }).then(function (response) {
             if (response.data.code === 0) {
-                console.log(response);
                 var article = response.data.data.article;
                 $scope.imgUrl = article.img;
                 $scope.title = article.title;
@@ -20,87 +15,10 @@ app.controller("detailsCtrl", function ($scope, $http, $state, $stateParams) {
                 $scope.industry1 = article.industry.toString();
                 $scope.explain = article.content;
                 $scope.url = article.url;
-                img.src = article.img;
-                console.log(article)
+                $scope.imgSrc = article.img;
             }
         })
     }
-    //输入框onchange
-    fileInput.onchange = function () {
-        //获取图片文件
-
-        $scope.$apply(function () {
-            $scope.toggle = true;//显示行内容
-            $scope.files = fileInput.files;
-            $scope.file = $scope.files[0];
-            console.log($scope.files);
-            //添加文件进FormData
-            oMyForm.append("file", $scope.file);
-            //验证文件是否为图片
-            if (!/image\/\w+/.test($scope.file.type)) {
-                alert("请上传图片！");
-                return false;
-            }
-        });
-    };
-    // xhr上传
-    // $scope.upload = function () {
-    //     var xhr = new XMLHttpRequest();
-    //     xhr.onreadystatechange = function () {
-    //         if (xhr.readyState == 4 && xhr.status == 200) {
-    //             console.log(JSON.parse(xhr.responseText));
-    //         }
-    //     };
-    //     xhr.open("POST", '/abc/a/u/img/task');
-    //     xhr.send(oMyForm);
-    // };
-
-    // $http上传图片
-    $scope.upload = function () {
-        $http({
-            method: 'post',
-            url: '/abc/a/u/img/task',
-            //跟踪上传文件进度
-            uploadEventHandlers: {
-                progress: function (e) {
-                    console.log(e.loaded / e.total * 100);
-                    $scope.progress = Math.round((e.loaded / e.total) * 100) + "%";
-                }
-            },
-            data: oMyForm,
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        }).then(function (response) {
-            if (response.data.code === 0) {
-                console.log(response);
-                $scope.imgUrl = response.data.data.url;
-                img.src = $scope.imgUrl;
-                $scope.switch = true;//成功上传后禁用上传按钮
-            }
-
-        });
-
-    };
-    //删除按钮
-    $scope.remove = function () {
-        $scope.toggle = false;//隐藏行
-        $scope.switch = false;//删除后启用按钮
-        $scope.progress = 0;//进度条清空
-        img.src = "";//图片地址清空
-        oMyForm.delete("file");//清空FormData数据，delete方法内是键名"key"
-        fileInput.value = "";//清空文件
-    };
-    //
-
-
-    // $scope.type = {
-    //     id: ($stateParams.type === undefined) ? "" : $stateParams.type
-    // };
-    // $scope.industrys = {
-    //     id: ($stateParams.status === undefined) ? "" : $stateParams.status
-    // };
-
-
     $scope.type1 = "";
     $scope.industry1 = "";
     // $scope.$watch('type1',function(){
@@ -202,7 +120,7 @@ app.controller("detailsCtrl", function ($scope, $http, $state, $stateParams) {
         }
     };
 
-    //更改工具栏图标
+    //更改编辑器工具栏图标
     window.UEDITOR_CONFIG.toolbars = [
         ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic',
             'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily',

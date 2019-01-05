@@ -1,7 +1,8 @@
 .form1 {
   margin: 15px auto 20px;
   width: 95%;
-  background: white; }
+  background: white;
+  border-radius: 5px; }
   .form1 span {
     line-height: 34px; }
 
