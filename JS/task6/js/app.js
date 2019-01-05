@@ -6,7 +6,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/navBar",
             templateUrl: "../html/nav-bar.html",
             resolve: {
-                loadMyService: ['$ocLazyLoad', function ($ocLazyLoad) {
+                loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                     return $ocLazyLoad.load('../css/backstage.css');
                 }]
             }
@@ -28,8 +28,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             resolve: {
                 loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        "../js/details.js",
-                        "../js/directives/imgUpload.js"
+                        "../js/details.js"
                     ]);
                 }]
             },

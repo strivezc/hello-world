@@ -34,10 +34,11 @@
 }
 .f16{font-size: 16px}
 .f20{font-size: 20px}
-/*导航栏模块*/
 
+/*导航栏模块*/
 body {
-    background: #f5f5f5; }
+    background: #f5f5f5;
+    padding-right: 0px !important;}/*这条是清除因多次点击模态框增加的 17px padding-right*/
 
 .navbar-default {
     margin: 0;
@@ -52,7 +53,6 @@ body {
         float: left;
         position: absolute;
         right: 0; } }
-
 .top-nav {
     display: inline-block;
     color: white;

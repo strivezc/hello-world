@@ -7,7 +7,7 @@ app.directive("myPagination",function ($http,$stateParams,$state) {
         link:function (scope, element, attrs) {
             scope.totalItems = 999; //初始分页数据的总条数
             scope.maxSize = 10;
-            scope.pageSize = "5";
+            scope.pageSize = "10";
             $http({
                 method: 'get',
                 url: "/abc/a/article/search",
@@ -28,7 +28,6 @@ app.directive("myPagination",function ($http,$stateParams,$state) {
             });
             //当面分页与url参数保持一致
             scope.currentPage = ($stateParams.page === undefined) ? 1 : $stateParams.page;
-
             //点击分页按钮时跳转
             scope.page = function () {
                 $state.go("navBar.article", {page: scope.currentPage}, {reload: true});

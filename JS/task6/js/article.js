@@ -1,24 +1,6 @@
-angular.module('myApp').controller("myCtrl", function ($scope, $http, $state, $stateParams) {
+angular.module('myApp').controller("myCtrl", function ($scope, $http, $state, $stateParams,MyService) {
     //判断cookies是否有值
-    var CookieUtill = {
-        get: function (name) {
-            var cookieName = encodeURIComponent(name) + "=",
-                cookieStart = document.cookie.indexOf(cookieName),
-                cookieValue = null;
-            if (cookieStart > -1) {
-                var cookieEnd = document.cookie.indexOf(";", cookieStart);
-                if (cookieEnd == -1) {
-                    cookieEnd = document.cookie.length;
-                }
-                cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd))
-            }
-            return cookieValue;
-        }
-    }
-    var cookies=CookieUtill.get("user");
-    if (cookies==null){
-        $state.go("login")
-    }
+    if (MyService.getcookies("user")==null){$state.go("login")}
     //判断cookies结束
     $scope.search = function () {
         $state.go("navBar.article",
@@ -170,7 +152,6 @@ angular.module('myApp').controller("myCtrl", function ($scope, $http, $state, $s
     $scope.edit = function () {
         $scope.currentId = this.x.id;
         $state.go("navBar.page2", {id: $scope.currentId});
-
     }
 });
 
