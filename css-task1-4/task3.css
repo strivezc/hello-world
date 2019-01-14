@@ -1,0 +1,31 @@
+html {font-size:62.5%;}
+body{margin: 0;
+    padding: 0;
+    background-color: #68cdd5;}
+.img{max-width:50%;
+    height: auto;}
+.btn{margin-top: 1.5625%;
+    margin-left: 2.375%;}
+.logo{padding: 3.125% 0 9.375% 0;
+    text-align: center;}
+.center{margin: auto;
+    width: 71%;
+    font-size:1.5rem;
+    text-align:left;
+    font-family: "sans-serif";
+    color:#ffffff;}
+.div{
+   max-width: 100%;
+    margin: 0 9.75%;
+    padding-top:14.06%;
+    font-family: "Adobe 黑体 Std", sans-serif;
+    color:#ffffff;
+    text-align: center;
+overflow: hidden}
+.icon-1{float: left;}
+.icon-2{float: right;}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}

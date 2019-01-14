@@ -1,0 +1,82 @@
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$blue-color:#29bde0;
+$white-color:white;
+$normal-border:0.02rem solid #c9c9c9;
+header{border-bottom: 0.02rem solid #74d4eb;}
+.result{
+  font-size: 0.34rem;
+  line-height: 0.88rem;
+  width: 100%;
+  max-width: 750px;
+}
+.footer{
+  width: 100%;
+  max-width: 750px;
+}
+.bg-11{
+  margin: {
+    top:0.22rem;
+    left:0.20rem ;
+  } }
+.bg-12{margin: {
+  top: 0.24rem;
+  right: 0.20rem;
+}}
+.victory{
+  background-color: $blue-color;
+  margin-top: 0.88rem;
+}
+.bg-13{
+  margin: 0.24rem auto auto;
+  position: relative;
+  p{
+    position: absolute;
+    top: 1.3rem;
+    left: 0.8rem;
+    font-size: 0.46rem;
+  }
+}
+.congratulate{
+  font-size: 0.32rem;
+  padding: 0.36rem 12.5%;
+}
+.details{
+  font-size:0.26rem ;
+  padding: 0.26rem 12.5% 0.26rem 12.5%;
+}
+.dailyDetails{
+  background-color: $white-color;
+  margin-bottom: 2rem;
+  line-height: 0.4rem;
+  font-size: 0.2rem;
+  span{
+    font-size: 0.3rem;
+    display: block;
+  }
+
+}
+.li{
+  border-bottom: $normal-border;
+  padding: 0.1rem 12.5% 0.3rem;
+}
+footer{
+  width: 100%;
+  height: 1.3rem;
+  background: rgba(41,189,224,.5);
+  .button1,.button2{
+    height: 0.86rem;
+    width: 42%;
+    border-radius: 0.1rem;
+    background-color: #d9534f;
+    &:hover{ background-color: #c9302c;}
+  }
+  .button2{
+    background-color: #f0ad4e;
+    &:hover{ background-color: #ec971f;}
+  }
+}
+

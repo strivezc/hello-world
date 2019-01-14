@@ -1,0 +1,39 @@
+@mixin sprite-icon($width,$height,$position){
+  width: $width;
+  height: $height;
+  background-position: $position;
+}
+.sprite{
+  background: url(../image/css_sprites.png) no-repeat;
+  background-size: 581px  575px;
+}
+.bg-1{@include sprite-icon(27px,26px,-300px -252px )}
+.bg-3{@include sprite-icon(27px,26px,-526px -322px )}
+.bg-4{@include sprite-icon(47px,66px,-524px -228px )}
+.bg-5{@include sprite-icon(62px,66px,-85px -428px )}
+.bg-6{@include sprite-icon(54px,66px,-10px -508px )}
+.bg-8{@include sprite-icon(74px,74px,-430px -228px )}
+.bg-10{@include sprite-icon(110px,110px,-140px -169px )}
+.bg-13{@include sprite-icon(111px,110px,-169px -10px )}
+.bg-14{@include sprite-icon(55px,60px,-10px -428px )}
+.bg-12{@include sprite-icon(110px,110px,-300px -10px )}
+.bg-15{@include sprite-icon(145px,55px,-10px -299px )}
+.bg-18{@include sprite-icon(171px,41px,-175px -299px )}
+.bg-2{@include sprite-icon(27px,26px,-479px -322px )}
+.bg-7{@include sprite-icon(15px,15px,-383px -252px )}
+.bg-9{@include sprite-icon(29px,27px,-430px -322px )}
+.bg-11{@include sprite-icon(110px,110px,-10px -169px )}
+.bg-19{@include sprite-icon(94px,92px,-300px -140px )}
+.bg-20{@include sprite-icon(124px,34px,-10px -374px )}
+.bg-21{@include sprite-icon(139px,139px,-10px -10px )}
+
+.bg-22{@include sprite-icon(16px,16px,-347px -252px )}
+.bg-16{@include sprite-icon(126px,57px,-430px -80px )}
+.bg-17{@include sprite-icon(141px,50px,-430px -10px )}
+.bg23{
+  width: 109px;
+  height: 50px;
+  background: url(../image/23.png) no-repeat;
+  background-size: 109px  50px;
+  background-position: 0 0;
+}

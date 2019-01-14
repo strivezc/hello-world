@@ -1,0 +1,120 @@
+body {
+  background: #29bde0; }
+
+.voting {
+  line-height: 0.7rem;
+  border-bottom: 1px solid #74d4eb;
+  width: 100%;
+  max-width: 750px; }
+  .voting p {
+    padding-left: 7.5%; }
+
+.menuButton {
+  margin-left: 0.24rem;
+  margin-top: 0.15rem; }
+
+.close {
+  margin-right: 0.24rem;
+  margin-top: 0.15rem; }
+
+.dialogBox {
+  line-height: 0.82rem;
+  background-color: #b9e9f5;
+  width: 100%;
+  padding-left: 7.5%; }
+  .dialogBox:after {
+    content: "";
+    border-top: solid 0.20rem #b9e9f5;
+    border-left: solid 0.15rem #00800000;
+    border-right: solid 0.15rem #00800000;
+    position: absolute;
+    top: 1.52rem;
+    left: 11.25%;
+    right: none; }
+
+.musicButton {
+  display: inline-block;
+  position: absolute;
+  top: 0.85rem;
+  left: none;
+  right: 0.18rem; }
+  .musicButton audio {
+    opacity: 0;
+    height: 38px; }
+
+.list {
+  width: 100vw;
+  margin-top: 0.7rem;
+  padding-bottom: 4rem; }
+
+.li {
+  overflow: hidden;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 0.5rem; }
+  .li .role {
+    float: left;
+    width: 21.25vw;
+    height: 32.65vw;
+    margin: 0 4.375vw; }
+    .li .role .diving {
+      background-color: #f5c97b;
+      border: 0.625vw solid white; }
+      .li .role .diving .name {
+        width: 20vw;
+        height: 15.6vw;
+        line-height: 15.6vw;
+        font-size: 4vw; }
+      .li .role .diving .number {
+        width: 20vw;
+        height: 4.4vw;
+        line-height: 4.4vw;
+        font-size: 3.1vw;
+        background-color: #83b09a; }
+
+.operation {
+  height: 11.4vw;
+  width: 21.25vw;
+  display: none;
+  position: relative; }
+
+.killButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+footer {
+  justify-content: center;
+  background-color: #29bde0;
+  width: 100%;
+  height: 1.9rem; }
+  footer:before {
+    position: fixed;
+    bottom: 1.9rem;
+    content: "";
+    width: 86%;
+    max-width: 400px;
+    border-top: 0.02rem solid white; }
+
+.voteButton {
+  height: 0.87rem;
+  background-color: #fbb435;
+  line-height: 0.87rem;
+  font-size: 0.4rem;
+  width: 76.6%; }
+  .voteButton:hover {
+    background-color: #ec971f; }
+
+.return {
+  width: 11px;
+  height: 22px;
+  padding: 0.15rem 0 0 0.24rem; }
+
+.footer {
+  width: 100%;
+  max-width: 750px; }
+
+/*# sourceMappingURL=voting.css.map */

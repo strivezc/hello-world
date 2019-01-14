@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=no"/>
+    <title>identity</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="task5.css">
+</head>
+<body>
+<div class="bg-img">
+<div class="land" ng-app="myApp" ng-controller="myCtrl">
+    <p>后台登陆</p>
+    <form action="">
+        <div class="form-group">
+            <input type="text" name="username" ng-model="userName" id="username" class="passWord" placeholder="用户名">
+            <div class="icon1"></div>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" ng-model="passWord" id="password" class="passWord" placeholder="密码">
+            <div class="icon2"></div>
+        </div>
+        <div class="alert">
+            <p class="text-alert"></p>
+        </div>
+        <button  class="btn" id="btn">登陆</button>
+    </form>
+</div>
+</div>
+
+<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+<script src="task5.js"></script>
+<script>
+    var userName=document.getElementById("username").value,
+        passWord=document.getElementById("password").value;
+    var app = angular.module('myApp', []);
+    app.controller("myCtrl",function ($scope, $http) {
+        $http({
+            url:"/abc/a/login",
+            method:"POST",
+            data: $.param({
+                name:userName,
+                pwd:passWord
+            })
+        }).then(function successCallback(response){
+            console.log('http正常返回response=='+response);
+        },function errorCallback(response){
+            console.log('http error返回=='+response);
+        });
+    })
+</script>
+</body>
+</html>

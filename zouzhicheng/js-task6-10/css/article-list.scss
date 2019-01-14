@@ -1,0 +1,49 @@
+.form1{
+  margin: 15px auto 20px;
+  width: 95%;
+  background: white;
+  border-radius: 5px;
+  span{line-height: 34px}
+}
+.list{
+  width: 95%;
+  margin: auto;
+  .top{
+padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #333;
+    .top-btn{padding: 0 10px;
+    float: right}
+  }
+}
+.table{
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  margin-bottom: 0;
+  th{padding: 8px;
+  text-align: center;
+    width: 130px;
+    max-width: 180px}
+  td{
+    padding: 8px;
+    text-align: center;
+  a{color: #337ab7}
+  }
+  tr:nth-child(odd)	{
+    background-color: #ffffff;
+  }
+  tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+}
+.paging{
+  width: 95%;
+  margin: auto;
+}
+//模态框居中
+.modal-body{
+  text-align: center;
+}

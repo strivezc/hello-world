@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <title>task7-2</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="task7_2.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top header" role="navigation">
+            <span>投票</span>
+            <button class="menuButton pull-left"></button>
+             <button class="closeButton pull-right"></button>
+    <div class="dialogBox">
+        <p>发言讨论结束，大家请投票</p>
+        <button type="button" class="musicButton" >
+            <audio src="财富自由.mp3"  controls="controls" class="play ">
+                Your browser does not support the audio element.
+            </audio>
+        </button>
+    </div>
+    <div class="tips"><p>点击得票数最多人的头像</p></div>
+    </nav>
+</header>
+<main>
+    <ul class="list">
+        <li class="row1">
+            <div class="role">
+                <div class="diving">
+                    <div class="name">水民</div>
+                    <div class="number">1号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">水民</div>
+                    <div class="number">2号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">警察</div>
+                    <div class="number">3号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+        </li>
+        <li class="row1">
+            <div class="role">
+                <div class="diving">
+                    <div class="name">法官</div>
+                    <div class="number">4号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">狙击手</div>
+                    <div class="number">5号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">医生</div>
+                    <div class="number">6号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+        </li>
+        <li class="row1">
+            <div class="role">
+                <div class="diving">
+                    <div class="name">杀手</div>
+                    <div class="number">7号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">水民</div>
+                    <div class="number">8号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">警察</div>
+                    <div class="number">9号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+        </li>
+        <li class="row1">
+            <div class="role">
+                <div class="diving">
+                    <div class="name">水民</div>
+                    <div class="number">10号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">水民</div>
+                    <div class="number">11号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+            <div class="role">
+                <div class="diving">
+                    <div class="name">警察</div>
+                    <div class="number">12号</div>
+                </div>
+                <div class="operation">
+                    <button class="killButton"></button>
+                    <button class="checkButton"></button>
+                    <button class="snipeButton"></button>
+                    <button class="reviveButton"></button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</main>
+<footer>
+    <nav class="navbar navbar-default navbar-fixed-bottom header footer" role="navigation">
+        <button class="btn btn-warning vote" onclick="window.location.href='../task7_3/task7_3.html';" >
+            投死
+        </button>
+    </nav>
+</footer>
+</body>
+</html>

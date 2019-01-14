@@ -1,0 +1,43 @@
+<div ng-controller="homeCtrl">
+<nav class="navbar navbar-default" role="navigation" >
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#menu">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <span class="top-nav">萝卜多后台管理系统</span>
+    </div>
+    <div class="top-content">
+        <ul class="clearfix">
+            <li>
+                <a href="">猎头</a>
+                <span> | </span>
+                <a href="">uesr</a>
+                <span> | </span>
+                <a href="" ng-click="close()"><span class="glyphicon glyphicon-off closeButton" ></span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="collapse navbar-collapse sidebar" id="menu">
+    <ul class="nav navbar-nav">
+        <li  ng-repeat="x in nav">
+            <div ng-click="first()" class="li" ng-class="{'head-highlight':x.state,'head-highlight-reset':x.highlightReset}">
+                <span class="glyphicon glyphicon-pencil pencil"></span>
+                <span class="accordion-toggle">{{x.first}}</span>
+                <span class="glyphicon  fr fc-ff pdr15" ng-class="x.state?'glyphicon-chevron-down':'glyphicon-chevron-left'"></span>
+            </div>
+            <ul ng-show="x.state">
+                <li ng-repeat="y in x.second"
+                    ui-sref="{{y.url}}"
+                    ng-click="second()"
+                ng-class="{'li-highlight':y.state}"><a href="#">{{y.name}}</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div ui-view=""></div>
+</div>

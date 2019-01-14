@@ -1,0 +1,135 @@
+
+.direction{
+border-top: 1px solid #d0d6d9;
+border-bottom: 1px solid #edf1f2;
+font-size: 14px;
+  span{
+    display: inline-block;
+    line-height: 60px;
+  }
+}
+.btn-process:hover{
+  color: #fff;
+  background-color: #449d44;
+  border-radius: 2px;
+}
+h1{
+  border-bottom: 1px solid #d0d6d9;
+}
+.card{
+  width: 33.3%;
+  float: left;
+  @media screen and (max-width: 997px) {
+   width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  table{
+    width: 100%;
+    background-color: white;
+    border: none;
+    span{display: inline-block};
+}
+  .table-radius{
+    overflow: hidden;
+    border: 1px solid #d0d6d9;
+    border-radius: 10px;
+    @media screen and (max-width: 997px) {
+        width: 90%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      margin: auto;
+    }
+    @media screen and (max-width: 425px) {
+      width: 100%;
+    }
+    .hiddenText{
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      height:0;
+      color: white;
+      border-radius: 5px;
+      background: rgba(41,176,120,.8);
+      font-size: 16px;
+      transition: 0.5s ease;
+      @media screen and(max-width: 997px){
+        width: 90%;
+        margin: auto;
+        right: 36px;
+      }
+      @media screen and(max-width: 768px){
+        width: 80%;
+        margin: auto;
+        right: 0;
+      }
+      @media screen and(max-width: 425px){
+        width: 100%;
+        right: 0;
+      }
+      span{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        display: block;
+      }
+      p{
+        text-indent: 2rem;
+        padding-left: 42px;
+        padding-right: 42px;
+      }
+    }
+    &:hover .hiddenText{height: 461px}
+  }
+
+
+
+.bg-21{
+  display: inline-block;
+  margin: 18px 8px 16px 10px;}
+.bg-22{
+  vertical-align: middle;
+  display: inline-block;
+}
+.pay{
+  text-align: center;
+  vertical-align: middle;
+}
+.tips{
+  padding: 12px 10px 12px 10px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.table-margin{
+  position: relative;
+  margin: 45px 15px 0 0;
+  @media screen and (max-width: 425px) {
+    margin: 45px 0 0 0;
+  }
+
+}
+}
+.cleartd{
+  border: none;
+}
+.cleartbl{
+  width: 6%;
+  border-left: none}
+.cleartbr{
+  border-right: none;
+  border-left: none;
+}
+.cleartbb{
+  border-bottom: none;
+}
+.clearbri{
+  border-right: none;
+}
+.rare{
+  padding-left: 8px;
+  padding-right: 4px;
+}
+

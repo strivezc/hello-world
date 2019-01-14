@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="myController">
+    <!--<div  ng-controller="myController">-->
+        <div>父scope：
+            <div>Say：{{value}}</div>
+        </div>
+        <div>隔离scope：
+            <div isolated-directive action="click()"></div>
+        </div>
+    </div>
+
+
+<script>
+    var app=angular.module("myApp",[]);
+    app.controller("myController", function ($scope) {
+        $scope.value = "hello world";
+        $scope.click = function () {
+            $scope.value = Math.random();
+        };
+    }).directive("isolatedDirective", function () {
+        return {
+            scope: {
+                action: "&"
+            },
+            template: '<input type="button" value="在directive中执行父scope定义的方法" ng-click="action()"/> <div>Say：{{value}}</div>'
+        }
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+$normal-border:1px solid #d9d9d9;
+$px2-border:2px solid #d9d9d9;
+body{
+
+  background: #f0f0f0;
+}
+.parameter{
+  font-size: 0.34rem;
+  line-height: 0.88rem;
+  width: 100%;
+  max-width: 750px;
+}
+.text{
+  float: left;
+  width: 1.2rem;
+  height: 4.5rem;
+  writing-mode: tb-rl!important;
+  font-size: 0.36rem;
+  color: #444444;
+  background: white;
+  text-align: center;
+  position: relative;
+  border-right: $normal-border;
+  p{
+    width: 30px;
+    height: 4.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+.container{
+  overflow: hidden;
+  margin-top: 0.88rem;
+  padding: 0.2rem;
+}
+.detail{
+  width:calc(100% - 1.22rem) ;
+  height: 4.5rem;
+  float: left;
+  font-size: 0.3rem;
+  color: #a1a1a1;
+  background: #fbfbfb;
+  text-align: center;
+  .role{
+    height: 3.8rem;
+    border-bottom: $px2-border;
+  }
+  .setting{
+    background: transparent;
+    height: 0.7rem;
+    line-height: 0.7rem;
+  }
+}
+ul{
+ margin: 0 0.2rem 0.2rem 0.2rem;
+  background: white;
+  padding-bottom: 0.3rem;
+
+  li{
+    margin: 0 .28rem 0 .28rem;
+    color: #d7d7d7;
+    font-size: 0.28rem;
+    border-bottom: $normal-border;
+    .word{
+      line-height: 0.8rem;
+      border: none;
+      outline: none;
+    }
+  }
+}
+.number{
+  margin: 0 0.2rem 0.2rem 0.2rem;
+  font-size: 0.28rem;
+  color: #444444;
+  background: white;
+  padding-left: 0.5rem;
+}
+.reduce{
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../image/-.png) no-repeat;
+  background-size:0.28rem 0.28rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  vertical-align: text-bottom;
+}
+.plus{
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../image/+.png) no-repeat;
+  background-size:0.28rem 0.28rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  vertical-align: text-bottom;
+}
+.start{
+  display: block;
+  outline: none;
+  border: none;
+  background: orange;
+  width: calc(100% - 0.4rem);
+  margin: 0 0.2rem 0.2rem 0.2rem;
+  height: 0.88rem;
+  color: white;
+  cursor: pointer;
+}
+.numberBox{
+  width: 0.7rem;
+  border: none;
+  margin: 0.4rem 0.1rem;
+  background:#f4f5f5 ;
+  color: orange;
+}
+.range{
+  margin: 0.3rem 0.1rem;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 80%;
+  height: 0.1rem;
+  background: orange;
+}
+/*滑块的样式修改*/
+input[type=range]::-webkit-slider-thumb{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.6rem;
+  height: 0.36rem;
+  border: 2px solid orange;
+  border-radius: 5px;
+  background: url("../image/line.png");
+  background-size: cover;
+}
+.people,.killer{
+  width: 40%;
+  text-align: left;
+  padding-left: 10%;
+  &:before{
+    content: " ";
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: #2aabd2;
+  }
+}
+.killer:before{
+  background: #ed9708;
+}

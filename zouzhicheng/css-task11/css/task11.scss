@@ -1,0 +1,84 @@
+$header-line-height: 0.92rem;
+$background-color: #5fc0cd;
+$font-color: white;
+$normal-font-size: 0.32rem;
+$land-font-size: 0.36rem;
+$land-margin: 0.3rem;
+$nothing: none;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {background-color: #eff0f4}
+html {font-size: 312.5%}
+header {
+  display: block;
+  overflow: hidden;
+  background-color: $background-color;
+  color: $font-color;
+  font-size: $normal-font-size;
+  line-height: $header-line-height;
+  text-align: center;
+  .close, .register {
+    float: left;
+    font-size: $normal-font-size;
+    margin: {
+      left: $land-margin;
+    } ;
+  }
+  .register {
+    float: right;
+    margin-right: $land-margin;
+    margin-left: 0;
+  }
+  span {
+    font-size: $land-font-size;
+  }
+}
+.landing {
+  @extend header;
+  font-size: $land-font-size;
+  border: $nothing;
+  outline: $nothing;
+  width: 100%;
+  cursor: pointer;
+}
+.phone {
+  overflow: hidden;
+  background-color: white;
+  margin: {
+    top: 0.16rem;
+    bottom: 0.16rem;
+  } ;
+  height: 1rem;
+  .phoneIcon {
+    display: block;
+    float: left;
+    height: 0.5rem;
+    margin: 0.24rem 0.3rem 0 0.42rem;
+    padding: 0.04rem 0.45rem 0.04rem 0;
+    border-right: 2px solid #eaedee;
+  }
+  .text {
+    display: block;
+    float: left;
+    line-height: 1rem;
+    border: $nothing;
+    outline: $nothing;
+    width: calc(100% - 1.5rem);
+  }
+}
+.img{
+  width: 14.5px;
+  height: 22.5px;
+  display: block;
+}
+a {
+  font-size: $normal-font-size;
+  color: $background-color;
+  float: right;
+  margin: {
+    top: $land-margin;
+    right: $land-margin;
+  }
+}

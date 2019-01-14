@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <title>Judge-Diary</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/sprite.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/Judge-Diary.css">
+</head>
+<body>
+<header class="header">
+    法官台本
+    <button class="fl bcg-trp"><img src="../image/return.png" class=" return"></button>
+    <button class="sprite bg-3 close fr"></button>
+</header>
+<main>
+    <div class="day" id="day">第一天</div>
+    <ul class="item" id="item1">
+        <li>
+            <span id="killing1"> <img src="../image/夜晚.png" class="icon">杀手杀人</span>
+        </li>
+        <p></p>
+        <li>
+            <span id="words1"><img src="../image/白天.png" class="icon">亡灵发表遗言</span>
+        </li>
+        <li><span id="speak1">玩家依次发言</span></li>
+        <li><span id="vote1">全民投票</span></li>
+        <p></p>
+    </ul>
+
+</main>
+<footer class="footer">
+<button>结束游戏</button>
+    <button id="diary">法官日志</button>
+</footer>
+<script src="../js/state-machine.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="../js/Judge-Diary.js"></script>
+</body>
+</html>

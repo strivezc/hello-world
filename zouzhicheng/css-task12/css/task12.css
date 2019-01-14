@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 312.5%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  line-height: 0.8rem;
+  background-color: #5fc0cd;
+  color: #ffffff;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.36rem;
+}
+.header img {
+  width: 0.2rem;
+  height: 0.36rem;
+  position: absolute;
+  top: 0.24rem;
+  left: 0.36rem;
+}
+.information {
+  position: relative;
+  margin-top: 0.8rem;
+  height: 3.28rem;
+  background: url("../image/2.png") no-repeat scroll;
+  background-size: cover;
+  color: #ffffff;
+}
+.information .head-portrait {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.3rem;
+  width: 1.69rem;
+  height: 1.71rem;
+}
+.information .age-name {
+  position: absolute;
+  top: 1.15rem;
+  left: 2.4rem;
+  font-size: 0.32rem;
+}
+.information .place {
+  position: absolute;
+  top: 1.74rem;
+  left: 2.44rem;
+  font-size: 0.24rem;
+}
+.information .place img {
+  width: 0.18rem;
+  height: 0.23rem;
+}
+.skill {
+  border-bottom: 0.01rem solid #e1e5e7;
+  line-height: 1rem;
+  font-size: 0.32rem;
+  color: #333333;
+  font-weight: bold;
+}
+.skill span {
+  margin-left: 0.3rem;
+  border-left: 2px solid #5fc0cd;
+}
+.experience, .introduce {
+  line-height: 1rem;
+  font-size: 0.32rem;
+  color: #333333;
+  margin-left: 0.3rem;
+  border-bottom: 0.01rem solid #e1e5e7;
+}
+.experience .redText, .introduce .redText {
+  color: #e26163;
+}
+.experience .home, .introduce .home {
+  border-right: 0.01rem solid #e1e5e7;
+  margin-right: 0.17rem;
+  padding-left: 0.38rem;
+  padding-right: 0.17rem;
+}
+.experience img, .introduce img {
+  width: 0.24rem;
+  height: 0.23rem;
+}
+.experience .keyword, .introduce .keyword {
+  color: #999999;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-right: 0.27rem;
+  border-right: 0.01rem solid #e1e5e7;
+}
+.introduce {
+  line-height: normal;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.introduce .details {
+  width: calc(100% - 2.5rem);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 1.68rem;
+  bottom: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+footer .button1, footer .button2 {
+  border: 2px solid #5fc0cd;
+  border-radius: 10px;
+  margin-left: 0.4rem;
+  font-size: 0.34rem;
+  width: 40%;
+  height: 0.88rem;
+  background-color: #ffffff;
+  color: #5fc0cd;
+  outline: none;
+  cursor: pointer;
+}
+footer .button2 {
+  color: #ffffff;
+  background-color: #5fc0cd;
+  margin-left: 0;
+  margin-right: 0.4rem;
+}
+
+/*# sourceMappingURL=task12.css.map */

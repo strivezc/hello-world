@@ -1,0 +1,92 @@
+ul{margin: 0;
+padding: 0}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+body{margin: 0;
+padding: 0}
+.navbar{
+    background-color: #29b079;
+    height: 100px;
+    display: block;
+    font-size: 16px;
+}
+
+.navbar .nav-list{
+    float: right;
+    display: block;
+}
+.navbar .nav-list li{
+    list-style: none;
+    float: left;
+    padding: 0 30px;
+    line-height: 98px;
+    cursor: pointer;
+}
+.navbar .nav-list li:hover{border-bottom: 2px solid white;}
+.navbar .nav-list a{
+    color: white;
+    text-decoration-line: none;
+}
+.navbar .nav-list  a:hover{
+    color: white;
+}
+.icon-bar{
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #888888;
+}
+.icon-bar +.icon-bar {
+    margin-top: 5px;
+}
+.navbar input:checked~.nav-list {
+    display: block;
+    background-color:#29b079;
+
+}
+@media (max-width: 768px){
+    .navbar .nav-list{width: 100%}
+}
+.navbar label{
+    overflow: hidden;
+    display: none;
+}
+.navbar .nav-toggle{
+    display: none;
+}
+.navbar  .menu-icon{
+    display: flex;
+    width: 36px;
+    height: 32px;
+    margin: 9px 10px 9px 0;
+    border-radius: 4px;
+    background: #47d197;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+}
+@media  (max-width: 768px) {
+    .navbar{height: 50px}
+    .navbar label{
+        display: block;
+    }
+    .navbar .nav-list{
+        display: none;
+    }
+    .navbar .nav-list li{
+        float: none;
+        text-align: center;
+    }
+    .navbar  label[for="nav-toggler"] {
+        display: block;
+        float: left;
+        width: 36px;
+        height: 36px;
+        z-index: 2;
+        cursor: pointer;
+    }
+}

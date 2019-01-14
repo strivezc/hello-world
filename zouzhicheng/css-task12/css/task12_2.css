@@ -1,0 +1,245 @@
+html {
+  font-size: 312.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+body {
+  color: #999999;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 0.86rem;
+  background-color: #5fc0cd;
+  top: 0;
+}
+header .button1, header .button2 {
+  float: left;
+  margin-left: 0;
+  background-color: #55a8b3;
+  color: #ffffff;
+  border: 0;
+  padding: 0.15rem 0.3rem;
+  outline: none;
+  border-radius: 0.08rem;
+  cursor: pointer;
+}
+header .button2 {
+  margin-left: -0.05rem;
+  background-color: #ffffff;
+  color: #5fc0cd;
+}
+.sprite {
+  background: url(../image/task12-2/img.png) no-repeat;
+  background-size: 4.92rem 0.96rem;
+}
+.map {
+  width: 0.42rem;
+  height: 0.45rem;
+  background-position: -2.44rem 0;
+  position: absolute;
+  top: 0.2rem;
+  left: none;
+  right: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.list {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e5e7;
+  margin-top: 0.86rem;
+  line-height: 0.8rem;
+  text-align: center;
+}
+.list .dropDown {
+  position: relative;
+  display: inline-block;
+  width: 33.33%;
+}
+.list .dropDown .dropDown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 0.02rem 0.02rem 0.02rem #999999;
+}
+.list .dropDown .dropDown-content span {
+  font-size: 0.28rem;
+  color: black;
+  display: block;
+}
+.list .dropDown .dropDown-content span:hover {
+  background-color: #5fc0cd;
+}
+.list .dropDown:hover .dropDown-content {
+  display: block;
+}
+.list .dropbtn, .list .last-dropbtn {
+  display: block;
+  color: #999999;
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  line-height: 0.8rem;
+  border-right: 1px solid #e1e5e7;
+}
+.list .last-dropbtn {
+  border: none;
+}
+.triangle {
+  width: 0.15rem;
+  height: 0.1rem;
+  background-position: -0.11rem 0;
+  position: absolute;
+  top: 0.4rem;
+  left: none;
+  right: 10%;
+}
+.main {
+  margin-top: 1.66rem;
+  margin-bottom: 2rem;
+}
+.main li {
+  height: 1.79rem;
+  border-bottom: 1px solid #e1e5e7;
+  overflow: hidden;
+}
+.main li .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+  height: 1.79rem;
+}
+.date-icon, .address-icon {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-position: -1.25rem 0;
+  margin-left: 0.32rem;
+  margin-top: 0.3rem;
+}
+.address-icon {
+  background-position: -0.44rem 0;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+  padding: 0.25rem 0 0.25rem 0.2rem;
+  font-size: 0.28rem;
+  width: calc(100% - 40% - 0.7rem);
+}
+.text p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.text .date {
+  line-height: 0.5rem;
+  color: #333333;
+}
+.price {
+  float: right;
+  height: 1.79rem;
+  width: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.price p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #e63b0e;
+  font-size: 0.3rem;
+}
+.arrow {
+  width: 0.22rem;
+  height: 0.35rem;
+  background-position: -0.83rem 0;
+  margin-left: 0.22rem;
+  margin-right: 0.32rem;
+}
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 1rem;
+  background-color: #f8fafb;
+  bottom: 0;
+}
+footer .home-page, footer .my {
+  display: flex;
+  margin-left: 23%;
+  height: 1rem;
+  flex-direction: column;
+}
+footer .home-page span, footer .my span {
+  font-size: 0.2rem;
+  color: #5fc0cd;
+}
+footer .my {
+  margin-left: 0;
+  margin-right: 23%;
+}
+footer .my span {
+  color: #999999;
+}
+.home-page-btn, .my-btn {
+  width: 0.48rem;
+  height: 0.41rem;
+  background-position: -3.11rem 0;
+  border: none;
+  outline: none;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+.word {
+  width: 0.96rem;
+  height: 0.96rem;
+  background-position: -3.96rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.my-btn {
+  width: 0.48rem;
+  height: 0.41rem;
+  background-position: -1.72rem 0;
+}
+
+/*# sourceMappingURL=task12_2.css.map */

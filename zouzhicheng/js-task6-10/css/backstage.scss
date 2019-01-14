@@ -1,0 +1,78 @@
+body{background: #f5f5f5}
+.navbar-default{
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid white;
+  .navbar-toggle:hover{background:#fdbb6b;}
+  .navbar-toggle{
+    span.icon-bar{background: white;}
+    @media (max-width: 768px){
+      float: left;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+.top-nav {
+  display: inline-block;
+  color:white;
+  font-size: 18px;
+  height: 50px;
+  width: 250px;
+  line-height: 50px;
+  background: #FDBB6C;
+  text-align: center;
+  @media (max-width: 768px){
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 768px){
+.navbar-collapse.collapse{
+  height:calc(100vh - 51px) !important;
+  padding-bottom: 3000px;
+  margin-bottom: -3000px;
+  overflow: hidden !important;
+  padding-right: 0;
+  padding-left: 0;
+}}
+.pencil{
+  color: white;
+  padding-right: 10px;
+}
+.closeButton{
+  display: contents;
+  color: orange;
+}
+.nav>li{
+  width: 100%;
+  a{text-decoration: none;
+  padding: 5px;
+    display: block;
+    text-align: center;
+    color: white;
+    &:hover{
+      background: #feae45;
+    }
+  }
+}
+.li{
+  padding: 15px;
+  cursor:pointer;
+  color: white;
+  &:hover{
+    background: #feae45;
+  }
+}
+.li-highlight{
+  background: #feae45;
+}
+.head-highlight{
+  background: #feae45;
+}
+.head-highlight-reset{
+  background: transparent;
+}
+
+

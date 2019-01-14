@@ -1,0 +1,89 @@
+$normal-border:1px solid #e6e6e6;
+.backgroundImg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+.list{
+  width: 25%;
+  font-size: 0;
+  display: inline-block;
+  @media screen and(max-width: 997px){
+    width: 100%;
+  }
+}
+.cooperation{
+  border-radius: 10px;
+ border: $normal-border;
+  margin: 0 15px 30px 0;
+  text-align: center;
+  @media screen and(max-width: 997px){
+    margin-right: 0;
+  }
+  .company{
+    line-height: 62px;
+    border-bottom: $normal-border;
+  }
+  .companyName{
+    display: inline-block;
+    line-height: 50px;
+    width: 100%;
+    & :hover .circle{background-color:#ff9052 ;};
+    @media screen and(max-width: 997px){
+      width: 33.3%;
+    }
+    @media screen and(max-width: 768px){
+      width: 50%;
+    }
+  }
+}
+.circle, .solidCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ff9052;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.solidCircle {background-color:#ff9052 ;}
+.center{
+  display: inline-block;
+  width: 91px;
+  text-align: left;
+}
+.introduce{
+  width: 75%;
+  text-indent: 2em;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  @media screen and(max-width: 997px){
+    width: 100%;
+  }
+}
+.tudou{  padding: 20px 15px 180px 15px;
+  @media screen and(max-width: 997px){
+  padding-bottom: 50px;
+}
+}
+.tudouIcon{
+  display: inline-block;
+  width: 25%;
+  line-height: 137px;
+  @media screen and(max-width: 768px){
+    width: 100%;
+    line-height: 78px;
+  }
+}
+.summary{
+  width: 75%;
+  display: inline-block;
+  padding-bottom: 15px;
+  @media screen and(max-width: 768px){
+    width: 100%;
+  }
+}
+@media screen and(max-width: 997px){
+ .footer{margin-top: 100px}
+}
