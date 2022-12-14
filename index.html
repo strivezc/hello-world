@@ -6,7 +6,7 @@
     <link rel="Stylesheet" type="text/css">
 </head>
 <body>
-<div>
+<!-- <div>
     <p>CSS任务：</p>
     <a href="./css-task1-4/task1.html">Task01-02</a>
     <a href="./css-task1-4/task3.html">Task03</a>
@@ -27,9 +27,16 @@
     <a href="./js-task2-4/html/task13_1.html">Task02-04</a>
     <a href="./js-task5/task5.html">Task05</a>
     <a href="./js-task6-10/html/index.html#!/login">Task06-10</a>
-</div>
+</div> -->
+    <button id="btn">回到小程序</button>
 <script>
-console.log(undefined==null)
+let btn=document.getElementById('btn');
+    btn.addEventListener('click',function () {
+        console.log('测试');
+      uni.navigateTo({
+        url: '/pages/home/index?id=1&name=uniapp',
+      });
+    })
 </script>
 </body>
 </html>
