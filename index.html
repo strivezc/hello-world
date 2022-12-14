@@ -72,7 +72,8 @@
             console.log('当前环境：' + JSON.stringify(res));
         });
   document.getElementById('btn2').addEventListener('click', function() {
-      uni.navigateTo({
+    console.log('测试');
+      uni.switchTab({
         url: '/pages/home/index?id=12'
       });
     });
@@ -83,12 +84,12 @@
             switch (action) {
               case 'switchTab':
                 uni.switchTab({
-                  url: '/pages/home/index?id=123456'
+                  url: '/pages/home/index'
                 });
                 break;
               case 'reLaunch':
                 uni.reLaunch({
-                  url: '/pages/tabBar/component/component'
+                  url: '/pages/home/index'
                 });
                 break;
               case 'navigateBack':
