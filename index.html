@@ -31,14 +31,30 @@
 </div> -->
     <button id="btn">回到小程序</button>
 <script>
-let btn=document.getElementById('btn');
-    btn.addEventListener('click',function () {
-        console.log('测试');
-        console.log(uni,'uni');
-      uni.navigateTo({
-        url: '/pages/home/index?id=1&name=uniapp',
+    // 待触发 `UniAppJSBridgeReady` 事件后，即可调用 uni 的 API。
+    document.addEventListener('UniAppJSBridgeReady', function() {
+      uni.postMessage({
+        data: {
+          action: 'message-zzc1'
+        }
       });
-    })
+      uni.getEnv(function(res) {
+        console.log('当前环境：' + JSON.stringify(res));
+      });
+      document.getElementById('btn').addEventListener('click',function () {
+        console.log('测试');
+        uni.navigateTo({
+          url: '/pages/home/index?id=1&name=uniapp',
+        });
+      })
+      document.getElementById('btn').addEventListener('click', function() {
+        uni.postMessage({
+          data: {
+            action: 'message-zzc2'
+          }
+        });
+      });
+    });
 </script>
 </body>
 </html>
