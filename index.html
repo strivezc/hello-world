@@ -73,9 +73,11 @@
         });
   document.getElementById('btn2').addEventListener('click', function() {
     console.log('测试');
-      uni.switchTab({
-        url: '/pages/home/index?id=12'
-      });
+    console.log('获取传递的数据', window.location.href.split('?')[1]);
+    alert('获取传递的数据', window.location.href.split('?')[1]);
+//       uni.switchTab({
+//         url: '/pages/home/index?id=12'
+//       });
     });
         document.querySelector('.btn-list').addEventListener('click', function(evt) {
           var target = evt.target;
