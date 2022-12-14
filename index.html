@@ -51,32 +51,9 @@
     </div>
     <script type="text/javascript">
       var userAgent = navigator.userAgent;
-      if (userAgent.indexOf('AlipayClient') > -1) {
-        // 支付宝小程序的 JS-SDK 防止 404 需要动态加载，如果不需要兼容支付宝小程序，则无需引用此 JS 文件。
-        document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
-      } else if (/QQ/i.test(userAgent) && /miniProgram/i.test(userAgent)) {
-        // QQ 小程序
-        document.write(
-          '<script type="text/javascript" src="https://qqq.gtimg.cn/miniprogram/webview_jssdk/qqjssdk-1.0.0.js"><\/script>'
-        );
-      } else if (/miniProgram/i.test(userAgent) && /micromessenger/i.test(userAgent)) {
+     if (/miniProgram/i.test(userAgent) && /micromessenger/i.test(userAgent)) {
         // 微信小程序 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。
         document.write('<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"><\/script>');
-      } else if (/toutiaomicroapp/i.test(userAgent)) {
-        // 头条小程序 JS-SDK 如果不需要兼容头条小程序，则无需引用此 JS 文件。
-        document.write(
-          '<script type="text/javascript" src="https://s3.pstatp.com/toutiao/tmajssdk/jssdk-1.0.1.js"><\/script>');
-      } else if (/swan/i.test(userAgent)) {
-        // 百度小程序 JS-SDK 如果不需要兼容百度小程序，则无需引用此 JS 文件。
-        document.write(
-          '<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js"><\/script>'
-        );
-      } else if (/quickapp/i.test(userAgent)) {
-        // quickapp
-        document.write('<script type="text/javascript" src="https://quickapp/jssdk.webview.min.js"><\/script>');
-      }
-      if (!/toutiaomicroapp/i.test(userAgent)) {
-        document.querySelector('.post-message-section').style.visibility = 'visible';
       }
     </script>
     <!-- uni 的 SDK -->
@@ -94,34 +71,29 @@
             console.log('当前环境：' + JSON.stringify(res));
         });
 
-        document.querySelector('.btn-list').addEventListener('click', function(evt) {
-          var target = evt.target;
-          if (target.tagName === 'BUTTON') {
-            var action = target.getAttribute('data-action');
-            switch (action) {
-              case 'switchTab':
-                uni.switchTab({
-                  url: '/pages/home/index'
-                });
-                break;
-              case 'reLaunch':
-                uni.reLaunch({
-                  url: '/pages/home/index'
-                });
-                break;
-              case 'navigateBack':
-                uni.navigateBack({
-                  delta: 1
-                });
-                break;
-              default:
-                uni[action]({
-                  url: '/pages/home/index'
-                });
-                break;
-            }
+          document.addEventListener('UniAppJSBridgeReady', function() {
+      uni.postMessage({
+        data: {
+          action: 'message-zzc1'
+        }
+      });
+      uni.getEnv(function(res) {
+        console.log('当前环境：' + JSON.stringify(res));
+      });
+      document.getElementById('btn').addEventListener('click',function () {
+        console.log('测试');
+        uni.navigateTo({
+          url: '/pages/home/index?id=1&name=uniapp',
+        });
+      })
+      document.getElementById('btn').addEventListener('click', function() {
+        uni.postMessage({
+          data: {
+            action: 'message-zzc2'
           }
         });
+      });
+    });
         document.getElementById('postMessage').addEventListener('click', function() {
           uni.postMessage({
             data: {
