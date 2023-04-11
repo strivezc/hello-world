@@ -8,25 +8,28 @@
 </head>
 
 <body>
-  <canvas id="canvas" width="600" height="600"></canvas>
+  <p><button style="width: 200px;height: 50px;background-color: #00c297;color: #ffffff;font-size: 20px;">测试浏览器分享</button></p>
 </body>
 
 </html>
 <script>
-  const canvas = document.getElementById('canvas')
-  const ctx = canvas.getContext('2d')
-  ctx.fillStyle = 'red'
-  const step = 1 // 每步的长度
-  let xPosition = 0 // x坐标
-  move() // call move
-  function move() {
-    ctx.clearRect(0, 0, 600, 600)
-    ctx.fillRect(xPosition, 0, 150, 150)
-    xPosition += step
-    if (xPosition <= 300) {
-      requestAnimationFrame(() => {
-        move()
-      })
-    }
-  }
+  const shareData = {
+      title: '浏览器分享测试',
+      text: '我正在测试web share api！',
+      url: 'https://test.talk915.com/h5/inedx'
+    };
+
+    const btn = document.querySelector('button');
+    console.log(btn,'btn');
+    // 分享操作必须由用户行为触发
+    btn.addEventListener('click', () => {
+      navigator.share(shareData)
+        .then(() =>{
+          console.log('分享成功');
+        })
+        .catch((e) =>{
+          console.log('分享失败');
+          alert('分享失败',e)
+        })
+    });
 </script>
