@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<canvas id="canvas" width="640" height="360"></canvas>
+<button id="playBtn">播放</button>
+<button id="pauseBtn">暂停</button>
+<button id="sendBtn">发送弹幕</button>
+<input type="text" onkeydown="search(event)" id="dmInput">
+</body>
+
+<script>
+  // 获取发送按钮dom
+  var sendBtn = document.querySelector('#sendBtn')
+  // 弹幕输入框dom
+  var dmInput = document.querySelector('#dmInput');
+  // 弹幕数组
+  var danmulist = [];
+  function search(event){
+    if (event.keyCode == "13") {
+      var danmu = {
+        value:dmInput.value,
+        x:640,
+        y:Math.random()*360
+      }
+      danmulist.push(danmu)
+    }
+  }
+
+  sendBtn.onclick = function(){
+    var danmu = {
+      value:dmInput.value,
+      x:640,
+      y:Math.random()*360
+    }
+    danmulist.push(danmu)
+  }
+
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const video = document.createElement('video');
+  video.src = 'https://s3test.hanyubar.com/competition/6f1f7dd0-6236-4340-88b2-3026baf225ec.mp4';
+  video.crossOrigin = 'anonymous'; // 如果视频跨域，需要设置跨域属性
+
+  let isPlaying = false;
+  let lastTime = 0;
+
+  function draw() {
+    if (isPlaying) {
+      const currentTime = video.currentTime;
+      if (currentTime != lastTime) {
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        lastTime = currentTime;
+        // 弹幕发送
+        ctx.font = "30px 微软雅黑";
+        ctx.fillStyle = "#fff"
+        danmulist.forEach(function(item,i){
+          item.x--;
+          console.log(item.x,'item.x');
+          ctx.fillText(item.value,item.x,item.y)
+        })
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  document.getElementById('playBtn').addEventListener('click', () => {
+    video.play();
+    isPlaying = true;
+    draw();
+  });
+
+  document.getElementById('pauseBtn').addEventListener('click', () => {
+    video.pause();
+    isPlaying = false;
+  });
+
+</script>
+</html>
